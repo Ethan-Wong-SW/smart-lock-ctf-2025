@@ -4,7 +4,7 @@ import asyncio
 from BLEClient import BLEClient
 from UserInterface import ShowUserInterface
 
-DEVICE_NAME = "Smart Lock [Group 1]" # <------ Modify here to match your group. Don't hijack other groups :-)
+DEVICE_NAME = "Smart Lock [Group 3]" # <------ Modify here to match your group. Don't hijack other groups :-)
 # Commands
 AUTH = [0x00]  # 7 Bytes
 OPEN = [0x01]  # 1 Byte

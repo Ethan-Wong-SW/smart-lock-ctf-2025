@@ -7,7 +7,7 @@ from BLEClient import BLEClient
 from nicegui import app, run, ui  # GUI Library
 
 
-DEVICE_NAME = "Smart Lock [Group 1]"
+DEVICE_NAME = "Smart Lock [Group 3]"
 
 AUTH = [0x00]  # 9 Bytes
 OPEN = [0x01]  # 1 Byte
