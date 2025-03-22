@@ -1,0 +1,204 @@
+[1] Connecting to "Smart Lock [Group 3]"...
+[Fuzz Auth 0] Sending AUTH command with passcode: [33, 135, 49, 175, 222, 75]
+[Fuzz Auth 0] Authentication failed with fuzzed passcode.
+[Fuzz Auth 1] Sending AUTH command with passcode: [75, 26, 238, 22, 63, 234]
+[Fuzz Auth 1] Authentication failed with fuzzed passcode.
+[Fuzz Auth 2] Sending AUTH command with passcode: [242, 5, 30, 170, 128, 114]
+[Fuzz Auth 2] Authentication failed with fuzzed passcode.
+[Fuzz Auth 3] Sending AUTH command with passcode: [115, 127, 152, 92, 119, 133]
+[Fuzz Auth 3] Authentication failed with fuzzed passcode.
+[Fuzz Auth 4] Sending AUTH command with passcode: [161, 57, 141, 231, 151, 208]
+[Fuzz Auth 4] Authentication failed with fuzzed passcode.
+[Fuzz Auth 5] Sending AUTH command with passcode: [108, 141, 166, 62, 148, 129]
+[Fuzz Auth 5] Authentication failed with fuzzed passcode.
+[Fuzz Auth 6] Sending AUTH command with passcode: [139, 51, 54, 113, 125, 120]
+[Fuzz Auth 6] Authentication failed with fuzzed passcode.
+[Fuzz Auth 7] Sending AUTH command with passcode: [22, 175, 161, 238, 101, 246]
+[Fuzz Auth 7] Authentication failed with fuzzed passcode.
+[Fuzz Auth 8] Sending AUTH command with passcode: [85, 236, 107, 115, 247, 103]
+[Fuzz Auth 8] Authentication failed with fuzzed passcode.
+[Fuzz Auth 9] Sending AUTH command with passcode: [69, 145, 239, 24, 138, 51]
+[Fuzz Auth 9] Authentication failed with fuzzed passcode.
+[Fuzz Auth 10] Sending AUTH command with passcode: [2, 0, 6, 2, 18, 196]
+[Fuzz Auth 10] Authentication failed with fuzzed passcode.
+[Fuzz Auth 11] Sending AUTH command with passcode: [233, 61, 241, 108, 127, 6]
+[Fuzz Auth 11] Authentication failed with fuzzed passcode.
+[Fuzz Auth 12] Sending AUTH command with passcode: [100, 140, 102, 120, 162, 12]
+[Fuzz Auth 12] Authentication failed with fuzzed passcode.
+[Fuzz Auth 13] Sending AUTH command with passcode: [181, 199, 152, 100, 193, 87]
+[Fuzz Auth 13] Authentication failed with fuzzed passcode.
+[Fuzz Auth 14] Sending AUTH command with passcode: [115, 111, 228, 51, 36, 149]
+[Fuzz Auth 14] Authentication failed with fuzzed passcode.
+[Fuzz Auth 15] Sending AUTH command with passcode: [221, 163, 102, 121, 116, 51]
+[Fuzz Auth 15] Authentication failed with fuzzed passcode.
+[Fuzz Auth 16] Sending AUTH command with passcode: [234, 190, 94, 190, 196, 118]
+[Fuzz Auth 16] Authentication failed with fuzzed passcode.
+[Fuzz Auth 17] Sending AUTH command with passcode: [5, 10, 232, 22, 1, 77]
+[Fuzz Auth 17] Authentication failed with fuzzed passcode.
+[Fuzz Auth 18] Sending AUTH command with passcode: [234, 1, 197, 118, 45, 245]
+[Fuzz Auth 18] Authentication failed with fuzzed passcode.
+[Fuzz Auth 19] Sending AUTH command with passcode: [253, 178, 121, 126, 28, 151]
+[Fuzz Auth 19] Authentication failed with fuzzed passcode.
+[Fuzz Auth 20] Sending AUTH command with passcode: [178, 239, 206, 211, 223, 227]
+[Fuzz Auth 20] Authentication failed with fuzzed passcode.
+[Fuzz Auth 21] Sending AUTH command with passcode: [197, 161, 10, 181, 160, 90]
+[Fuzz Auth 21] Authentication failed with fuzzed passcode.
+[Fuzz Auth 22] Sending AUTH command with passcode: [224, 104, 225, 71, 67, 58]
+[Fuzz Auth 22] Authentication failed with fuzzed passcode.
+[Fuzz Auth 23] Sending AUTH command with passcode: [22, 29, 113, 75, 49, 83]
+[Fuzz Auth 23] Authentication failed with fuzzed passcode.
+[Fuzz Auth 24] Sending AUTH command with passcode: [208, 68, 242, 8, 155, 111]
+[Fuzz Auth 24] Authentication failed with fuzzed passcode.
+[Fuzz Auth 25] Sending AUTH command with passcode: [29, 49, 115, 179, 230, 23]
+[Fuzz Auth 25] Authentication failed with fuzzed passcode.
+[Fuzz Auth 26] Sending AUTH command with passcode: [143, 161, 222, 112, 20, 34]
+[Fuzz Auth 26] Authentication failed with fuzzed passcode.
+[Fuzz Auth 27] Sending AUTH command with passcode: [245, 209, 26, 79, 208, 121]
+[Fuzz Auth 27] Authentication failed with fuzzed passcode.
+[Fuzz Auth 28] Sending AUTH command with passcode: [212, 82, 165, 120, 159, 186]
+[Fuzz Auth 28] Authentication failed with fuzzed passcode.
+[Fuzz Auth 29] Sending AUTH command with passcode: [2, 232, 6, 249, 20, 193]
+[Fuzz Auth 29] Authentication failed with fuzzed passcode.
+[Fuzz Auth 30] Sending AUTH command with passcode: [53, 42, 25, 243, 75, 33]
+[Fuzz Auth 30] Authentication failed with fuzzed passcode.
+[Fuzz Auth 31] Sending AUTH command with passcode: [168, 230, 122, 2, 89, 84]
+[Fuzz Auth 31] Authentication failed with fuzzed passcode.
+[Fuzz Auth 32] Sending AUTH command with passcode: [17, 220, 252, 141, 160, 151]
+[Fuzz Auth 32] Authentication failed with fuzzed passcode.
+[Fuzz Auth 33] Sending AUTH command with passcode: [225, 161, 123, 85, 26, 125]
+[Fuzz Auth 33] Authentication failed with fuzzed passcode.
+[Fuzz Auth 34] Sending AUTH command with passcode: [105, 207, 180, 144, 29, 37]
+[Fuzz Auth 34] Authentication failed with fuzzed passcode.
+[Fuzz Auth 35] Sending AUTH command with passcode: [149, 225, 120, 86, 205, 136]
+[Fuzz Auth 35] Authentication failed with fuzzed passcode.
+[Fuzz Auth 36] Sending AUTH command with passcode: [96, 172, 94, 116, 110, 164]
+[Fuzz Auth 36] Authentication failed with fuzzed passcode.
+[Fuzz Auth 37] Sending AUTH command with passcode: [43, 71, 55, 222, 136, 229]
+[Fuzz Auth 37] Authentication failed with fuzzed passcode.
+[Fuzz Auth 38] Sending AUTH command with passcode: [134, 29, 6, 84, 150, 25]
+[Fuzz Auth 38] Authentication failed with fuzzed passcode.
+[Fuzz Auth 39] Sending AUTH command with passcode: [227, 124, 104, 64, 100, 169]
+[Fuzz Auth 39] Authentication failed with fuzzed passcode.
+[Fuzz Auth 40] Sending AUTH command with passcode: [15, 254, 241, 122, 186, 248]
+[Fuzz Auth 40] Authentication failed with fuzzed passcode.
+[Fuzz Auth 41] Sending AUTH command with passcode: [131, 195, 185, 139, 250, 128]
+[Fuzz Auth 41] Authentication failed with fuzzed passcode.
+[Fuzz Auth 42] Sending AUTH command with passcode: [173, 61, 69, 195, 185, 34]
+[Fuzz Auth 42] Authentication failed with fuzzed passcode.
+[Fuzz Auth 43] Sending AUTH command with passcode: [98, 6, 71, 88, 25, 188]
+[Fuzz Auth 43] Authentication failed with fuzzed passcode.
+[Fuzz Auth 44] Sending AUTH command with passcode: [134, 52, 126, 34, 254, 146]
+[Fuzz Auth 44] Authentication failed with fuzzed passcode.
+[Fuzz Auth 45] Sending AUTH command with passcode: [39, 248, 221, 71, 107, 58]
+[Fuzz Auth 45] Authentication failed with fuzzed passcode.
+[Fuzz Auth 46] Sending AUTH command with passcode: [8, 187, 42, 250, 49, 216]
+[Fuzz Auth 46] Authentication failed with fuzzed passcode.
+[Fuzz Auth 47] Sending AUTH command with passcode: [118, 30, 23, 172, 49, 213]
+[Fuzz Auth 47] Authentication failed with fuzzed passcode.
+[Fuzz Auth 48] Sending AUTH command with passcode: [112, 68, 25, 159, 73, 106]
+[Fuzz Auth 48] Authentication failed with fuzzed passcode.
+[Fuzz Auth 49] Sending AUTH command with passcode: [155, 13, 31, 244, 30, 47]
+[Fuzz Auth 49] Authentication failed with fuzzed passcode.
+[Fuzz Auth 50] Sending AUTH command with passcode: [61, 216, 155, 142, 207, 114]
+[Fuzz Auth 50] Authentication failed with fuzzed passcode.
+[Fuzz Auth 51] Sending AUTH command with passcode: [164, 137, 93, 3, 51, 6]
+[Fuzz Auth 51] Authentication failed with fuzzed passcode.
+[Fuzz Auth 52] Sending AUTH command with passcode: [229, 231, 243, 56, 63, 5]
+[Fuzz Auth 52] Authentication failed with fuzzed passcode.
+[Fuzz Auth 53] Sending AUTH command with passcode: [116, 0, 237, 144, 174, 241]
+[Fuzz Auth 53] Authentication failed with fuzzed passcode.
+[Fuzz Auth 54] Sending AUTH command with passcode: [215, 193, 129, 154, 53, 223]
+[Fuzz Auth 54] Authentication failed with fuzzed passcode.
+[Fuzz Auth 55] Sending AUTH command with passcode: [34, 66, 149, 245, 161, 76]
+[Fuzz Auth 55] Authentication failed with fuzzed passcode.
+[Fuzz Auth 56] Sending AUTH command with passcode: [212, 155, 59, 64, 98, 90]
+[Fuzz Auth 56] Authentication failed with fuzzed passcode.
+[Fuzz Auth 57] Sending AUTH command with passcode: [210, 191, 1, 88, 182, 111]
+[Fuzz Auth 57] Authentication failed with fuzzed passcode.
+[Fuzz Auth 58] Sending AUTH command with passcode: [16, 143, 104, 142, 147, 228]
+[Fuzz Auth 58] Authentication failed with fuzzed passcode.
+[Fuzz Auth 59] Sending AUTH command with passcode: [230, 11, 184, 82, 13, 165]
+[Fuzz Auth 59] Authentication failed with fuzzed passcode.
+[Fuzz Auth 60] Sending AUTH command with passcode: [145, 22, 4, 139, 92, 68]
+[Fuzz Auth 60] Authentication failed with fuzzed passcode.
+[Fuzz Auth 61] Sending AUTH command with passcode: [204, 83, 11, 229, 126, 124]
+[Fuzz Auth 61] Authentication failed with fuzzed passcode.
+[Fuzz Auth 62] Sending AUTH command with passcode: [78, 219, 47, 253, 76, 11]
+[Fuzz Auth 62] Authentication failed with fuzzed passcode.
+[Fuzz Auth 63] Sending AUTH command with passcode: [184, 139, 63, 207, 48, 34]
+[Fuzz Auth 63] Authentication failed with fuzzed passcode.
+[Fuzz Auth 64] Sending AUTH command with passcode: [118, 89, 145, 149, 10, 98]
+[Fuzz Auth 64] Authentication failed with fuzzed passcode.
+[Fuzz Auth 65] Sending AUTH command with passcode: [87, 78, 228, 145, 43, 127]
+[Fuzz Auth 65] Authentication failed with fuzzed passcode.
+[Fuzz Auth 66] Sending AUTH command with passcode: [158, 86, 35, 1, 16, 26]
+[Fuzz Auth 66] Authentication failed with fuzzed passcode.
+[Fuzz Auth 67] Sending AUTH command with passcode: [30, 230, 103, 152, 225, 202]
+[Fuzz Auth 67] Authentication failed with fuzzed passcode.
+[Fuzz Auth 68] Sending AUTH command with passcode: [82, 221, 181, 239, 142, 103]
+[Fuzz Auth 68] Authentication failed with fuzzed passcode.
+[Fuzz Auth 69] Sending AUTH command with passcode: [55, 104, 181, 217, 234, 54]
+[Fuzz Auth 69] Authentication failed with fuzzed passcode.
+[Fuzz Auth 70] Sending AUTH command with passcode: [103, 205, 130, 215, 127, 109]
+[Fuzz Auth 70] Authentication failed with fuzzed passcode.
+[Fuzz Auth 71] Sending AUTH command with passcode: [199, 125, 19, 22, 188, 179]
+[Fuzz Auth 71] Authentication failed with fuzzed passcode.
+[Fuzz Auth 72] Sending AUTH command with passcode: [208, 79, 160, 75, 97, 222]
+[Fuzz Auth 72] Authentication failed with fuzzed passcode.
+[Fuzz Auth 73] Sending AUTH command with passcode: [189, 64, 125, 225, 66, 160]
+[Fuzz Auth 73] Authentication failed with fuzzed passcode.
+[Fuzz Auth 74] Sending AUTH command with passcode: [161, 182, 18, 101, 91, 101]
+[Fuzz Auth 74] Authentication failed with fuzzed passcode.
+[Fuzz Auth 75] Sending AUTH command with passcode: [140, 71, 247, 175, 102, 78]
+[Fuzz Auth 75] Authentication failed with fuzzed passcode.
+[Fuzz Auth 76] Sending AUTH command with passcode: [63, 5, 76, 83, 99, 82]
+[Fuzz Auth 76] Authentication failed with fuzzed passcode.
+[Fuzz Auth 77] Sending AUTH command with passcode: [130, 35, 253, 151, 161, 196]
+[Fuzz Auth 77] Authentication failed with fuzzed passcode.
+[Fuzz Auth 78] Sending AUTH command with passcode: [34, 96, 199, 186, 207, 140]
+[Fuzz Auth 78] Authentication failed with fuzzed passcode.
+[Fuzz Auth 79] Sending AUTH command with passcode: [106, 213, 26, 60, 57, 117]
+[Fuzz Auth 79] Authentication failed with fuzzed passcode.
+[Fuzz Auth 80] Sending AUTH command with passcode: [112, 231, 53, 189, 4, 14]
+[Fuzz Auth 80] Authentication failed with fuzzed passcode.
+[Fuzz Auth 81] Sending AUTH command with passcode: [110, 112, 44, 132, 228, 164]
+[Fuzz Auth 81] Authentication failed with fuzzed passcode.
+[Fuzz Auth 82] Sending AUTH command with passcode: [223, 143, 113, 173, 92, 244]
+[Fuzz Auth 82] Authentication failed with fuzzed passcode.
+[Fuzz Auth 83] Sending AUTH command with passcode: [80, 136, 151, 121, 33, 1]
+[Fuzz Auth 83] Authentication failed with fuzzed passcode.
+[Fuzz Auth 84] Sending AUTH command with passcode: [109, 142, 220, 84, 168, 69]
+[Fuzz Auth 84] Authentication failed with fuzzed passcode.
+[Fuzz Auth 85] Sending AUTH command with passcode: [54, 52, 107, 200, 26, 193]
+[Fuzz Auth 85] Authentication failed with fuzzed passcode.
+[Fuzz Auth 86] Sending AUTH command with passcode: [12, 111, 145, 217, 63, 198]
+[Fuzz Auth 86] Authentication failed with fuzzed passcode.
+[Fuzz Auth 87] Sending AUTH command with passcode: [165, 7, 69, 107, 185, 151]
+[Fuzz Auth 87] Authentication failed with fuzzed passcode.
+[Fuzz Auth 88] Sending AUTH command with passcode: [29, 37, 248, 158, 71, 204]
+[Fuzz Auth 88] Authentication failed with fuzzed passcode.
+[Fuzz Auth 89] Sending AUTH command with passcode: [84, 89, 167, 231, 249, 126]
+[Fuzz Auth 89] Authentication failed with fuzzed passcode.
+[Fuzz Auth 90] Sending AUTH command with passcode: [62, 60, 54, 236, 54, 224]
+[Fuzz Auth 90] Authentication failed with fuzzed passcode.
+[Fuzz Auth 91] Sending AUTH command with passcode: [121, 144, 107, 196, 244, 50]
+[Fuzz Auth 91] Authentication failed with fuzzed passcode.
+[Fuzz Auth 92] Sending AUTH command with passcode: [153, 134, 248, 200, 94, 41]
+[Fuzz Auth 92] Authentication failed with fuzzed passcode.
+[Fuzz Auth 93] Sending AUTH command with passcode: [105, 36, 83, 55, 73, 131]
+[Fuzz Auth 93] Authentication failed with fuzzed passcode.
+[Fuzz Auth 94] Sending AUTH command with passcode: [84, 35, 73, 161, 25, 252]
+[Fuzz Auth 94] Authentication failed with fuzzed passcode.
+[Fuzz Auth 95] Sending AUTH command with passcode: [54, 4, 148, 108, 139, 107]
+[Fuzz Auth 95] Authentication failed with fuzzed passcode.
+[Fuzz Auth 96] Sending AUTH command with passcode: [17, 30, 184, 113, 2, 191]
+[Fuzz Auth 96] Authentication failed with fuzzed passcode.
+[Fuzz Auth 97] Sending AUTH command with passcode: [114, 142, 227, 70, 228, 89]
+[Fuzz Auth 97] Authentication failed with fuzzed passcode.
+[Fuzz Auth 98] Sending AUTH command with passcode: [91, 69, 201, 8, 236, 193]
+[Fuzz Auth 98] Authentication failed with fuzzed passcode.
+[Fuzz Auth 99] Sending AUTH command with passcode: [201, 170, 63, 167, 178, 168]
+[Fuzz Auth 99] Authentication failed with fuzzed passcode.
+[X] Fuzzing authentication did not succeed after several attempts. Exiting.
+Task was destroyed but it is pending!
+task: <Task cancelling name='Task-2' coro=<BLEClient._serialport_task() running at C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py:92> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\asyncio\tasks.py:767]>

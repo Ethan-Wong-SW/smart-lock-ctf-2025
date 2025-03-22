@@ -1,0 +1,27 @@
+[1] Connecting to "Smart Lock [Group 3]"...
+[Fuzz Auth 0] Sending AUTH command with passcode: [225, 84, 71, 135, 105, 49]
+[Fuzz Auth 0] Authentication failed with fuzzed passcode.
+[Fuzz Auth 1] Sending AUTH command with passcode: [56, 213, 27, 2, 135, 217]
+[Fuzz Auth 1] Authentication failed with fuzzed passcode.
+[Fuzz Auth 2] Sending AUTH command with passcode: [219, 246, 225, 3, 47, 202]
+[Fuzz Auth 2] Authentication failed with fuzzed passcode.
+[Fuzz Auth 3] Sending AUTH command with passcode: [202, 33, 150, 179, 247, 21]
+[Fuzz Auth 3] Authentication failed with fuzzed passcode.
+[Fuzz Auth 4] Sending AUTH command with passcode: [213, 78, 134, 82, 197, 240]
+[Fuzz Auth 4] Authentication failed with fuzzed passcode.
+[X] Fuzzing authentication did not succeed after several attempts. Exiting.
+
+[Logs from Smart Lock (Serial Port)]:
+--------------------------------------------------
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed

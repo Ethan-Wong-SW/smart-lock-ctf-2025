@@ -1,0 +1,49 @@
+[1] Connecting to "Smart Lock [Group 3]"...
+[Mutation Fuzz] Sending correct passcode for authentication before fuzzing commands.
+[Mutation Fuzz] Successfully authenticated with correct passcode.
+[Mutation] Byte at index 0 changed from 2 to 209
+[Mutation Fuzz 0] Sending mutated command: [209]
+[Mutation Fuzz 0] Received response: [2]
+[Mutation] Byte at index 0 changed from 1 to 116
+[Mutation Fuzz 1] Sending mutated command: [116]
+[Mutation Fuzz 1] Received response: [2]
+[Mutation] Appended extra byte: 57
+[Mutation Fuzz 2] Sending mutated command: [1, 57]
+[Mutation Fuzz 2] Received response: [0]
+[Mutation] Byte at index 0 changed from 1 to 178
+[Mutation Fuzz 3] Sending mutated command: [178]
+[Mutation Fuzz 3] Received response: [2]
+[Mutation] Appended extra byte: 220
+[Mutation Fuzz 4] Sending mutated command: [2, 220]
+[Mutation Fuzz 4] Received response: [0]
+[Mutation] Byte at index 0 changed from 2 to 242
+[Mutation Fuzz 5] Sending mutated command: [242]
+[Mutation Fuzz 5] Received response: [2]
+[Mutation] Byte at index 0 changed from 1 to 55
+[Mutation Fuzz 6] Sending mutated command: [55]
+[Mutation Fuzz 6] Received response: [2]
+[Mutation] Byte at index 0 changed from 1 to 130
+[Mutation Fuzz 7] Sending mutated command: [130]
+[Mutation Fuzz 7] Received response: [2]
+[Mutation] Byte at index 0 changed from 2 to 152
+[Mutation Fuzz 8] Sending mutated command: [152]
+[Mutation Fuzz 8] Received response: [2]
+[Mutation] Byte at index 0 changed from 1 to 5
+[Mutation Fuzz 9] Sending mutated command: [5]
+[Mutation Fuzz 9] Received response: [2]
+
+[Disconnecting...]
+
+[Logs from Smart Lock (Serial Port)]:
+--------------------------------------------------
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
