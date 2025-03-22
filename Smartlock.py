@@ -64,6 +64,22 @@ async def example_control_smartlock():
 
     # --- Fuzzing Operational Commands ---
     command_choices = [OPEN, CLOSE]
+    
+    # Ensure correct passcode is input before fuzzing operational commands
+    print("[Fuzz Command] Sending correct passcode for authentication before fuzzing commands.")
+    try:
+        res = await ble.write_command(AUTH + PASSCODE)
+        if res and res[0] == 0:
+            print("[Fuzz Command] Successfully authenticated with correct passcode.")
+        else:
+            print("[Fuzz Command] Failed to authenticate with correct passcode. Exiting.")
+            await ble.disconnect()
+            return
+    except Exception as e:
+        print(f"[Fuzz Command] Error sending correct passcode: {e}")
+        await ble.disconnect()
+        return
+
     for i in range(10):
         base_cmd = random.choice(command_choices)
         # Append between 0 and 5 random extra bytes to the command to fuzz the command structure.
@@ -125,6 +141,22 @@ async def example_mutation_based_fuzzer():
 
     # --- Mutation Fuzzing for Operational Commands ---
     command_choices = [OPEN, CLOSE]
+    
+    # Ensure correct passcode is input before fuzzing operational commands
+    print("[Mutation Fuzz] Sending correct passcode for authentication before fuzzing commands.")
+    try:
+        res = await ble.write_command(AUTH + PASSCODE)
+        if res and res[0] == 0:
+            print("[Mutation Fuzz] Successfully authenticated with correct passcode.")
+        else:
+            print("[Mutation Fuzz] Failed to authenticate with correct passcode. Exiting.")
+            await ble.disconnect()
+            return
+    except Exception as e:
+        print(f"[Mutation Fuzz] Error sending correct passcode: {e}")
+        await ble.disconnect()
+        return
+
     for i in range(10):
         base_cmd = random.choice(command_choices)
         mutated_command = mutate_command(base_cmd)
