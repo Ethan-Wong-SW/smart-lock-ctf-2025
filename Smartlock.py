@@ -29,8 +29,18 @@ def mutate_command(command):
         print(f'[Mutation] Appended extra byte: {extra}')
     return mutated
 
+async def ensure_connection(ble):
+    """Helper to verify connection and attempt reconnection if needed."""
+    try:
+        print("[!] Attempting to reconnect...")
+        await ble.connect(DEVICE_NAME)
+        print("[!] Reconnected successfully.")
+    except Exception as conn_e:
+        print(f"[!] Reconnection failed: {conn_e}")
+
 async def example_control_smartlock():
-    """Original fuzzer: fuzzes authentication with random passcodes and appends extra bytes to operational commands."""
+    """Original fuzzer: fuzzes authentication with random passcodes
+    and appends extra bytes to operational commands."""
     ble = BLEClient()
     ble.init_logs()  # Collect logs from Smart Lock (Serial Port)
 
@@ -47,6 +57,8 @@ async def example_control_smartlock():
             res = await ble.write_command(AUTH + fuzz_passcode)
         except Exception as e:
             print(f'[Fuzz Auth {i}] Error sending AUTH command: {e}')
+            if "Not connected" in str(e):
+                await ensure_connection(ble)
             await asyncio.sleep(1)
             continue
         if res and res[0] == 0:
@@ -77,23 +89,26 @@ async def example_control_smartlock():
             return
     except Exception as e:
         print(f"[Fuzz Command] Error sending correct passcode: {e}")
+        if "Not connected" in str(e):
+            await ensure_connection(ble)
         await ble.disconnect()
         return
 
     for i in range(10):
-        base_cmd = random.choice(command_choices)
-        # Append between 0 and 5 random extra bytes to the command to fuzz the command structure.
+        # Append between 0 and 5 random extra bytes to the command to fuzz the structure.
         fuzz_extra = [random.randint(0, 255) for _ in range(random.randint(0, 5))]
-        fuzzed_command = base_cmd + fuzz_extra
+        fuzzed_command = random.choice(command_choices) + fuzz_extra
         print(f'[Fuzz Command {i}] Sending fuzzed command: {fuzzed_command}')
         try:
             res = await ble.write_command(fuzzed_command)
         except Exception as e:
             print(f'[Fuzz Command {i}] Error sending command: {e}')
+            if "Not connected" in str(e):
+                await ensure_connection(ble)
             await asyncio.sleep(random.uniform(0.5, 3))
             continue
         print(f'[Fuzz Command {i}] Received response: {res}')
-        # Wait for a random time between commands to simulate unpredictable timing.
+        # Wait a random time between commands to simulate unpredictable timing.
         await asyncio.sleep(random.uniform(0.5, 3))
     
     print("\n[Disconnecting...]")
@@ -107,7 +122,8 @@ async def example_control_smartlock():
     sys.exit(0)
 
 async def example_mutation_based_fuzzer():
-    """Mutation-based fuzzer: uses a valid authentication and then mutates valid operational commands."""
+    """Mutation-based fuzzer: uses a valid authentication and then
+    mutates valid operational commands."""
     ble = BLEClient()
     ble.init_logs()  # Collect logs from Smart Lock (Serial Port)
 
@@ -124,6 +140,8 @@ async def example_mutation_based_fuzzer():
             res = await ble.write_command(AUTH + mutated_passcode)
         except Exception as e:
             print(f'[Mutation Auth {i}] Error sending AUTH command: {e}')
+            if "Not connected" in str(e):
+                await ensure_connection(ble)
             await asyncio.sleep(1)
             continue
         if res and res[0] == 0:
@@ -154,6 +172,8 @@ async def example_mutation_based_fuzzer():
             return
     except Exception as e:
         print(f"[Mutation Fuzz] Error sending correct passcode: {e}")
+        if "Not connected" in str(e):
+            await ensure_connection(ble)
         await ble.disconnect()
         return
 
@@ -165,6 +185,8 @@ async def example_mutation_based_fuzzer():
             res = await ble.write_command(mutated_command)
         except Exception as e:
             print(f'[Mutation Fuzz {i}] Error sending command: {e}')
+            if "Not connected" in str(e):
+                await ensure_connection(ble)
             await asyncio.sleep(random.uniform(0.5, 3))
             continue
         print(f'[Mutation Fuzz {i}] Received response: {res}')
