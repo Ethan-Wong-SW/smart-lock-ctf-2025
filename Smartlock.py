@@ -43,7 +43,12 @@ async def example_control_smartlock():
         # Create a random 6-byte passcode
         fuzz_passcode = [random.randint(0, 255) for _ in range(6)]
         print(f'[Fuzz Auth {i}] Sending AUTH command with passcode: {fuzz_passcode}')
-        res = await ble.write_command(AUTH + fuzz_passcode)
+        try:
+            res = await ble.write_command(AUTH + fuzz_passcode)
+        except Exception as e:
+            print(f'[Fuzz Auth {i}] Error sending AUTH command: {e}')
+            await asyncio.sleep(1)
+            continue
         if res and res[0] == 0:
             print(f'[Fuzz Auth {i}] Authenticated with fuzzed passcode: {fuzz_passcode}')
             authenticated = True
@@ -65,7 +70,12 @@ async def example_control_smartlock():
         fuzz_extra = [random.randint(0, 255) for _ in range(random.randint(0, 5))]
         fuzzed_command = base_cmd + fuzz_extra
         print(f'[Fuzz Command {i}] Sending fuzzed command: {fuzzed_command}')
-        res = await ble.write_command(fuzzed_command)
+        try:
+            res = await ble.write_command(fuzzed_command)
+        except Exception as e:
+            print(f'[Fuzz Command {i}] Error sending command: {e}')
+            await asyncio.sleep(random.uniform(0.5, 3))
+            continue
         print(f'[Fuzz Command {i}] Received response: {res}')
         # Wait for a random time between commands to simulate unpredictable timing.
         await asyncio.sleep(random.uniform(0.5, 3))
@@ -94,7 +104,12 @@ async def example_mutation_based_fuzzer():
         # Mutate the valid passcode.
         mutated_passcode = mutate_command(PASSCODE)
         print(f'[Mutation Auth {i}] Sending AUTH command with mutated passcode: {mutated_passcode}')
-        res = await ble.write_command(AUTH + mutated_passcode)
+        try:
+            res = await ble.write_command(AUTH + mutated_passcode)
+        except Exception as e:
+            print(f'[Mutation Auth {i}] Error sending AUTH command: {e}')
+            await asyncio.sleep(1)
+            continue
         if res and res[0] == 0:
             print(f'[Mutation Auth {i}] Authenticated with mutated passcode: {mutated_passcode}')
             authenticated = True
@@ -114,7 +129,12 @@ async def example_mutation_based_fuzzer():
         base_cmd = random.choice(command_choices)
         mutated_command = mutate_command(base_cmd)
         print(f'[Mutation Fuzz {i}] Sending mutated command: {mutated_command}')
-        res = await ble.write_command(mutated_command)
+        try:
+            res = await ble.write_command(mutated_command)
+        except Exception as e:
+            print(f'[Mutation Fuzz {i}] Error sending command: {e}')
+            await asyncio.sleep(random.uniform(0.5, 3))
+            continue
         print(f'[Mutation Fuzz {i}] Received response: {res}')
         # Wait for a random time between commands to simulate unpredictable timing.
         await asyncio.sleep(random.uniform(0.5, 3))
@@ -135,7 +155,7 @@ if len(sys.argv) > 1 and sys.argv[1] == "--gui":
 else:
     try:
         # Uncomment one of the following lines to choose the fuzzer mode:
-        asyncio.run(example_control_smartlock())
-        # asyncio.run(example_mutation_based_fuzzer())
+        # asyncio.run(example_control_smartlock())
+        asyncio.run(example_mutation_based_fuzzer())
     except KeyboardInterrupt:
         print("\nProgram Exited by User!")
