@@ -1,0 +1,501 @@
+Fuzzing Function: fuzz_mutation
+Timestamp: 2025-03-13 16:14:54.993494
+Command: [1, 2, 3, 5, 6]
+Response: [3]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.021539
+Command: [1, 2, 3, 5]
+Response: [3]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.052207
+Command: [66, 18, 67, 229]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.082837
+Command: [64, 2, 3, 237]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.113043
+Command: [197, 195, 51, 109]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.141754
+Command: [229, 192, 59, 108]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.171795
+Command: [229, 59, 108]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.201433
+Command: [59, 108]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.233089
+Command: [59, 108, 40]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.263022
+Command: [183, 232, 44]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.292633
+Command: [183, 232, 44, 97]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.323118
+Command: [167, 234, 170, 121]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.352290
+Command: [167, 234, 121]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.382617
+Command: [182, 170, 120]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.413527
+Command: [222, 14, 48]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.443251
+Command: [212, 10, 120]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.472664
+Command: [212, 10, 120, 246]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.502352
+Command: [212, 10, 120, 246, 137]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.532013
+Command: [245, 122, 124, 213, 128]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.563098
+Command: [122, 124, 213, 128]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.592783
+Command: [106, 108, 244, 149]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.621932
+Command: [106, 108, 244, 149, 99]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.651939
+Command: [106, 44, 116, 157, 103]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.683040
+Command: [97, 109, 124, 175, 99]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.713168
+Command: [97, 124, 175, 99]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.742355
+Command: [99, 60, 173, 96]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.774967
+Command: [235, 28, 45, 73]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.802085
+Command: [235, 28, 45]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.832461
+Command: [235, 28, 45, 138]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.862285
+Command: [235, 28, 45]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.891983
+Command: [107, 5, 47]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.922605
+Command: [107, 5, 47, 183]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.952667
+Command: [107, 5, 47, 183, 24]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:55.982705
+Command: [225, 4, 39, 244, 104]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.012221
+Command: [225, 4, 39, 244, 104, 249]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.042148
+Command: [241, 0, 151, 245, 232, 57]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.071767
+Command: [241, 0, 151, 245, 232, 57, 18]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.101808
+Command: [241, 0, 151, 245, 232, 57, 18, 4]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.132751
+Command: [17, 128, 147, 245, 238, 57, 115, 197]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.163091
+Command: [17, 128, 147, 245, 238, 57, 115, 197, 123]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.193258
+Command: [17, 128, 147, 238, 57, 115, 197, 123]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.222476
+Command: [145, 195, 162, 246, 40, 119, 213, 171]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.252201
+Command: [177, 201, 226, 251, 43, 125, 245, 232]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.282018
+Command: [177, 201, 226, 251, 43, 125, 245, 232, 131]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.313228
+Command: [177, 201, 226, 251, 43, 125, 245, 232, 131, 207]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.357628
+Command: [57, 193, 224, 251, 74, 56, 247, 224, 51, 199]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.395165
+Command: [47, 232, 229, 210, 66, 48, 255, 208, 114, 147]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.417382
+Command: [47, 232, 229, 210, 66, 48, 255, 208, 114, 147, 76]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.440194
+Command: [46, 232, 228, 82, 106, 80, 251, 144, 230, 151, 72]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.462429
+Command: [46, 232, 228, 82, 106, 80, 251, 144, 230, 151, 72, 42]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.484744
+Command: [44, 120, 230, 219, 202, 242, 253, 242, 231, 149, 64, 168]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.508090
+Command: [140, 117, 246, 123, 10, 214, 221, 242, 101, 147, 0, 170]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.531111
+Command: [13, 113, 228, 25, 138, 219, 253, 98, 100, 163, 146, 190]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.551944
+Command: [69, 121, 224, 65, 140, 218, 185, 115, 116, 147, 130, 190]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.575186
+Command: [197, 250, 192, 161, 172, 178, 187, 50, 188, 153, 143, 158]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.597806
+Command: [237, 248, 200, 183, 46, 34, 155, 162, 176, 185, 131, 30]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.619184
+Command: [233, 232, 200, 181, 39, 32, 24, 162, 240, 184, 1, 157]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.641414
+Command: [233, 232, 181, 39, 32, 24, 162, 240, 184, 1, 157]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.665357
+Command: [201, 234, 53, 55, 192, 56, 168, 224, 174, 33, 136]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.687424
+Command: [217, 238, 29, 183, 193, 57, 40, 164, 44, 32, 136]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.709773
+Command: [241, 255, 149, 182, 233, 27, 32, 36, 125, 36, 200]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.732555
+Command: [241, 255, 149, 182, 233, 27, 32, 36, 125, 36, 200, 223]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.754731
+Command: [241, 255, 149, 182, 27, 32, 36, 125, 36, 200, 223]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.776957
+Command: [241, 255, 149, 182, 27, 32, 36, 125, 200, 223]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.799154
+Command: [117, 167, 165, 228, 31, 225, 52, 109, 208, 71]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.822361
+Command: [117, 167, 165, 228, 31, 225, 52, 109, 208, 71, 116]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.845636
+Command: [117, 167, 165, 228, 31, 225, 109, 208, 71, 116]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.866866
+Command: [117, 167, 165, 31, 225, 109, 208, 71, 116]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.890058
+Command: [247, 135, 36, 151, 97, 237, 145, 15, 100]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.912876
+Command: [247, 135, 36, 151, 97, 237, 145, 15, 100, 116]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.933610
+Command: [127, 143, 230, 211, 113, 169, 146, 13, 36, 84]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.957588
+Command: [127, 143, 230, 211, 113, 169, 146, 13, 36, 84, 14]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:56.980818
+Command: [108, 142, 196, 123, 113, 32, 22, 205, 100, 212, 175]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.002018
+Command: [108, 142, 196, 123, 113, 32, 22, 205, 100, 212, 175, 227]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.025288
+Command: [108, 142, 196, 123, 113, 32, 22, 205, 100, 212, 175, 227, 200]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.047022
+Command: [110, 198, 100, 59, 49, 44, 85, 204, 48, 198, 171, 195, 72]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.069780
+Command: [107, 194, 101, 43, 49, 4, 213, 252, 59, 242, 171, 203, 40]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.092735
+Command: [123, 210, 245, 47, 115, 36, 213, 237, 59, 123, 191, 223, 0]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.115369
+Command: [123, 210, 245, 47, 115, 36, 213, 237, 59, 123, 191, 223, 0, 191]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.137641
+Command: [123, 210, 245, 47, 115, 36, 213, 237, 59, 123, 191, 223, 0, 191, 133]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.159858
+Command: [121, 242, 241, 39, 123, 34, 85, 204, 35, 121, 191, 159, 4, 63, 133]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.182330
+Command: [249, 250, 243, 23, 123, 26, 94, 205, 99, 249, 191, 27, 28, 55, 149]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.204512
+Command: [249, 250, 243, 23, 123, 26, 94, 205, 99, 249, 191, 27, 28, 55, 149, 169]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.226834
+Command: [249, 243, 23, 123, 26, 94, 205, 99, 249, 191, 27, 28, 55, 149, 169]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.249968
+Command: [249, 243, 23, 123, 26, 94, 205, 99, 249, 191, 27, 28, 55, 149, 169, 18]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.272099
+Command: [249, 243, 23, 123, 94, 205, 99, 249, 191, 27, 28, 55, 149, 169, 18]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.294823
+Command: [249, 243, 23, 123, 94, 205, 99, 249, 191, 27, 28, 55, 149, 169, 18, 79]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.317065
+Command: [251, 251, 23, 123, 92, 197, 98, 251, 167, 25, 93, 119, 157, 188, 154, 71]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.340344
+Command: [251, 251, 23, 123, 92, 197, 98, 251, 167, 25, 93, 119, 157, 188, 154, 71, 169]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.366969
+Command: [251, 251, 23, 123, 92, 197, 98, 251, 167, 25, 93, 119, 157, 188, 154, 71, 169, 236]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.398029
+Command: [122, 251, 21, 111, 28, 205, 224, 189, 181, 19, 221, 103, 223, 170, 155, 195, 161, 204]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.430405
+Command: [122, 251, 21, 111, 28, 205, 224, 189, 181, 19, 221, 103, 223, 170, 155, 195, 161]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.452097
+Command: [122, 251, 21, 111, 28, 205, 224, 189, 181, 19, 221, 103, 223, 170, 155, 195, 161, 91]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.475065
+Command: [98, 179, 23, 78, 24, 93, 72, 28, 165, 18, 157, 36, 251, 182, 146, 193, 35, 251]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.498231
+Command: [102, 51, 23, 111, 16, 95, 104, 4, 225, 50, 173, 38, 163, 166, 184, 194, 99, 249]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.519409
+Command: [102, 51, 23, 111, 95, 104, 4, 225, 50, 173, 38, 163, 166, 184, 194, 99, 249]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.546307
+Command: [102, 51, 23, 111, 95, 104, 4, 225, 50, 173, 38, 163, 166, 184, 194, 99, 249, 29]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.575056
+Command: [102, 39, 83, 107, 91, 40, 36, 227, 60, 47, 135, 51, 167, 186, 196, 35, 249, 89]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.599034
+Command: [100, 103, 107, 75, 73, 136, 55, 211, 116, 34, 134, 55, 170, 169, 198, 33, 217, 121]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:14:57.620879
+Command: [100, 103, 107, 75, 73, 136, 55, 211, 116, 134, 55, 170, 169, 198, 33, 217, 121]
+Response: [2]
+Errors/Logs: ['', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x01 (Open)', '[Bluetooth] Received command: 0x01 (Open)']
+--------------------------------------------------

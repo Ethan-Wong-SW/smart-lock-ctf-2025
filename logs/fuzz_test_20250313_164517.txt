@@ -1,0 +1,501 @@
+Fuzzing Function: fuzz_random_w_auth
+Timestamp: 2025-03-13 16:45:20.051223
+Command: [0, 93, 191, 38, 98, 38, 138]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.083429
+Command: [0, 128, 235, 66, 233, 152, 100]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.112899
+Command: [0, 175, 89, 96, 108, 185, 218]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.143149
+Command: [0, 83, 123, 251, 108, 41, 150]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.172741
+Command: [0, 185, 226, 212, 140, 65, 51]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.203490
+Command: [0, 15, 19, 185, 63, 228, 26]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.232175
+Command: [0, 198, 98, 179, 162, 141, 217]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.263036
+Command: [0, 184, 120, 159, 86, 172, 186]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.292243
+Command: [0, 48, 115, 100, 114, 206, 4]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.322549
+Command: [0, 98, 48, 196, 179, 179, 113]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.352460
+Command: [0, 240, 200, 153, 197, 239, 245]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.382742
+Command: [0, 234, 249, 205, 57, 35, 36]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.412566
+Command: [0, 123, 63, 48, 189, 98, 158]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.441535
+Command: [0, 155, 250, 221, 52, 134, 235]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.470864
+Command: [0, 236, 230, 26, 91, 77, 238]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.502578
+Command: [0, 190, 148, 125, 91, 247, 180]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.532850
+Command: [0, 62, 252, 138, 232, 199, 254]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.562927
+Command: [0, 243, 25, 197, 4, 7, 138]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.591864
+Command: [0, 86, 191, 78, 36, 124, 17]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.621982
+Command: [0, 126, 109, 152, 206, 241, 48]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.651702
+Command: [0, 66, 80, 151, 109, 196, 255]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.682340
+Command: [0, 72, 213, 4, 20, 80, 195]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.712535
+Command: [0, 32, 78, 27, 239, 137, 99]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.742129
+Command: [0, 213, 128, 64, 159, 83, 134]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.772262
+Command: [0, 210, 165, 70, 249, 29, 232]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.801954
+Command: [0, 231, 200, 156, 109, 130, 10]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.832324
+Command: [0, 242, 226, 132, 130, 105, 153]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.876093
+Command: [0, 21, 7, 110, 159, 152, 45]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.907158
+Command: [0, 220, 173, 1, 57, 28, 156]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.936584
+Command: [0, 184, 239, 157, 205, 173, 128]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.968175
+Command: [0, 200, 183, 209, 153, 14, 64]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:20.997180
+Command: [0, 58, 251, 45, 121, 91, 93]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.027479
+Command: [0, 90, 157, 130, 72, 82, 253]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.057571
+Command: [0, 255, 85, 47, 75, 88, 141]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.087280
+Command: [0, 244, 66, 138, 242, 156, 230]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.116577
+Command: [0, 238, 98, 116, 108, 216, 215]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.147738
+Command: [0, 52, 7, 129, 108, 84, 56]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.177987
+Command: [0, 159, 136, 4, 245, 61, 190]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.223996
+Command: [0, 238, 132, 139, 153, 113, 115]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.254282
+Command: [0, 132, 96, 248, 233, 85, 60]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.282020
+Command: [0, 54, 119, 188, 204, 20, 211]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.311660
+Command: [0, 146, 38, 216, 213, 143, 20]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.343027
+Command: [0, 143, 186, 53, 196, 185, 167]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.371462
+Command: [0, 122, 41, 222, 202, 237, 25]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.401641
+Command: [0, 134, 72, 29, 88, 14, 86]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.432419
+Command: [0, 70, 238, 242, 31, 73, 47]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.462737
+Command: [0, 151, 73, 75, 74, 3, 78]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.484563
+Command: [0, 152, 33, 141, 225, 43, 214]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.507204
+Command: [0, 28, 254, 198, 136, 170, 58]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.540168
+Command: [0, 170, 236, 83, 49, 112, 101]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.563555
+Command: [0, 22, 97, 10, 130, 131, 238]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.597051
+Command: [0, 62, 221, 62, 143, 112, 152]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.619234
+Command: [0, 44, 116, 39, 155, 220, 232]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.641623
+Command: [0, 80, 171, 188, 54, 231, 70]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.664032
+Command: [0, 2, 65, 233, 8, 173, 103]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.687389
+Command: [0, 215, 214, 41, 43, 76, 162]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.709076
+Command: [0, 253, 26, 19, 68, 48, 223]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.731136
+Command: [0, 30, 34, 34, 108, 71, 182]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.754482
+Command: [0, 105, 197, 145, 107, 250, 64]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.776978
+Command: [0, 237, 180, 8, 144, 204, 69]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.799207
+Command: [0, 87, 180, 207, 42, 227, 120]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.821384
+Command: [0, 164, 127, 90, 100, 211, 8]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.855517
+Command: [0, 108, 154, 239, 80, 192, 191]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.878950
+Command: [0, 78, 213, 113, 143, 71, 75]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.910997
+Command: [0, 192, 153, 213, 40, 8, 240]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.933830
+Command: [0, 178, 208, 130, 254, 120, 40]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.957010
+Command: [0, 152, 66, 228, 203, 250, 62]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:21.979294
+Command: [0, 133, 239, 129, 4, 60, 109]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.001984
+Command: [0, 222, 69, 228, 246, 235, 102]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.024738
+Command: [0, 121, 154, 21, 217, 35, 20]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.046594
+Command: [0, 140, 59, 103, 255, 12, 134]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.068880
+Command: [0, 105, 131, 161, 189, 71, 101]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.092098
+Command: [0, 178, 209, 173, 60, 81, 221]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.113796
+Command: [0, 3, 143, 190, 168, 19, 2]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.136634
+Command: [0, 112, 54, 237, 69, 90, 30]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.158860
+Command: [0, 42, 92, 14, 50, 216, 50]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.182089
+Command: [0, 150, 180, 223, 150, 90, 128]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.204684
+Command: [0, 118, 248, 238, 99, 51, 178]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.228991
+Command: [0, 193, 13, 148, 160, 110, 12]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.261888
+Command: [0, 177, 82, 93, 68, 24, 58]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.283480
+Command: [0, 54, 255, 203, 178, 93, 15]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.316565
+Command: [0, 229, 7, 49, 58, 102, 5]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.351048
+Command: [0, 179, 200, 203, 113, 241, 110]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.373127
+Command: [0, 241, 232, 85, 141, 191, 65]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.395400
+Command: [0, 205, 213, 46, 41, 15, 103]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.418133
+Command: [0, 40, 233, 187, 19, 161, 49]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.440522
+Command: [0, 74, 193, 113, 86, 219, 242]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.463684
+Command: [0, 137, 108, 30, 185, 213, 246]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.485773
+Command: [0, 214, 100, 246, 111, 234, 27]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.508288
+Command: [0, 174, 167, 197, 16, 55, 224]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.529674
+Command: [0, 14, 6, 39, 47, 161, 69]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.553424
+Command: [0, 186, 254, 222, 238, 77, 26]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.575168
+Command: [0, 22, 224, 64, 216, 187, 29]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.598372
+Command: [0, 204, 187, 229, 47, 201, 103]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.622471
+Command: [0, 248, 225, 1, 153, 218, 167]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.654423
+Command: [0, 175, 181, 118, 99, 48, 245]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.677231
+Command: [0, 52, 198, 87, 117, 8, 212]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.699735
+Command: [0, 254, 225, 22, 183, 40, 208]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.721431
+Command: [0, 124, 21, 200, 229, 199, 71]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------
+Timestamp: 2025-03-13 16:45:22.744759
+Command: [0, 71, 214, 7, 80, 226, 211]
+Response: [1]
+Errors/Logs: ['I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size', '[Bluetooth] User Connected', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed', '[Bluetooth] Received command: 0x00 (Authenticate)', '[AUTH] Authentication Failed']
+--------------------------------------------------

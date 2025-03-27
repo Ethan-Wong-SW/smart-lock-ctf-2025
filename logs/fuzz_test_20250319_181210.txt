@@ -1,0 +1,35 @@
+Fuzzing Password now
+[2] Authenticating...
+[!] --> Command: [0, 147, 175, 115, 142, 175, 109]
+[!] <-- Response: 1
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 217, 9, 71, 205, 220, 9]
+[!] <-- Response: 1
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 133, 97, 192, 23, 189, 206]
+[!] <-- Response: 1
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 127, 186, 35, 252, 152, 214]
+[!] <-- Response: 1
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 171, 103, 161, 112, 154, 103]
+[!] <-- Response: 1
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+Fuzzing command now
+[!] --> Command: [26]
+[!] <-- Response: [2]
+Current state: Locked
+--------------------------------------------------
+[!] --> Command: []
+[!] <-- Response: [0]
+Current state: Unlocked
+--------------------------------------------------
