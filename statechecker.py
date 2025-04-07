@@ -5,6 +5,7 @@ import asyncio
 import datetime
 import traceback
 from BLEClient import BLEClient
+import logging
 
 ble = None
 log_filename = None
@@ -66,6 +67,34 @@ class SmartLockState:
     UNLOCKED = "Unlocked"
     AUTHENTICATED_AND_AUTHENTICATING_AGAIN = "authenticated once and authenticating again"
 
+def generate_filename():
+    """
+    Generates a unique filename using the current timestamp.
+    """
+    
+    log_dir = "logs"
+    os.makedirs(log_dir, exist_ok=True)
+
+    # Generate a unique log filename based on the current timestamp
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_filename = os.path.join(log_dir, f"fuzz_test_{timestamp}.txt")
+
+    return log_filename
+
+# Setup logging to a text file
+log_filename = generate_filename()  # Generate log file with timestamp
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(message)s",
+    handlers=[
+        logging.FileHandler(log_filename),  # Log to a file
+        logging.StreamHandler(sys.stdout)   # Also print to console
+    ]
+)
+
+def log_print(message):
+    """Logs and prints a message. Call this function to print to console and txt file"""
+    logging.info(message)
 
 def flip_bits(data):
     """
@@ -132,21 +161,6 @@ def log_comment(filename, comment):
     with open(filename, "a") as file:
         file.write(comment + "\n")
 
-
-def generate_filename():
-    """
-    Generates a unique filename using the current timestamp.
-    """
-    
-    log_dir = "logs"
-    os.makedirs(log_dir, exist_ok=True)
-
-    # Generate a unique log filename based on the current timestamp
-    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    log_filename = os.path.join(log_dir, f"fuzz_test_{timestamp}.txt")
-
-    return log_filename
-
 def write_fuzz_type(filename, fuzz_type):
     with open(filename, "a") as file:
         file.write(f"Fuzzing Function: {fuzz_type}\n")
@@ -156,7 +170,7 @@ async def fuzz_with_state_tracking():
     ble.init_logs()  # Collect logs from Smart Lock (Serial Port)
 
     # Generate a unique log file
-    log_filename = generate_filename()
+    # log_filename = generate_filename()
 
     # Initialize the state machine
     current_state = SmartLockState.LOCKED
