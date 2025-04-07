@@ -1,0 +1,20 @@
+[1] Connecting to "Smart Lock [Group 3]"...
+[Mutation] Appended extra byte: 22
+[Mutation Auth 0] Sending AUTH command with mutated passcode: [1, 2, 3, 4, 5, 6, 22]
+[Mutation Auth 0] Authentication failed with mutated passcode.
+[Mutation] Appended extra byte: 133
+[Mutation Auth 1] Sending AUTH command with mutated passcode: [1, 2, 3, 4, 5, 6, 133]
+[Mutation Auth 1] Error sending AUTH command: [WinError -2147023673] The operation was canceled by the user
+An OSError occurred, reconnecting to device
+[Mutation] Byte at index 1 changed from 2 to 37
+[Mutation Auth 2] Sending AUTH command with mutated passcode: [1, 37, 3, 4, 5, 6]
+[Mutation Auth 2] Authentication failed with mutated passcode.
+[Mutation] Appended extra byte: 118
+[Mutation Auth 3] Sending AUTH command with mutated passcode: [1, 2, 3, 4, 5, 6, 118]
+[Mutation Auth 3] Authentication failed with mutated passcode.
+[Mutation] Byte at index 4 changed from 5 to 71
+[Mutation Auth 4] Sending AUTH command with mutated passcode: [1, 2, 3, 4, 71, 6]
+[Mutation Auth 4] Authentication failed with mutated passcode.
+[X] Mutation-based authentication did not succeed after several attempts. Exiting.
+Task was destroyed but it is pending!
+task: <Task cancelling name='Task-2' coro=<BLEClient._serialport_task() running at C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py:92> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\asyncio\tasks.py:767]>

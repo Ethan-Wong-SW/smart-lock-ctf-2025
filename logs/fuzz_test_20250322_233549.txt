@@ -1,0 +1,14 @@
+[1] Connecting to "Smart Lock [Group 3]"...
+[Fuzz Auth 0] Sending AUTH command with passcode: [198, 209, 48, 113, 63, 136]
+[Fuzz Auth 0] Authentication failed with fuzzed passcode.
+[Fuzz Auth 1] Sending AUTH command with passcode: [82, 28, 158, 162, 129, 219]
+[Fuzz Auth 1] Authentication failed with fuzzed passcode.
+[Fuzz Auth 2] Sending AUTH command with passcode: [87, 207, 65, 43, 215, 29]
+[Fuzz Auth 2] Authentication failed with fuzzed passcode.
+[Fuzz Auth 3] Sending AUTH command with passcode: [22, 197, 124, 244, 61, 2]
+[Fuzz Auth 3] Authentication failed with fuzzed passcode.
+[Fuzz Auth 4] Sending AUTH command with passcode: [164, 253, 24, 185, 104, 189]
+[Fuzz Auth 4] Authentication failed with fuzzed passcode.
+[X] Fuzzing authentication did not succeed after several attempts. Exiting.
+Task was destroyed but it is pending!
+task: <Task cancelling name='Task-2' coro=<BLEClient._serialport_task() running at C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py:92> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\asyncio\tasks.py:767]>

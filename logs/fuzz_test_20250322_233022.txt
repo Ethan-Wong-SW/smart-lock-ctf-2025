@@ -1,0 +1,122 @@
+[1] Connecting to "Smart Lock [Group 3]"...
+[Mutation] Appended extra byte: 121
+[Mutation Auth 0] Sending AUTH command with mutated passcode: [1, 2, 3, 4, 5, 6, 121]
+[Mutation Auth 0] Error sending AUTH command: [WinError -2147023673] The operation was canceled by the user
+[Mutation] Byte at index 0 changed from 1 to 226
+[Mutation Auth 1] Sending AUTH command with mutated passcode: [226, 2, 3, 4, 5, 6]
+[Mutation Auth 1] Error sending AUTH command: Not connected
+[!] Attempting to reconnect...
+[!] Reconnected successfully.
+[Mutation] Appended extra byte: 81
+[Mutation Auth 2] Sending AUTH command with mutated passcode: [1, 2, 3, 4, 5, 6, 81]
+[Mutation Auth 2] Authentication failed with mutated passcode.
+[Mutation] Byte at index 1 changed from 2 to 174
+[Mutation Auth 3] Sending AUTH command with mutated passcode: [1, 174, 3, 4, 5, 6]
+[Mutation Auth 3] Authentication failed with mutated passcode.
+[Mutation] Byte at index 4 changed from 5 to 12
+[Mutation Auth 4] Sending AUTH command with mutated passcode: [1, 2, 3, 4, 12, 6]
+[Mutation Auth 4] Authentication failed with mutated passcode.
+[X] Mutation-based authentication did not succeed after several attempts. Exiting.
+
+[Logs from Smart Lock (Serial Port)]:
+--------------------------------------------------
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Error] Code: 0x******
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x4205e9ac  RA      : 0x4205f974  SP      : 0x4083d900  GP      : 0x40816434  
+TP      : 0x4083dc40  T0      : 0x40028192  T1      : 0x00000000  T2      : 0x71dd4580  
+S0/FP   : 0x00000000  S1      : 0x00000000  A0      : 0x00000000  A1      : 0x4081c7a8  
+A2      : 0x00000000  A3      : 0x000000ab  A4      : 0x00000001  A5      : 0x00000001  
+A6      : 0x0000013f  A7      : 0x00000000  S2      : 0x4083349b  S3      : 0x4083dbb0  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x420f09b0  T4      : 0x00000000  T5      : 0x4200000a  T6      : 0x00000009  
+MSTATUS : 0x00001881  MTVEC   : 0x40800001  MCAUSE  : 0x00000005  MTVAL   : 0x00000008  
+MHARTID : 0x00000000  
+
+Stack memory:
+4083d900: 0x42116fac 0x00000000 0x4081d450 0x4206ecb2 0x71dd4580 0x00000008 0x40829000 0x42063d02
+4083d920: 0x4083349b 0x00000008 0x00000000 0x4083dbb0 0x4083349b 0x00000008 0x40829000 0x42001b2a
+4083d940: 0x4083dbb0 0x00000003 0x00000002 0x42002b8a 0x40880000 0x40843164 0x71dd4580 0x00098ee5
+4083d960: 0x00000009 0x4083000a 0x4083463c 0x408054ca 0x00000000 0x4083d9c4 0x40843370 0x40814b1a
+4083d980: 0x4083d9a4 0x00000003 0x00000015 0x42009a96 0x00000000 0x4083d9c4 0x4083463c 0x42009bce
+4083d9a0: 0x00000001 0x00000000 0x002a0000 0x20001000 0x00000008 0x00000001 0x00000000 0x00000000
+4083d9c0: 0x00000000 0x002a0002 0x00010000 0xdd45ff00 0x098ee571 0x00000900 0x83000a00 0x408147bc
+4083d9e0: 0x00000000 0x00000000 0x00000000 0x40022498 0x408335b4 0x40880000 0x4082ceb0 0x40022574
+4083da00: 0x00000000 0x00000000 0x83d9c400 0x00000118 0x00001800 0x00000000 0x4082d590 0x4080548a
+4083da20: 0x00001800 0x00000118 0x408337c0 0x40805578 0x00000000 0x00001800 0x00000118 0x00000004
+4083da40: 0x40810212 0x00000118 0x408337c0 0x408147bc 0x40810212 0x408102a4 0x4083dad0 0x40816434
+4083da60: 0x4083dc40 0x40030dca 0x0000000f 0x71dd4580 0x4083fa80 0x00000000 0x00000001 0x00000001
+4083da80: 0x00000001 0x00000004 0x00000000 0x20001000 0x00000008 0x00000004 0x00000000 0x00000000
+4083daa0: 0x00000009 0x00000009 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+4083dac0: 0x420f09b0 0x00000000 0x4200000a 0x00000009 0x00000000 0x00000000 0x4083fa80 0x4080f654
+4083dae0: 0x00001800 0x00000000 0x4082d590 0x00000000 0x00001800 0x00000016 0x40842fa8 0x40805578
+4083db00: 0x00000000 0x00001800 0x00000016 0x00000000 0x0000000a 0x00000001 0x4083f6cc 0x42041b9a
+4083db20: 0x408102e0 0x408102d8 0x4083dba0 0x40816434 0x4083dc40 0x40022494 0xffffffe0 0x71dd4580
+4083db40: 0x4083cd3c 0x00000001 0x00000001 0x00000001 0x4083dc4c 0x00000004 0x00000001 0x00000001
+4083db60: 0x00000002 0x00000003 0x00000000 0x420023d4 0x00000000 0x00000000 0x00000000 0x00000000
+4083db80: 0x4083dbb0 0x00000003 0x00000002 0x42009106 0x00000000 0x4083c8f8 0x40842b14 0x42009fde
+4083dba0: 0x40880000 0x00000001 0x4083cd3c 0x00000000 0x00000000 0x00000005 0x71dd4580 0x002a8ee5
+4083dbc0: 0x00000000 0x40830008 0x4083349a 0x00000000 0x00000000 0x4083c8f8 0x40842b14 0x4203de44
+4083dbe0: 0x00000000 0x00000000 0x00000000 0x420415a8 0x00000000 0x00000000 0x4203de1c 0x40842b14
+4083dc00: 0x00000000 0x00000000 0x00000000 0x40810018 0x00000000 0x00000000 0x00000000 0x00000000
+4083dc20: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+4083dc40: 0xa5a5a5a5 0x00000150 0x4083db20 0x00000000 0x408287b0 0x408287b0 0x4083dc48 0x408287a8
+4083dc60: 0x00000006 0x4083cd68 0x4083cd68 0x4083dc48 0x00000000 0x00000013 0x4083ce44 0x5f435442
+4083dc80: 0x4b534154 0x00000000 0x00000000 0x4083dc40 0x00000013 0x00000000 0x00000000 0x00000000
+4083dca0: 0x00000000 0x4082d800 0x4082d868 0x4082d8d0 0x00000000 0x00000000 0x00000001 0x00000000
+4083dcc0: 0x00000000 0x00000000 0x4002849c 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+4083dce0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+
+
+
+ELF file SHA256: 37bce7794
+
+Rebooting...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0x6c (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x4086c110,len:0x103c
+load:0x4086e610,len:0x313c
+load:0x40875720,len:0x1808
+entry 0x4086c110
+I (13) boot: ESP-IDF 5.4.0 2nd stage bootloader
+I (14) boot: compile time Feb  8 2025 02:46:19
+I (15) boot: chip revision: v0.1
+I (16) boot: efuse block revision: v0.3
+I (17) qio_mode: Enabling default flash chip QIO
+I (22) boot.esp32c6: SPI Speed      : 80MHz
+I (25) boot.esp32c6: SPI Mode       : QIO
+I (29) boot.esp32c6: SPI Flash Size : 4MB
+I (33) boot: Enabling RNG early entropy source...
+I (38) boot: Partition Table:
+I (40) boot: ## Label            Usage          Type ST Offset   Length
+I (46) boot:  0 nvs              WiFi data        01 02 00009000 00005000
+I (53) boot:  1 otadata          OTA data         01 00 0000e000 00002000
+I (59) boot:  2 app0             factory app      00 00 00010000 003e0000
+I (66) boot:  3 coredump         Unknown data     01 03 003f0000 00010000
+I (73) boot: End of partition table
+I (76) boot: Defaulting to factory image
+I (80) esp_image: segment 0: paddr=00010020 vaddr=420f0020 size=6a358h (435032) map
+I (240) esp_image: segment 1: paddr=0007a380 vaddr=40800000 size=05c98h ( 23704) load
+I (251) esp_image: segment 2: paddr=00080020 vaddr=42000020 size=eb01ch (962588) map
+I (592) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size=0ff8ch ( 65420) load
+I (620) esp_image: segment 4: paddr=0017afd8 vaddr=40815c30 size=02b9ch ( 11164) load
+I (626) esp_image: segment 5: paddr=0017db7c vaddr=50000000 size=0001ch (    28) load
+I (638) boot: Loaded app from partition at offset 0x10000
+I (638) boot: Disabling RNG early entropy source...
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Error] Code: 0x******
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
