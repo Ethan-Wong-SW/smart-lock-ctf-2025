@@ -1,4 +1,27 @@
 [
   {"timestamp":"2025-04-10T00:00:28.191559","error":"[WinError -2147023673] The operation was canceled by the user","input":[0],"type":"command_code"},
-  {"timestamp":"2025-04-10T00:00:31.102429","error":"Not connected","input":[0,75,6],"type":"command_code"}
+  {"timestamp":"2025-04-10T00:00:31.102429","error":"Not connected","input":[0,75,6],"type":"command_code"},
+  {"timestamp":"2025-04-15T00:00:23.205359","error":"[WinError -2147023673] The operation was canceled by the user","input":[0],"type":"command_code"},
+  {"timestamp":"2025-04-15T00:00:25.652942","error":"Not connected","input":[1],"type":"command_code"},
+  {"timestamp":"2025-04-15T00:00:33.481131","error":"Not connected","input":[68],"type":"command_code"},
+  {"timestamp":"2025-04-15T00:01:52.981698","error":"[WinError -2147023673] The operation was canceled by the user","input":[0,43],"type":"command_code"},
+  {"timestamp":"2025-04-15T00:01:55.593608","error":"Not connected","input":[1,162],"type":"command_code"},
+  {"timestamp":"2025-04-15T00:03:14.469285","error":"[WinError -2147023673] The operation was canceled by the user","input":[0,219],"type":"command_code"},
+  {"timestamp":"2025-04-15T00:03:15.212474","error":"Not connected","input":[101],"type":"command_code"},
+  {"timestamp":"2025-04-15T00:04:52.832807","error":"[WinError -2147023673] The operation was canceled by the user","input":[152,160,210,75,214,150],"type":"passcode"},
+  {"timestamp":"2025-04-15T00:04:53.858948","error":"Not connected","input":[223,89,99,205,196,232],"type":"passcode"},
+  {"timestamp":"2025-04-15T00:09:51.449363","error":"[WinError -2147023673] The operation was canceled by the user","input":[135,128,3,20,54],"type":"passcode"},
+  {"timestamp":"2025-04-15T00:09:52.469980","error":"Not connected","input":[190,51,11,6,7,186],"type":"passcode"},
+  {"timestamp":"2025-04-15T00:12:37.431401","error":"[WinError -2147023673] The operation was canceled by the user","input":[62,2,4,6,193],"type":"passcode"},
+  {"timestamp":"2025-04-15T00:12:38.442703","error":"Not connected","input":[58,130,36,74,41],"type":"passcode"},
+  {"timestamp":"2025-04-15T00:15:18.214063","error":"[WinError -2147023673] The operation was canceled by the user","input":[0,66,23,217,5,56],"type":"passcode"},
+  {"timestamp":"2025-04-15T00:15:19.231957","error":"Not connected","input":[61,3,1,100,67,161],"type":"passcode"},
+  {"timestamp":"2025-04-15T00:18:07.199934","error":"[WinError -2147023673] The operation was canceled by the user","input":[140,2,3,4,182],"type":"passcode"},
+  {"timestamp":"2025-04-15T00:18:08.210331","error":"Not connected","input":[11,86,61,84,127],"type":"passcode"},
+  {"timestamp":"2025-04-15T00:20:52.549501","error":"[WinError -2147023673] The operation was canceled by the user","input":[85,194,35,142,4,46,8,167],"type":"passcode"},
+  {"timestamp":"2025-04-15T00:20:53.566212","error":"Not connected","input":[139,9,153,33,219],"type":"passcode"},
+  {"timestamp":"2025-04-15T00:23:24.647080","error":"[WinError -2147023673] The operation was canceled by the user","input":[233,73,88],"type":"passcode"},
+  {"timestamp":"2025-04-15T00:23:25.670155","error":"Not connected","input":[191,0,226,217,133],"type":"passcode"},
+  {"timestamp":"2025-04-15T00:29:03.109760","error":"[WinError -2147023673] The operation was canceled by the user","input":[49,61,37,43],"type":"passcode"},
+  {"timestamp":"2025-04-15T00:29:04.122821","error":"Not connected","input":[186,74,50,28,202],"type":"passcode"}
 ]

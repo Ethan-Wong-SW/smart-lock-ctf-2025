@@ -360,7 +360,7 @@ class Fuzzer:
                 self.save_known_errors()
                 
                 # Brief pause between cycles
-                await asyncio.sleep(2)
+                await asyncio.sleep(random.uniform(0.5, 3))
                 
         except KeyboardInterrupt:
             self.log_print("\n[!] Received interrupt signal, shutting down...")
@@ -422,7 +422,7 @@ class Fuzzer:
                     await self.ensure_connection()
             
             attempts_made += 1
-            await asyncio.sleep(1)
+            await asyncio.sleep(random.uniform(0.5, 5))
         
         return authenticated
 
@@ -465,9 +465,10 @@ class Fuzzer:
                 self.record_new_error(e, type_command, fuzzed_command)
                 if "Not connected" in str(e):
                     await self.ensure_connection()
+                    await self.ble.write_command(COMMANDS['AUTH'] + PASSCODE)
             
             attempts_made += 1
-            await asyncio.sleep(random.uniform(0.5, 3))
+            await asyncio.sleep(random.uniform(0.5, 5))
 
     def _command_has_known_error(self, command):
         """Check if this exact command has previously caused an error"""
@@ -480,18 +481,18 @@ class Fuzzer:
 async def run_random_fuzzer(run_forever=False):
     """Run the random fuzzer"""
     fuzzer = Fuzzer()
-    await fuzzer.run_fuzzer('random', 20, 20, run_forever=run_forever)
+    await fuzzer.run_fuzzer('random', 50, 50, run_forever=run_forever)
 
 async def run_mutation_fuzzer(run_forever=False):
     """Run the mutation-based fuzzer"""
     fuzzer = Fuzzer()
-    await fuzzer.run_fuzzer('mutation', 20, 20, run_forever=run_forever)
+    await fuzzer.run_fuzzer('mutation', 50, 50, run_forever=run_forever)
 
 # Main execution
 if __name__ == "__main__":
     try:
         # Choose which fuzzer to run
-        asyncio.run(run_random_fuzzer(False))
-        # asyncio.run(run_mutation_fuzzer(False))
+        # asyncio.run(run_random_fuzzer(True))
+        asyncio.run(run_mutation_fuzzer(True))
     except KeyboardInterrupt:
         print("\nProgram Exited by User!")
