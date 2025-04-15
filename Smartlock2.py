@@ -29,6 +29,7 @@ class Fuzzer:
         self.interesting_passcodes = [PASSCODE]  # Start with known good passcode
         self.interesting_commands = [COMMANDS['OPEN'], COMMANDS['CLOSE']]  # Base commands
         self.load_interesting_inputs()  # Load from previous sessions
+        self.unique_error_codes = set()
         
     def setup_logging(self):
         """Initialize logging configuration"""
@@ -178,7 +179,7 @@ class Fuzzer:
         except Exception as e:
             print(f"Error loading interesting inputs: {e}")
 
-    def is_interesting(self, input_type, input):
+    def is_interesting(self, input_type, input, response=None):
         """
         Determine if an input is interesting enough to save
         and add to our mutation pools if it is. (This is not yet implementad)
@@ -186,19 +187,27 @@ class Fuzzer:
         """
         if not input:
             return False
-            
-        """ add additional code here to check if an input is interesting if it is, call the following lines of code, else return False """
-        
+
+        is_new = False
+
+        # Track unique error codes if response is provided
+        if response is not None and isinstance(response, list) and len(response) > 0:
+            code = response[0]
+            if code not in self.unique_error_codes:
+                self.unique_error_codes.add(code)
+                is_new = True
+
         # Add to respective interesting inputs list based on input type
-        if input_type == type_passcode:
-            if input not in self.interesting_passcodes:
-                self.interesting_passcodes.append(input)
-                return True
-        elif input_type == type_command:
-            if input not in self.interesting_commands:
-                self.interesting_commands.append(input)
-                return True
-                
+        if is_new:
+            if input_type == type_passcode:
+                if input not in self.interesting_passcodes:
+                    self.interesting_passcodes.append(input)
+                    return True
+            elif input_type == type_command:
+                if input not in self.interesting_commands:
+                    self.interesting_commands.append(input)
+                    return True
+
         return False
 
     async def ensure_connection(self):
@@ -412,7 +421,7 @@ class Fuzzer:
                     self.log_print(f'[+] Authenticated with: {fuzz_passcode}')
                 else:
                     self.log_print('[!] Authentication failed')
-                    self.is_interesting(type_passcode, fuzz_passcode)
+                    self.is_interesting(type_passcode, fuzz_passcode, response=res)
             except Exception as e:
                 self.log_print(f'[!] Error: {e}')
                 self.is_interesting(type_passcode, fuzz_passcode)
@@ -454,7 +463,7 @@ class Fuzzer:
                 self.log_print(f'[!] Command: {fuzzed_command}')
                 self.log_print(f'[!] Response: {res[0]}')
                 if res and res[0] != 0:  # Check for non-success response codes
-                    self.is_interesting(type_command, fuzzed_command)
+                    self.is_interesting(type_command, fuzzed_command, response=res)
                 elif res and res[0] == 4: 
                     # Record the error in our tracking system
                     self.record_new_error(e, type_command, fuzzed_command)
