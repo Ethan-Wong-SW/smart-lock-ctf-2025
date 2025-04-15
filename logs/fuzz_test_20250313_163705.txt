@@ -1,0 +1,59 @@
+Fuzzing Function: fuzz_mutation_with_incorrect_auth
+Timestamp: 2025-03-13 16:37:06.442452
+Command: [0]
+Response: [1]
+Errors/Logs: [X] Unexpected Error detected!
+--------------------------------------------------
+Timestamp: 2025-03-13 16:37:07.730133
+Command: [33]
+Response: [2]
+Errors/Logs: [X] Unexpected Error detected!
+--------------------------------------------------
+Timestamp: 2025-03-13 16:37:09.431788
+Command: [35]
+Response: [2]
+Errors/Logs: [X] Unexpected Error detected!
+--------------------------------------------------
+Timestamp: 2025-03-13 16:37:12.473472
+Command: []
+Response: 
+Errors/Logs: Command is NULL/empty
+--------------------------------------------------
+Timestamp: 2025-03-13 16:37:12.478533
+Command: [69]
+Response: [2]
+Errors/Logs: [X] Unexpected Error detected!
+--------------------------------------------------
+Timestamp: 2025-03-13 16:37:16.735059
+Command: []
+Response: 
+Errors/Logs: Command is NULL/empty
+--------------------------------------------------
+Timestamp: 2025-03-13 16:37:16.736039
+Command: [81]
+Response: [2]
+Errors/Logs: [X] Unexpected Error detected!
+--------------------------------------------------
+Timestamp: 2025-03-13 16:37:20.291511
+Command: [145]
+Response: [2]
+Errors/Logs: [X] Unexpected Error detected!
+--------------------------------------------------
+Timestamp: 2025-03-13 16:37:25.204235
+Command: []
+Response: 
+Errors/Logs: Command is NULL/empty
+--------------------------------------------------
+Timestamp: 2025-03-13 16:37:25.205214
+Command: [5]
+Response: [2]
+Errors/Logs: [X] Unexpected Error detected!
+--------------------------------------------------
+Timestamp: 2025-03-13 16:37:29.196417
+Command: [1, 4]
+Response: [3]
+--------------------------------------------------
+Timestamp: 2025-03-13 16:37:32.677886
+Command: [0]
+
+smart lock hangs here with "waiting" status.

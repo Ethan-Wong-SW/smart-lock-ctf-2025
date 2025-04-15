@@ -1,0 +1,724 @@
+Fuzzing Password now
+[2] Authenticating...
+[!] --> Command: [0, 126, 177, 120, 18, 212]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 52, 244, 46, 251, 6]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 211, 134, 58, 95, 219]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 42, 150, 202, 13, 41]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 77, 204, 78, 191, 28]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 31, 133, 39, 28, 45]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 131, 188, 60, 28, 24]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 158, 118, 102, 165, 112]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 180, 126, 125, 56, 66]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 136, 110, 248, 166, 193]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 86, 227, 72, 79, 106]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 107, 108, 134, 133, 214]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 191, 235, 211, 62, 61]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 250, 57, 209, 4, 136]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 92, 170, 7, 201, 92]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 164, 206, 123, 115, 195]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 96, 68, 166, 202, 98]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 251, 161, 211, 129, 11]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 50, 120, 19, 215, 217]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 73, 3, 174, 239, 12]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 19, 129, 25, 227, 151]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 20, 164, 45, 207, 218]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 85, 89, 65, 79, 9]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 97, 148, 120, 50, 43]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 145, 31, 249, 86, 254]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 28, 45, 246, 223, 139]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 49, 39, 144, 195, 206]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 54, 243, 186, 169, 246]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 22, 81, 223, 134, 219]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 178, 24, 67, 6, 176]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 218, 210, 137, 208, 40]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 211, 146, 104, 11, 224]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 204, 93, 151, 72, 217]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 109, 144, 171, 42, 83]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 35, 71, 56, 142, 192]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 67, 31, 80, 104, 11]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 76, 176, 165, 43, 229]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 98, 169, 144, 40, 7]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 12, 63, 157, 101, 44]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 85, 42, 104, 171, 250]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 124, 90, 85, 149, 186]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 50, 243, 129, 158, 66]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 149, 130, 8, 154, 9]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 42, 245, 74, 62, 72]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 152, 65, 18, 3, 189]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 233, 6, 79, 131, 152]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 72, 192, 27, 171, 226]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 176, 62, 25, 209, 126]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 149, 238, 215, 91, 37]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 223, 77, 46, 254, 22]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 105, 32, 139, 185, 64]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 171, 163, 19, 52, 24]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 2, 196, 73, 204, 73]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 5, 89, 43, 87, 39]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 207, 240, 187, 112, 230]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 190, 253, 228, 246, 104]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 46, 109, 15, 179, 19]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 11, 137, 203, 6, 2]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 240, 211, 192, 206, 194]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 168, 16, 237, 119, 105]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 232, 114, 195, 201, 82]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 233, 16, 153, 232, 68]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 111, 33, 253, 81, 228]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 210, 4, 164, 42, 115]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 141, 98, 53, 11, 95]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 173, 32, 202, 144, 145]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 53, 139, 173, 91, 51]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 31, 90, 33, 72, 27]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 199, 79, 217, 145, 226]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 46, 129, 236, 141, 69]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 216, 51, 158, 132, 217]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 46, 218, 3, 44, 90]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 247, 3, 71, 178, 71]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 23, 119, 149, 216, 19]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 154, 237, 109, 128, 19]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 48, 145, 193, 94, 196]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 139, 97, 105, 224, 223]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 41, 97, 224, 249, 99]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 183, 196, 5, 40, 252]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 144, 254, 179, 180, 170]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 103, 91, 89, 94, 249]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 229, 13, 235, 83, 70]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 19, 20, 109, 209, 59]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 75, 7, 43, 219, 74]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 134, 6, 158, 221, 48]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 212, 7, 131, 203, 8]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 111, 140, 48, 117, 127]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 0, 158, 91, 182, 30]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 64, 140, 25, 224, 47]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 94, 13, 88, 79, 250]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 50, 9, 131, 76, 38]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 79, 142, 79, 157, 120]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 216, 97, 9, 36, 40]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 188, 181, 113, 0, 100]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 233, 63, 75, 182, 254]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 218, 187, 253, 235, 185]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 36, 39, 200, 172, 116]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 234, 120, 70, 167, 79]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 98, 149, 62, 255, 8]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 118, 63, 101, 134, 86]
+[!] <-- Response: 1
+Locked
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+Fuzzing command now
+
+[3] Sending command
+[!] --> Command: [0]
+[!] <-- Response: [1]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: []
+[!] <-- Response: [0]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [1, 16]
+[!] <-- Response: [3]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: []
+[!] <-- Response: [0]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [3]
+[!] <-- Response: [2]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [35]
+[!] <-- Response: [2]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [78]
+[!] <-- Response: [2]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [130]
+[!] <-- Response: [2]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [66]
+[!] <-- Response: [2]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: []
+[!] <-- Response: [0]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [2, 248]
+[!] <-- Response: [3]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [2, 48]
+[!] <-- Response: [3]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [1, 14]
+[!] <-- Response: [3]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: []
+[!] <-- Response: [0]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [32]
+[!] <-- Response: [2]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [5]
+[!] <-- Response: [2]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [2, 203]
+[!] <-- Response: [3]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [2, 109]
+[!] <-- Response: [3]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: []
+[!] <-- Response: [0]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [34]
+[!] <-- Response: [2]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [35]
+[!] <-- Response: [2]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: []
+[!] <-- Response: [0]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [2, 163]
+[!] <-- Response: [3]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [163]
+[!] <-- Response: [2]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command

@@ -1,0 +1,100 @@
+Fuzzing Password now
+[2] Authenticating...
+[!] --> Command: [0, 150, 68, 181, 232, 17, 248]
+[!] <-- Response: 1
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 178, 31, 89, 45, 4, 35]
+[!] <-- Response: 1
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 98, 21, 72, 167, 45, 70]
+[!] <-- Response: 1
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 44, 199, 130, 104, 176, 99]
+[!] <-- Response: 1
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 103, 147, 172, 8, 230, 32]
+[!] <-- Response: 1
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+Fuzzing command now
+
+[3] Sending command
+[!] --> Command: []
+[!] <-- Response: [0]
+Unlocked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [0]
+[!] <-- Response: [1]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: []
+[!] <-- Response: [0]
+Unlocked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: []
+[!] <-- Response: [0]
+Unlocked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [73]
+[!] <-- Response: [2]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [8]
+[!] <-- Response: [2]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [162]
+[!] <-- Response: [2]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [2, 59]
+[!] <-- Response: [3]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [74]
+[!] <-- Response: [2]
+Current state: Locked
+--------------------------------------------------
+[3] Sending command
+[!] --> Command: [3]
+[!] <-- Response: [2]
+Current state: Locked
+--------------------------------------------------
+
+[5] Disconnecting...
+
+[6] Logs from Smart Lock (Serial Port):
+17
+a 0xb4000000 0x744083d9 0xce40834a 0x0142009b
+4083daf0: 0x00000
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Error] Code: 0x018374
+[Bluetooth] Received command: 0x02 (Close)

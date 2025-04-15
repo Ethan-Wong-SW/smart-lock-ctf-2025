@@ -1,0 +1,30 @@
+Fuzzing Password now
+[2] Authenticating...
+I (353) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[!] --> Command: [0, 178, 120, 56, 210, 87, 102]
+[!] <-- Response: 1
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 201, 231, 105, 107, 234, 103]
+[!] <-- Response: 1
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 163, 22, 11, 200, 221, 213]
+[!] <-- Response: 1
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[!] --> Command: [0, 5, 122, 165, 212, 208, 61]
+[!] <-- Response: 1
+[X] Failure: Wrong Passcode.
+--------------------------------------------------
+[2] Authenticating...
+[AUTH] Authentication Failed
+[!] --> Command: [0, 70, 28, 38, 61, 124, 17]
+[!] <-- Response: 1
+[X] Failure: Wrong Passcode.
+--------------------------------------------------

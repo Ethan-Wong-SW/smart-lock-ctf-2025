@@ -1,0 +1,21 @@
+Fuzzing Function: fuzz_mutation_with_incorrect_auth
+Timestamp: 2025-03-13 16:20:09.029637
+Command: [8]
+Response: [2]
+Errors/Logs: [X] Unexpected Error detected!
+--------------------------------------------------
+Timestamp: 2025-03-13 16:20:11.384113
+Command: [210]
+Response: [2]
+Errors/Logs: [X] Unexpected Error detected!
+--------------------------------------------------
+Timestamp: 2025-03-13 16:20:15.346282
+Command: []
+Response: [0]
+Errors/Logs: [X] Unexpected Error detected!
+--------------------------------------------------
+
+[!] Sending mutated command: [34]
+[!] --> Command:  [34]
+
+program crashes after this
