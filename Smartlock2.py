@@ -9,6 +9,9 @@ from UserInterface import ShowUserInterface
 import logging
 import json
 
+BLUE = '\033[94m'
+RESET = '\033[0m'  # This resets the color back to default
+
 type_passcode = 'passcode'
 type_command = 'command_code'    
 
@@ -54,15 +57,17 @@ class Fuzzer:
         self.load_known_errors()
     
     def load_known_errors(self):
-        """Load known error patterns from file"""
+        """Load known error patterns from file, storing only the error messages"""
         try:
             if os.path.exists(self.KNOWN_ERRORS_FILE):
                 with open(self.KNOWN_ERRORS_FILE, 'r') as f:
-                    self.known_errors = set(json.load(f))
+                    error_list = json.load(f)  # Load the list of error objects
+                    # Extract just the "error" field from each object
+                    self.known_errors = {error_obj["error"] for error_obj in error_list 
+                                    if "error" in error_obj}
+                print("number of known errors from the json file:" + str(len(self.known_errors)))
         except Exception as e:
-            print(f"Error loading known errors: {e}")
-
-   
+            print(f"{BLUE}Error loading known errors: {e}{RESET}")
 
     def save_known_errors(self):
         """Save known error patterns to file in a more readable format"""
@@ -85,7 +90,7 @@ class Fuzzer:
                                         except json.JSONDecodeError:
                                             continue
                 except Exception as e:
-                    print(f"Error reading existing errors: {e}")
+                    print(f"{BLUE}Error reading existing errors: {e}{RESET}")
                     existing_errors = []
 
             # Prepare current errors (same as your original code)
@@ -128,7 +133,7 @@ class Fuzzer:
                 f.write("]\n")  # End of JSON array
                 
         except Exception as e:
-            print(f"Error saving known errors: {e}")
+            print(f"{BLUE}Error saving known errors: {e}{RESET}")
 
     def is_known_error(self, message):
         """Check if a message matches a known error pattern"""
@@ -136,13 +141,11 @@ class Fuzzer:
 
     def log_print(self, message):
         """Logs and prints a message, filtering known errors"""
-        if not self.is_known_error(message):
-            logging.info(message)
+        logging.info(message)
             
     def record_new_error(self, error, input_type, input):
         """Record a newly discovered error in a structured JSON format"""
         error_entry = {
-            'timestamp': datetime.datetime.now().isoformat(),
             'error': str(error),
             'input': input,
             'type': input_type
@@ -160,44 +163,55 @@ class Fuzzer:
                 with open(self.KNOWN_ERRORS_FILE, 'r') as f:
                     errors = json.load(f)
                     for error in errors:
-                        cmd = error.get('command')
+                        # Get the input and type from the error entry
+                        cmd = error.get('input')
                         err_type = error.get('type')
                         
-                        # Handle both string and dict error entries
+                        # Skip if no input or type
+                        if cmd is None or err_type is None:
+                            continue
+                        
+                        # Handle case where input might be a string representation
                         if isinstance(cmd, str):
                             try:
                                 cmd = json.loads(cmd.replace("'", '"'))
                             except:
                                 continue
                         
-                        if cmd and err_type == type_passcode:
+                        # Add to appropriate list based on type
+                        if err_type == type_passcode:
                             if cmd not in self.interesting_passcodes:
                                 self.interesting_passcodes.append(cmd)
-                        elif cmd and err_type == type_command:
+                        elif err_type == type_command:
                             if cmd not in self.interesting_commands:
                                 self.interesting_commands.append(cmd)
+
+                    print(f"{BLUE}Loaded {str(len(self.interesting_passcodes))} interesting passcodes{RESET}")
+                    print(f"{BLUE}Loaded {str(len(self.interesting_commands))} interesting commands{RESET}")
         except Exception as e:
-            print(f"Error loading interesting inputs: {e}")
+            print(f"{BLUE}Error loading interesting inputs: {e}{RESET}")
 
     def is_interesting(self, input_type, input, response=None):
         """
         Determine if an input is interesting enough to save
-        and add to our mutation pools if it is. (This is not yet implementad)
+        and add to our mutation pools if it is. (This is not yet implemented)
         Returns True if the input was added to an interesting pool.
         """
         if not input:
             return False
 
-        is_new = False
+        is_new = True
+        # is_new = False
 
         # Track unique error codes if response is provided
         if response is not None and isinstance(response, list) and len(response) > 0:
             code = response[0]
             if code not in self.unique_error_codes:
+                self.log_print(f"New input is interesting!")
                 self.unique_error_codes.add(code)
                 is_new = True
-
-        # Add to respective interesting inputs list based on input type
+        
+        # Add to respective interesting inputs list based on input type if the error is new
         if is_new:
             if input_type == type_passcode:
                 if input not in self.interesting_passcodes:
@@ -424,11 +438,23 @@ class Fuzzer:
                     self.is_interesting(type_passcode, fuzz_passcode, response=res)
             except Exception as e:
                 self.log_print(f'[!] Error: {e}')
+                if "Not connected" in str(e):
+                    await self.ensure_connection()
+                    
+                    self.log_print(f'\n[!] Send request with the same input again')
+
+                    # if the error is Not connected, try the same input again
+                    try:
+                        res = await self.ble.write_command(fuzz_passcode)
+                    except Exception as e:
+                        self.is_interesting(type_passcode, fuzz_passcode, response=res)
+                        # Record the error in our tracking system
+                        self.record_new_error(e, type_passcode, fuzz_passcode)
+                    continue
+                
                 self.is_interesting(type_passcode, fuzz_passcode)
                 # Record the error in our tracking system
                 self.record_new_error(e, type_passcode, fuzz_passcode)
-                if "Not connected" in str(e):
-                    await self.ensure_connection()
             
             attempts_made += 1
             await asyncio.sleep(1)
@@ -464,16 +490,25 @@ class Fuzzer:
                 self.log_print(f'[!] Response: {res[0]}')
                 if res and res[0] != 0:  # Check for non-success response codes
                     self.is_interesting(type_command, fuzzed_command, response=res)
-                elif res and res[0] == 4: 
-                    # Record the error in our tracking system
-                    self.record_new_error(e, type_command, fuzzed_command)
             except Exception as e:
                 self.log_print(f'[!] Error: {e}')
+                if "Not connected" in str(e):
+                    await self.ensure_connection()
+                    
+                    self.log_print(f'\n[!] Send request with the same input again')
+
+                    # if the error is Not connected, try the same input again
+                    try:
+                        res = await self.ble.write_command(fuzzed_command)
+                    except Exception as e:
+                        self.is_interesting(type_command, fuzzed_command, response=res)
+                        # Record the error in our tracking system
+                        self.record_new_error(e, type_command, fuzzed_command)
+                    continue
+
                 self.is_interesting(type_command, fuzzed_command)
                 # Record the error in our tracking system
                 self.record_new_error(e, type_command, fuzzed_command)
-                if "Not connected" in str(e):
-                    await self.ensure_connection()
             
             attempts_made += 1
             await asyncio.sleep(random.uniform(0.5, 3))
@@ -489,18 +524,18 @@ class Fuzzer:
 async def run_random_fuzzer(run_forever=False):
     """Run the random fuzzer"""
     fuzzer = Fuzzer()
-    await fuzzer.run_fuzzer('random', 20, 20, run_forever=run_forever)
+    await fuzzer.run_fuzzer('random', 50, 50, run_forever=run_forever)
 
 async def run_mutation_fuzzer(run_forever=False):
     """Run the mutation-based fuzzer"""
     fuzzer = Fuzzer()
-    await fuzzer.run_fuzzer('mutation', 20, 20, run_forever=run_forever)
+    await fuzzer.run_fuzzer('mutation', 50, 50, run_forever=run_forever)
 
 # Main execution
 if __name__ == "__main__":
     try:
         # Choose which fuzzer to run
-        asyncio.run(run_random_fuzzer(False))
-        # asyncio.run(run_mutation_fuzzer(False))
+        # asyncio.run(run_random_fuzzer(True))
+        asyncio.run(run_mutation_fuzzer(True))
     except KeyboardInterrupt:
         print("\nProgram Exited by User!")

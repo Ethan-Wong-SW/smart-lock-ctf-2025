@@ -1,6 +1,0 @@
-Fuzzing Function: fuzz_mutation_with_incorrect_auth
-Timestamp: 2025-03-13 16:18:02.935682
-Command: []
-Response: [0]
-Errors/Logs: [X] Unexpected Error detected!
---------------------------------------------------
