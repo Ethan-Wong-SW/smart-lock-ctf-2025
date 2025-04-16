@@ -1,0 +1,603 @@
+
+==================================================
+[+] Starting new fuzzing cycle
+==================================================
+[1] Connecting to "Smart Lock [Group 3]"...
+[Mutation] Byte 1: 2 -> 80
+
+[Mutation Auth 0] Trying: [1, 80, 3, 4, 5, 6]
+[!] Command: [0, 1, 80, 3, 4, 5, 6]
+[!] Response: 1
+[!] Authentication failed
+[Mutation] Byte 0: 1 -> 17, Byte 1: 2 -> 58, Byte 2: 3 -> 147, Byte 3: 4 -> 132, Byte 4: 5 -> 133, Byte 5: 6 -> 28, Byte 6: 155 -> 153
+
+[Mutation Auth 1] Trying: [17, 58, 147, 132, 133, 28, 153]
+[!] Command: [0, 17, 58, 147, 132, 133, 28, 153]
+[!] Response: 1
+[!] Authentication failed
+[Mutation] Byte 0: 255 -> 242, Byte 1: 5 -> 84, Byte 2: 3 -> 22, Byte 3: 4 -> 36, Byte 4: 5 -> 36, Byte 5: 6 -> 4
+
+[Mutation Auth 2] Trying: [242, 84, 22, 36, 36, 4]
+[!] Command: [0, 242, 84, 22, 36, 36, 4]
+[!] Response: 1
+[!] Authentication failed
+[Mutation] Byte 0: 1 -> 65, Byte 1: 2 -> 12, Byte 2: 3 -> 74, Byte 3: 4 -> 84, Byte 4: 5 -> 69, Byte 5: 6 -> 66, Byte 6: 155 -> 203
+
+[Mutation Auth 3] Trying: [65, 12, 74, 84, 69, 66, 203]
+[!] Command: [0, 65, 12, 74, 84, 69, 66, 203]
+[!] Response: 1
+[!] Authentication failed
+[Mutation] Changed length from 6 to 7 bytes
+
+[Mutation Auth 4] Trying: [1, 2, 3, 4, 5, 6, 212]
+[!] Command: [0, 1, 2, 3, 4, 5, 6, 212]
+[!] Response: 255
+[!] Authentication failed
+[Mutation] Changed length from 7 to 8 bytes
+
+[Mutation Auth 5] Trying: [1, 2, 3, 4, 5, 6, 188, 152]
+[!] Error: [WinError -2147023673] The operation was canceled by the user
+[Mutation] Changed length from 7 to 8 bytes
+
+[Mutation Auth 6] Trying: [1, 2, 3, 4, 5, 6, 188, 93]
+[!] Error: Not connected
+[!] Attempting to reconnect...
+[!] Reconnected successfully.
+
+[!] Send request with the same input again
+[Mutation] Changed length from 7 to 6 bytes
+
+[Mutation Auth 6] Trying: [1, 2, 3, 4, 5, 155]
+[!] Command: [0, 1, 2, 3, 4, 5, 155]
+[!] Response: 1
+[!] Authentication failed
+[Mutation] Byte 0: 1 -> 3, Byte 1: 2 -> 0, Byte 2: 3 -> 71, Byte 3: 4 -> 13, Byte 4: 5 -> 23, Byte 6: 188 -> 255
+
+[Mutation Auth 7] Trying: [3, 0, 71, 13, 23, 6, 255]
+[!] Command: [0, 3, 0, 71, 13, 23, 6, 255]
+[!] Response: 1
+[!] Authentication failed
+[Mutation] Changed length from 6 to 5 bytes
+
+[Mutation Auth 8] Trying: [5, 3, 4, 5, 6]
+[!] Command: [0, 5, 3, 4, 5, 6]
+[!] Response: 1
+[!] Authentication failed
+[Mutation] Byte 0: 1 -> 113, Byte 1: 2 -> 192, Byte 2: 3 -> 83, Byte 3: 4 -> 1, Byte 4: 5 -> 12, Byte 5: 6 -> 47, Byte 6: 155 -> 153
+
+[Mutation Auth 9] Trying: [113, 192, 83, 1, 12, 47, 153]
+[!] Command: [0, 113, 192, 83, 1, 12, 47, 153]
+[!] Response: 1
+[!] Authentication failed
+[Mutation] Byte 4: 5 -> 98
+
+[Mutation Auth 10] Trying: [1, 2, 3, 4, 98, 6]
+[!] Command: [0, 1, 2, 3, 4, 98, 6]
+[!] Response: 1
+[!] Authentication failed
+[Mutation] Byte 0: 255 -> 157, Byte 1: 5 -> 4, Byte 2: 3 -> 1, Byte 3: 4 -> 20, Byte 4: 5 -> 7, Byte 5: 6 -> 130
+
+[Mutation Auth 11] Trying: [157, 4, 1, 20, 7, 130]
+[!] Command: [0, 157, 4, 1, 20, 7, 130]
+[!] Response: 1
+[!] Authentication failed
+[Mutation] Byte 0: 255 -> 126, Byte 1: 5 -> 68, Byte 2: 3 -> 35, Byte 3: 4 -> 68, Byte 4: 5 -> 3
+
+[Mutation Auth 12] Trying: [126, 68, 35, 68, 3, 6]
+[!] Command: [0, 126, 68, 35, 68, 3, 6]
+[!] Response: 1
+[!] Authentication failed
+[Mutation] Changed length from 7 to 6 bytes
+
+[Mutation Auth 13] Trying: [1, 2, 3, 4, 5, 6]
+[!] Command: [0, 1, 2, 3, 4, 5, 6]
+[!] Response: 0
+[+] Authenticated with: [1, 2, 3, 4, 5, 6]
+[Mutation] Changed length from 1 to 2 bytes
+
+[Mutation Command 0] Sending: [0, 236]
+[!] Command: [0, 236]
+[!] Response: 1
+[Mutation] Byte 0: 2 -> 35
+
+[Mutation Command 1] Sending: [35]
+[!] Command: [35]
+[!] Response: 2
+[Mutation] Byte 0: 1 -> 68
+
+[Mutation Command 2] Sending: [68]
+[!] Command: [68]
+[!] Response: 2
+[Mutation] Byte 0: 2 -> 3
+
+[Mutation Command 3] Sending: [3]
+[!] Command: [3]
+[!] Response: 2
+[Mutation] Byte 0: 1 -> 5
+
+[Mutation Command 4] Sending: [5]
+[!] Command: [5]
+[!] Response: 2
+
+[Mutation Command 5] Sending: [2]
+[!] Command: [2]
+[!] Response: 4
+[Mutation] Changed length from 1 to 2 bytes
+
+[Mutation Command 6] Sending: [2, 221]
+[!] Command: [2, 221]
+[!] Response: 4
+[Mutation] Byte 0: 0 -> 85
+
+[Mutation Command 7] Sending: [85]
+[!] Command: [85]
+[!] Response: 2
+[Mutation] Byte 0: 1 -> 197
+
+[Mutation Command 8] Sending: [197]
+[!] Command: [197]
+[!] Response: 2
+[Mutation] Byte 0: 0 -> 244
+
+[Mutation Command 9] Sending: [244]
+[!] Command: [244]
+[!] Response: 2
+[Mutation] Changed length from 1 to 2 bytes
+
+[Mutation Command 10] Sending: [1, 115]
+[!] Command: [1, 115]
+[!] Response: 0
+[Mutation] Changed length from 1 to 2 bytes
+
+[Mutation Command 11] Sending: [1, 139]
+[!] Command: [1, 139]
+[!] Response: 4
+[Mutation] Byte 0: 1 -> 160
+
+[Mutation Command 12] Sending: [160]
+[!] Command: [160]
+[!] Response: 2
+[Mutation] Byte 0: 0 -> 136
+
+[Mutation Command 13] Sending: [136]
+[!] Command: [136]
+[!] Response: 2
+[Mutation] Byte 0: 0 -> 16
+
+[Mutation Command 14] Sending: [16]
+[!] Command: [16]
+[!] Response: 2
+[Mutation] Byte 0: 2 -> 101
+
+[Mutation Command 15] Sending: [101]
+[!] Command: [101]
+[!] Response: 2
+[Mutation] Byte 0: 2 -> 50
+
+[Mutation Command 16] Sending: [50]
+[!] Command: [50]
+[!] Response: 2
+[Mutation] Byte 0: 1 -> 33
+
+[Mutation Command 17] Sending: [33]
+[!] Command: [33]
+[!] Response: 2
+[Mutation] Byte 0: 2 -> 18
+
+[Mutation Command 18] Sending: [18]
+[!] Command: [18]
+[!] Response: 2
+
+[Mutation Command 19] Sending: [2]
+[!] Command: [2]
+[!] Response: 0
+[Mutation] Byte 0: 1 -> 105
+
+[Mutation Command 20] Sending: [105]
+[!] Command: [105]
+[!] Response: 2
+[Mutation] Changed length from 1 to 2 bytes
+
+[Mutation Command 21] Sending: [1, 103]
+[!] Command: [1, 103]
+[!] Response: 0
+[Mutation] Byte 0: 2 -> 54
+
+[Mutation Command 22] Sending: [54]
+[!] Command: [54]
+[!] Response: 2
+[Mutation] Changed length from 1 to 2 bytes
+
+[Mutation Command 23] Sending: [2, 35]
+[!] Command: [2, 35]
+[!] Response: 0
+[Mutation] Byte 0: 1 -> 161
+
+[Mutation Command 24] Sending: [161]
+[!] Command: [161]
+[!] Response: 2
+[Mutation] Byte 0: 2 -> 16
+
+[Mutation Command 25] Sending: [16]
+[!] Command: [16]
+[!] Response: 2
+
+[Mutation Command 26] Sending: [0]
+[!] Error: [WinError -2147023673] The operation was canceled by the user
+[Mutation] Byte 0: 1 -> 35
+
+[Mutation Command 27] Sending: [35]
+[!] Error: Not connected
+[!] Attempting to reconnect...
+[!] Reconnected successfully.
+
+[!] Send request with the same input again
+[Mutation] Byte 0: 0 -> 105
+
+[Mutation Command 27] Sending: [105]
+[!] Command: [105]
+[!] Response: 2
+[Mutation] Changed length from 1 to 2 bytes
+
+[Mutation Command 28] Sending: [0, 6]
+[!] Error: Not connected
+[!] Attempting to reconnect...
+[!] Reconnected successfully.
+
+[!] Send request with the same input again
+[Mutation] Byte 0: 1 -> 25
+
+[Mutation Command 28] Sending: [25]
+[!] Command: [25]
+[!] Response: 2
+[Mutation] Byte 0: 0 -> 128
+
+[Mutation Command 29] Sending: [128]
+[!] Command: [128]
+[!] Response: 2
+[Mutation] Byte 0: 1 -> 137
+
+[Mutation Command 30] Sending: [137]
+[!] Command: [137]
+[!] Response: 2
+[Mutation] Byte 0: 0 -> 196
+
+[Mutation Command 31] Sending: [196]
+[!] Command: [196]
+[!] Response: 2
+[Mutation] Changed length from 1 to 2 bytes
+
+[Mutation Command 32] Sending: [2, 157]
+[!] Command: [2, 157]
+[!] Response: 3
+[Mutation] Byte 0: 2 -> 24
+
+[Mutation Command 33] Sending: [24]
+[!] Command: [24]
+[!] Response: 2
+[Mutation] Byte 0: 0 -> 1
+
+[Mutation Command 34] Sending: [1]
+[!] Command: [1]
+[!] Response: 3
+[Mutation] Byte 0: 2 -> 34
+
+[Mutation Command 35] Sending: [34]
+[!] Command: [34]
+[!] Response: 2
+[Mutation] Changed length from 1 to 2 bytes
+
+[Mutation Command 36] Sending: [2, 56]
+[!] Command: [2, 56]
+[!] Response: 3
+[Mutation] Byte 0: 2 -> 166
+
+[Mutation Command 37] Sending: [166]
+[!] Command: [166]
+[!] Response: 2
+[Mutation] Byte 0: 0 -> 64
+
+[Mutation Command 38] Sending: [64]
+[!] Command: [64]
+[!] Response: 2
+[Mutation] Byte 0: 2 -> 191
+
+[Mutation Command 39] Sending: [191]
+[!] Command: [191]
+[!] Response: 2
+[Mutation] Byte 0: 0 -> 132
+
+[Mutation Command 40] Sending: [132]
+[!] Command: [132]
+[!] Response: 2
+[Mutation] Changed length from 1 to 2 bytes
+
+[Mutation Command 41] Sending: [1, 105]
+[!] Command: [1, 105]
+[!] Response: 3
+[Mutation] Byte 0: 1 -> 224
+
+[Mutation Command 42] Sending: [224]
+[!] Command: [224]
+[!] Response: 2
+[Mutation] Byte 0: 0 -> 160
+
+[Mutation Command 43] Sending: [160]
+[!] Command: [160]
+[!] Response: 2
+[Mutation] Byte 0: 2 -> 33
+
+[Mutation Command 44] Sending: [33]
+[!] Command: [33]
+[!] Response: 2
+[Mutation] Byte 0: 2 -> 130
+
+[Mutation Command 45] Sending: [130]
+[!] Command: [130]
+[!] Response: 2
+[Mutation] Byte 0: 0 -> 14
+
+[Mutation Command 46] Sending: [14]
+[!] Command: [14]
+[!] Response: 2
+[Mutation] Changed length from 1 to 2 bytes
+
+[Mutation Command 47] Sending: [1, 177]
+[!] Command: [1, 177]
+[!] Response: 3
+[Mutation] Byte 0: 0 -> 82
+
+[Mutation Command 48] Sending: [82]
+[!] Command: [82]
+[!] Response: 2
+[Mutation] Byte 0: 1 -> 67
+
+[Mutation Command 49] Sending: [67]
+[!] Command: [67]
+[!] Response: 2
+
+[Disconnecting...]
+
+[Logs from Smart Lock (Serial Port)]:
+--------------------------------------------------
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Error] Code: 0x******
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Error] Code: 0x******
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x4205e9ac  RA      : 0x4205f974  SP      : 0x4083d8f0  GP      : 0x40816434  
+TP      : 0x4083dc30  T0      : 0x40028192  T1      : 0x00000000  T2      : 0x8102d840  
+S0/FP   : 0x00000000  S1      : 0x00000000  A0      : 0x00000000  A1      : 0x4081c7a8  
+A2      : 0x00000000  A3      : 0x000000ab  A4      : 0x00000001  A5      : 0x00000001  
+A6      : 0x0000013f  A7      : 0x00000000  S2      : 0x40832ffb  S3      : 0x4083dba0  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0xffffe040  T4      : 0x02249440  T5      : 0x83dc3040  T6      : 0x81643440  
+MSTATUS : 0x00001881  MTVEC   : 0x40800001  MCAUSE  : 0x00000005  MTVAL   : 0x00000008  
+MHARTID : 0x00000000  
+
+Stack memory:
+4083d8f0: 0x42116fac 0x00000000 0x4081d450 0x4206ecb2 0x00000000 0x00000009 0x40829000 0x42063d02
+4083d910: 0x40832ffb 0x00000009 0x00000000 0x4083dba0 0x40832ffb 0x00000009 0x40829000 0x42001b2a
+4083d930: 0x4083dba0 0x00000003 0x00000002 0x42002b8a 0x40880000 0x4084315c 0x4082ceb0 0x400225ca
+4083d950: 0x00000000 0x4083d9b4 0x40842f9c 0x408054ca 0x00000000 0x4083d9b4 0x40832ff4 0x40814b1a
+4083d970: 0x4083d994 0x00000003 0x00000015 0x42009a96 0x00000000 0x4083d9b4 0x40842f9c 0x42009bce
+4083d990: 0x00000001 0x00000000 0x002a0000 0x20001000 0x00000008 0x00000001 0x00000000 0x00000000
+4083d9b0: 0x00000000 0x002a0002 0x00010000 0x82ceff00 0x0225ca40 0x00000040 0x83d9b400 0x842f9c40
+4083d9d0: 0x8054ca40 0x00000040 0x83d9b400 0x84336840 0x814b1a40 0x83d99440 0x00000340 0x00001500
+4083d9f0: 0x009a9600 0x00000042 0x83d9b400 0x842f9c40 0x009bce40 0x00000142 0x00000000 0x2a000000
+4083da10: 0x00100000 0x00000820 0x00000100 0x00000000 0x00000000 0x00000000 0x2a000200 0x01000000
+4083da30: 0xce010000 0x25ca4082 0x00004002 0xd9b40000 0x2f9c4083 0x54ca4084 0x00004080 0xd9b40000
+4083da50: 0x33684083 0x4b1a4084 0xd9944081 0x00034083 0x00150000 0x9a960000 0x00004200 0xd9b40000
+4083da70: 0x2f9c4083 0x9bce4084 0x00014200 0x00000000 0x00000000 0x1000002a 0x00082000 0x00010000
+4083da90: 0x00000000 0x00000000 0x00000000 0x00020000 0x0000002a 0x01000001 0xca4082ce 0x00400225
+4083dab0: 0xb4000000 0x9c4083d9 0xca40842f 0x00408054 0xb4000000 0x684083d9 0x1a408433 0x9440814b
+4083dad0: 0x034083d9 0x15000000 0x96000000 0x0042009a 0xb4000000 0x9c4083d9 0xce40842f 0x0142009b
+4083daf0: 0x00000000 0x00000000 0x00002a00 0x08200010 0x01000000 0x00000000 0x00000000 0x00000000
+4083db10: 0x408102e2 0x408102d8 0x4083db90 0x40816434 0x4083dc30 0x40022494 0xffffffe0 0x8102d840
+4083db30: 0x4083cd34 0x00000001 0x00000001 0x00000001 0x4083dc44 0x00000004 0x00000001 0x00000001
+4083db50: 0x00000002 0x00000003 0x00000000 0x420023d4 0x00000000 0x00000000 0x00000000 0x00000000
+4083db70: 0x4083dba0 0x00000003 0x00000002 0x42009106 0x00000000 0x4083c8f0 0x40842fe0 0x42009fde
+4083db90: 0x40880000 0x00000001 0x4083cd34 0x00000000 0x00000000 0x0000000f 0x71dd4580 0x002a8ee5
+4083dbb0: 0x00000000 0x88000009 0x40832ffa 0x00000000 0x00000000 0x4083c8f0 0x40842fe0 0x4203de44
+4083dbd0: 0x00000000 0x00000000 0x00000000 0x420415a8 0x00000000 0x00000000 0x4203de1c 0x40842fe0
+4083dbf0: 0x00000000 0x00000000 0x00000000 0x40810018 0x00000000 0x00000000 0x00000000 0x00000000
+4083dc10: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+4083dc30: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0x00000150 0x4083d8b0 0x00000000 0x408287b0 0x408287b0
+4083dc50: 0x4083dc40 0x408287a8 0x00000006 0x4083cd60 0x4083cd60 0x4083dc40 0x00000000 0x00000013
+4083dc70: 0x4083ce3c 0x5f435442 0x4b534154 0x00000000 0x00000000 0x4083dc30 0x00000013 0x00000000
+4083dc90: 0x00000000 0x00000000 0x00000000 0x4082d800 0x4082d868 0x4082d8d0 0x00000000 0x00000000
+4083dcb0: 0x00000001 0x00000000 0x00000000 0x00000000 0x4002849c 0x00000000 0x00000000 0x00000000
+4083dcd0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+
+
+
+ELF file SHA256: 37bce7794
+
+Rebooting...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0x6c (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x4086c110,len:0x103c
+load:0x4086e610,len:0x313c
+load:0x40875720,len:0x1808
+entry 0x4086c110
+I (13) boot: ESP-IDF 5.4.0 2nd stage bootloader
+I (14) boot: compile time Feb  8 2025 02:46:19
+I (15) boot: chip revision: v0.1
+I (16) boot: efuse block revision: v0.3
+I (17) qio_mode: Enabling default flash chip QIO
+I (22) boot.esp32c6: SPI Speed      : 80MHz
+I (25) boot.esp32c6: SPI Mode       : QIO
+I (29) boot.esp32c6: SPI Flash Size : 4MB
+I (33) boot: Enabling RNG early entropy source...
+I (38) boot: Partition Table:
+I (40) boot: ## Label            Usage          Type ST Offset   Length
+I (46) boot:  0 nvs              WiFi data        01 02 00009000 00005000
+I (53) boot:  1 otadata          OTA data         01 00 0000e000 00002000
+I (59) boot:  2 app0             factory app      00 00 00010000 003e0000
+I (66) boot:  3 coredump         Unknown data     01 03 003f0000 00010000
+I (73) boot: End of partition table
+I (76) boot: Defaulting to factory image
+I (80) esp_image: segment 0: paddr=00010020 vaddr=420f0020 size=6a358h (435032) map
+I (240) esp_image: segment 1: paddr=0007a380 vaddr=40800000 size=05c98h ( 23704) load
+I (251) esp_image: segment 2: paddr=00080020 vaddr=42000020 size=eb01ch (962588) map
+I (592) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size=0ff8ch ( 65420) load
+I (620) esp_image: segment 4: paddr=0017afd8 vaddr=40815c30 size=02b9ch ( 11164) load
+I (626) esp_image: segment 5: paddr=0017db7c vaddr=50000000 size=0001ch (    28) load
+I (638) boot: Loaded app from partition at offset 0x10000
+I (638) boot: Disabling RNG early entropy source...
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Error] Code: 0x010203
+Guru Meditation Error: Core  0 panic'ed (Store access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x42001a64  RA      : 0x42001a64  SP      : 0x4083d930  GP      : 0x40816434  
+TP      : 0x4083dc30  T0      : 0x40028192  T1      : 0x4083d58c  T2      : 0x8102d840  
+S0/FP   : 0x408431ba  S1      : 0x00000001  A0      : 0x00000001  A1      : 0x00000001  
+A2      : 0x00000000  A3      : 0x00000004  A4      : 0x00000001  A5      : 0x00000000  
+A6      : 0x00000001  A7      : 0x00000040  S2      : 0x4083dba0  S3      : 0x4083dba0  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0xffffe040  T4      : 0x02249440  T5      : 0x83dc3040  T6      : 0x81643440  
+MSTATUS : 0x00001881  MTVEC   : 0x40800001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+4083d930: 0x4083dba0 0x00000003 0x00000002 0x42002b8a 0x40880000 0x408431b4 0x4082ceb0 0x400225ca
+4083d950: 0x00000000 0x4083d9b4 0x40834560 0x408054ca 0x00000000 0x4083d9b4 0x408433c0 0x40814b1a
+4083d970: 0x4083d994 0x00000003 0x00000015 0x42009a96 0x00000000 0x4083d9b4 0x40834560 0x42009bce
+4083d990: 0x00000001 0x00000000 0x002a0000 0x20001000 0x00000008 0x00000001 0x00000000 0x00000000
+4083d9b0: 0x00000000 0x002a0002 0x00010000 0x82ce0200 0x0225ca40 0x00000040 0x83d9b400 0x834a7840
+4083d9d0: 0x8054ca40 0x00000040 0x83d9b400 0x8433c040 0x814b1a40 0x83d99440 0x00000340 0x00001500
+4083d9f0: 0x009a9600 0x00000042 0x83d9b400 0x834a7840 0x009bce40 0x00000142 0x00000000 0x2a000000
+4083da10: 0x00100000 0x00000820 0x00000100 0x00000000 0x00000000 0x00000000 0x2a000200 0x01000000
+4083da30: 0xce020000 0x25ca4082 0x00004002 0xd9b40000 0x45604083 0x54ca4083 0x00004080 0xd9b40000
+4083da50: 0x33c04083 0x4b1a4084 0xd9944081 0x00034083 0x00150000 0x9a960000 0x00004200 0xd9b40000
+4083da70: 0x45604083 0x9bce4083 0x00014200 0x00000000 0x00000000 0x1000002a 0x00082000 0x00010000
+4083da90: 0x00000000 0x00000000 0x00000000 0x00020000 0x0000002a 0x00000001 0xca4082ce 0x00400225
+4083dab0: 0xb4000000 0x784083d9 0xca40834a 0x00408054 0xb4000000 0xc04083d9 0x1a408433 0x9440814b
+4083dad0: 0x034083d9 0x15000000 0x96000000 0x0042009a 0xb4000000 0x784083d9 0xce40834a 0x0142009b
+4083daf0: 0x00000000 0x00000000 0x00002a00 0x08200010 0x01000000 0x00000000 0x00000000 0x00000000
+4083db10: 0x408102e2 0x408102d8 0x4083db90 0x40816434 0x4083dc30 0x40022494 0xffffffe0 0x8102d840
+4083db30: 0x4083cd34 0x00000001 0x00000001 0x00000001 0x4083dc44 0x00000004 0x00000001 0x00000001
+4083db50: 0x00000002 0x00000003 0x00000000 0x420023d4 0x00000000 0x00000000 0x00000000 0x00000000
+4083db70: 0x4083dba0 0x00000003 0x00000002 0x42009106 0x00000000 0x4083c8f0 0x40834a78 0x42009fde
+4083db90: 0x40880000 0x00000001 0x4083cd34 0x00000000 0x00000000 0x0000004b 0x71dd4580 0x002a8ee5
+4083dbb0: 0x00000000 0x88000001 0x408431ba 0x00000000 0x00000000 0x4083c8f0 0x40834a78 0x4203de44
+4083dbd0: 0x00000000 0x00000000 0x00000000 0x420415a8 0x00000000 0x00000000 0x4203de1c 0x40834a78
+4083dbf0: 0x00000000 0x00000000 0x00000000 0x40810018 0x00000000 0x00000000 0x00000000 0x00000000
+4083dc10: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+4083dc30: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0x00000150 0x4083d890 0x0000184e 0x408287b0 0x408287b0
+4083dc50: 0x4083dc40 0x408287a8 0x00000006 0x4083cd60 0x4083cd60 0x4083dc40 0x00000000 0x00000013
+4083dc70: 0x4083ce3c 0x5f435442 0x4b534154 0x00000000 0x00000000 0x4083dc30 0x00000013 0x00000000
+4083dc90: 0x00000000 0x00000000 0x00000000 0x4082d800 0x4082d868 0x4082d8d0 0x00000000 0x00000000
+4083dcb0: 0x00000001 0x00000000 0x00000000 0x00000000 0x4002849c 0x00000000 0x00000000 0x00000000
+4083dcd0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+4083dcf0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+4083dd10: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+
+
+
+ELF file SHA256: 37bce7794
+
+Rebooting...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0x6c (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x4086c110,len:0x103c
+load:0x4086e610,len:0x313c
+load:0x40875720,len:0x1808
+entry 0x4086c110
+I (14) boot: ESP-IDF 5.4.0 2nd stage bootloader
+I (14) boot: compile time Feb  8 2025 02:46:19
+I (15) boot: chip revision: v0.1
+I (16) boot: efuse block revision: v0.3
+I (17) qio_mode: Enabling default flash chip QIO
+I (22) boot.esp32c6: SPI Speed      : 80MHz
+I (26) boot.esp32c6: SPI Mode       : QIO
+I (29) boot.esp32c6: SPI Flash Size : 4MB
+I (33) boot: Enabling RNG early entropy source...
+I (38) boot: Partition Table:
+I (40) boot: ## Label            Usage          Type ST Offset   Length
+I (47) boot:  0 nvs              WiFi data        01 02 00009000 00005000
+I (53) boot:  1 otadata          OTA data         01 00 0000e000 00002000
+I (60) boot:  2 app0             factory app      00 00 00010000 003e0000
+I (66) boot:  3 coredump         Unknown data     01 03 003f0000 00010000
+I (73) boot: End of partition table
+I (76) boot: Defaulting to factory image
+I (80) esp_image: segment 0: paddr=00010020 vaddr=420f0020 size=6a358h (435032) map
+I (241) esp_image: segment 1: paddr=0007a380 vaddr=40800000 size=05c98h ( 23704) load
+I (252) esp_image: segment 2: paddr=00080020 vaddr=42000020 size=eb01ch (962588) map
+I (592) esp_image: segment 3: paddr=0016b044 vaddr=40805c98 size=0ff8ch ( 65420) load
+I (620) esp_image: segment 4: paddr=0017afd8 vaddr=40815c30 size=02b9ch ( 11164) load
+I (626) esp_image: segment 5: paddr=0017db7c vaddr=50000000 size=0001ch (    28) load
+I (638) boot: Loaded app from partition at offset 0x10000
+I (638) boot: Disabling RNG early entropy source...
+
+[Bluetooth] User Connected
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
