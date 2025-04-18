@@ -312,6 +312,10 @@ class Fuzzer:
         self.testcases = 0
         self.total_testcases = 0
         self.idx = 0
+        self.total_generation_time = 0.0
+        self.total_execution_time = 0.0
+        self.total_cycles = 0
+        self.total_inputs_generated = 0
 
     async def print_new_logs(self, ble, input_type=None, input=None):
         """Print only new logs since last index and return new last index"""
@@ -327,7 +331,7 @@ class Fuzzer:
                 error_code = line.split("0x")[1].strip()
                 if has_similar_input(input) == False:
                     record_new_error(error_code, input_type, input, self.state_checker.command_history)
-                    similar_inputs.add(input)
+                    similar_inputs.add(tuple(input))
 
         # Return new last index
         self.idx = len(logs)
@@ -498,7 +502,7 @@ class Fuzzer:
             differences = []
             for i, (orig, mut) in enumerate(zip(original, mutated)):
                 if orig != mut:
-                    differences.append(f'Byte {i}: {orig} -> {mut}')
+                    differences.append(f'Byte {i}: {orig} -> {mut}\n')
             
             if differences:
                 log_print('\n[Mutation] ' + ', '.join(differences))
@@ -535,7 +539,6 @@ class Fuzzer:
                 authenticated = False
                 try:
                     authenticated = await self.fuzz_authentication(fuzzer_type, auth_attempts)
-                    
                     if not authenticated:
                         log_print("\n[!] Authentication fuzzing failed, trying with correct passcode...")
                         try:
@@ -574,10 +577,14 @@ class Fuzzer:
                             f'Total Known errors: {len(known_errors)}\n'
                             f'Tests done for this cycle: {self.testcases}\n'
                             f'Total Tests done: {self.total_testcases}\n'
+                            f'Avg generation time: {self.total_generation_time/self.total_inputs_generated:.10f}s\n'
+                            f'Total inputs generated: {self.total_inputs_generated}\n'
+                            f'Avg execution time: {self.total_execution_time/self.total_inputs_generated:.5f}s\n'
                             f'{"="*50}\n')
                 
                 log_print(f"current pool of interesting passcodes: {interesting_passcodes}")
                 log_print(f"current pool of interesting commands: {interesting_commands}")
+                log_print(f"current pool of similar inputs: {similar_inputs}")
                 
                 log_print(f"\n[Logs from Smart Lock (Serial Port)]:\n{'-'*50}")
                 for line in self.ble.read_logs():
@@ -591,8 +598,11 @@ class Fuzzer:
                 loop_number = loop_number + 1
 
                 self.state_checker.command_history.clear()
+                self.state_checker.current_state = self.state_checker.STATES['BEF_AUTH_LOCKED']
+                self.state_checker.prev_state = None
                 self.testcases = 0
 
+                await self.ble.disconnect()
                 # Brief pause between cycles
                 await asyncio.sleep(2)
                 
@@ -619,6 +629,9 @@ class Fuzzer:
                         f'Total Interesting commands found: {len(interesting_commands)}\n'
                         f'Total Known errors found: {len(known_errors)}\n'
                         f'Total tests done: {self.total_testcases}\n'
+                        f'Average generation time per input: {self.total_generation_time/self.total_inputs_generated:.10f}s\n'
+                        f'Total inputs generated: {self.total_inputs_generated}\n'
+                        f'Average execution time per input: {self.total_execution_time/self.total_inputs_generated:.5f}s\n'
                         f'{"="*50}\n')
 
             sys.exit(0)
@@ -629,6 +642,7 @@ class Fuzzer:
         authenticated = False
         
         while attempts_made < attempts and not authenticated:
+            start_gen = asyncio.get_event_loop().time()
             if fuzzer_type == 'random':
                 # 50% chance to use interesting passcode as base
                 if interesting_passcodes and random.random() < 0.5:
@@ -642,13 +656,22 @@ class Fuzzer:
             
             full_command = COMMANDS['AUTH'] + fuzz_passcode
             
+            generation_time = asyncio.get_event_loop().time() - start_gen
+            self.total_generation_time += generation_time
+            self.total_inputs_generated += 1
+
             if self._command_has_known_error(full_command):
                 continue
                 
             log_print(f'[{fuzzer_type.capitalize()} Auth {attempts_made}] Trying: {fuzz_passcode}')
-            
             try:
+                start_exec = asyncio.get_event_loop().time()
+
                 res = await self.ble.write_command(full_command)
+
+                execution_time = asyncio.get_event_loop().time() - start_exec
+                self.total_execution_time += execution_time
+
                 self.state_checker.update_state(full_command, res)
                 log_print(f'[!] Command: {full_command}')
                 log_print(f'[!] Response: {res[0]}')
@@ -697,18 +720,23 @@ class Fuzzer:
         attempts_made = 0
         
         while attempts_made < attempts:
+            start_gen = asyncio.get_event_loop().time()
             if fuzzer_type == 'random':
                 # 50% chance to use interesting command as base
                 if interesting_commands and random.random() < 0.5:
                     base = random.choice(interesting_commands)
                     fuzzed_command = self.mutate_command(base)
                 else:
-                    base = random.choice([COMMANDS['OPEN'], COMMANDS['CLOSE'], ""])
+                    base = random.choice([COMMANDS['OPEN'], COMMANDS['CLOSE'], []])
                     fuzz_extra = [random.randint(0, 255) for _ in range(random.randint(0, 5))]
                     fuzzed_command = base + fuzz_extra
             else:  # mutation
                 base = random.choice(interesting_commands)
                 fuzzed_command = self.mutate_command(base)
+
+            generation_time = asyncio.get_event_loop().time() - start_gen
+            self.total_generation_time += generation_time
+            self.total_inputs_generated += 1
             
             if self._command_has_known_error(fuzzed_command):
                 continue
@@ -716,12 +744,18 @@ class Fuzzer:
             log_print(f'\n[{fuzzer_type.capitalize()} Command {attempts_made}] Sending: {fuzzed_command}')
             
             try:
+                start_exec = asyncio.get_event_loop().time()
+
                 res = await self.ble.write_command(fuzzed_command)
+
+                execution_time = asyncio.get_event_loop().time() - start_exec
+                self.total_execution_time += execution_time
+
                 self.state_checker.update_state(fuzzed_command, res)
                 log_print(f'[!] Command: {fuzzed_command}')
                 log_print(f'[!] Response: {res[0]}')
                 if res and res[0] == 0:  # Check for non-success response codes
-                    self.is_interesting("Response: Success", type_passcode, fuzzed_command, response=res)
+                    self.is_interesting("Response: Success", type_command, fuzzed_command, response=res)
 
                 await self.print_new_logs(self.ble, type_command, fuzzed_command)
             except Exception as e:
@@ -906,7 +940,7 @@ class StateChecker:
 if __name__ == "__main__":
     try:
         # Choose which fuzzer to run
-        # asyncio.run(run_random_fuzzer(True))
-        asyncio.run(run_mutation_fuzzer(5, 5, True))
+        asyncio.run(run_random_fuzzer(5, 5, True))
+        # asyncio.run(run_mutation_fuzzer(5, 5, True))
     except KeyboardInterrupt:
         print("\nProgram Exited by User!")

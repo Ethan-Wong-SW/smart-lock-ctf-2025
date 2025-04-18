@@ -1,0 +1,183 @@
+
+==================================================
+[+] Starting new fuzzing cycle: Attempt 1
+==================================================
+[1] Connecting to "Smart Lock [Group 3]"...
+
+[Mutation] Byte 3: 32 -> 42
+[Mutation Auth 0] Trying: [243, 146, 1, 42, 133, 130]
+
+
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+
+
+[!] Previous state 'None' is now state 'Locked before authentication'! 
+[!] Command: [0, 243, 146, 1, 42, 133, 130]
+[!] Response: 1
+[!] [243, 146, 1, 42, 133, 130] added to json file
+
+[Mutation] Changed length from 6 to 5 bytes
+[Mutation Auth 1] Trying: [243, 146, 1, 133, 130]
+
+
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+
+
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 243, 146, 1, 133, 130]
+[!] Response: 1
+[!] [243, 146, 1, 133, 130] added to json file
+[Mutation Auth 2] Trying: [243, 146, 1, 42, 133, 130]
+
+
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+
+
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 243, 146, 1, 42, 133, 130]
+[!] Response: 1
+
+[Mutation] Byte 0: 243 -> 247, Byte 1: 146 -> 178, Byte 2: 1 -> 73, Byte 3: 42 -> 43, Byte 5: 130 -> 138
+[Mutation Auth 3] Trying: [247, 178, 73, 43, 133, 138]
+
+
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+
+
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 247, 178, 73, 43, 133, 138]
+[!] Response: 1
+[!] [247, 178, 73, 43, 133, 138] added to json file
+
+[Mutation] Byte 2: 3 -> 127
+[Mutation Auth 4] Trying: [255, 2, 127, 4, 5, 6]
+
+
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+
+
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 255, 2, 127, 4, 5, 6]
+[!] Response: 1
+[!] [255, 2, 127, 4, 5, 6] added to json file
+
+[!] Authentication fuzzing failed, trying with correct passcode...
+
+
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+
+
+[!] Previous state 'Locked before authentication' is now state 'Authenticated'! 
+[+] Authenticated with correct passcode
+
+[Mutation] Changed length from 5 to 6 bytes
+
+[Mutation Command 0] Sending: [0, 0, 0, 0, 0, 0]
+
+
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Error] Code: 0x018374
+
+
+[!] Interesting input found at Authenticated! 
+[!] [0, 0, 0, 0, 0, 0] added to json file
+[!] Current state: 'Authenticated'! 
+[!] Command: [0, 0, 0, 0, 0, 0]
+[!] Response: 1
+[!] [0, 0, 0, 0, 0, 0] added to json file
+
+[Mutation] Byte 0: 2 -> 130
+
+[Mutation Command 1] Sending: [130]
+
+
+
+
+[!] Current state: 'Authenticated'! 
+[!] Command: [130]
+[!] Response: 2
+
+[Mutation Command 2] Sending: [1]
+
+
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+
+
+[!] Previous state 'Locked before authentication' is now state 'Unlocked'! 
+[!] Command: [1]
+[!] Response: 0
+[1] is similar to inputs in json file
+
+[Mutation Command 3] Sending: [2]
+
+
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+
+
+[!] Previous state 'Authenticated' is now state 'Locked'! 
+[!] Command: [2]
+[!] Response: 0
+[2] is similar to inputs in json file
+
+[Mutation] Byte 0: 2 -> 82
+
+[Mutation Command 4] Sending: [82]
+
+
+[State] Lock mechanism closed
+
+
+[!] Current state: 'Locked'! 
+[!] Command: [82]
+[!] Response: 2
+
+==================================================
+[+] Total number of Fuzzing cycles completed: 1 
+Total Interesting passcodes found: 10
+Total Interesting commands found: 7
+Total Known errors found: 8
+Total tests done: 10
+==================================================
+
+
+[Logs from Smart Lock (Serial Port)]:
+--------------------------------------------------
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Error] Code: 0x018374
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+
+[Disconnecting...]

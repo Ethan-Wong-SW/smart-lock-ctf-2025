@@ -1,0 +1,157 @@
+
+==================================================
+[+] Starting new fuzzing cycle: Attempt 1
+==================================================
+[1] Connecting to "Smart Lock [Group 3]"...
+
+[Mutation] Byte 0: 127 -> 5, Byte 4: 5 -> 127
+[Mutation Auth 0] Trying: [5, 2, 3, 4, 127, 6]
+[!] Previous state 'None' is now state 'Locked before authentication'! 
+[!] Command: [0, 5, 2, 3, 4, 127, 6]
+[!] Response: 1
+[!] Authentication failed
+
+BLE Logs:
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+
+[Mutation] Changed length from 6 to 5 bytes
+[Mutation Auth 1] Trying: [146, 1, 32, 133, 130]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 146, 1, 32, 133, 130]
+[!] Response: 1
+[!] Authentication failed
+
+BLE Logs:
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+
+[Mutation] Changed length from 6 to 8 bytes
+[Mutation Auth 2] Trying: [1, 2, 3, 4, 5, 4, 5, 6]
+[!] Current state: 'Locked before authentication'! 
+[!] Command: [0, 1, 2, 3, 4, 5, 4, 5, 6]
+[!] Response: 1
+[!] Authentication failed
+
+BLE Logs:
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+
+[Mutation] Byte 0: 243 -> 133, Byte 4: 133 -> 243
+[Mutation Auth 3] Trying: [133, 146, 1, 32, 243, 130]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 133, 146, 1, 32, 243, 130]
+[!] Response: 1
+[!] Authentication failed
+
+BLE Logs:
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+
+[Mutation] Changed length from 6 to 7 bytes
+[Mutation Auth 4] Trying: [243, 146, 1, 32, 133, 130, 18]
+[!] Current state: 'Locked before authentication'! 
+[!] Command: [0, 243, 146, 1, 32, 133, 130, 18]
+[!] Response: 1
+[!] Authentication failed
+
+BLE Logs:
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+
+[!] Authentication fuzzing failed, trying with correct passcode...
+[!] Previous state 'Locked before authentication' is now state 'Authenticated'! 
+
+BLE Logs:
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[+] Authenticated with correct passcode
+
+[Mutation Command 0] Sending: [0, 0, 0, 0, 0]
+[!] Current state: 'Authenticated'! 
+[!] Command: [0, 0, 0, 0, 0]
+[!] Response: 1
+[0, 0, 0, 0, 0] is similar to inputs in json file
+
+BLE Logs:
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+
+[Mutation] Byte 0: 2 -> 207
+
+[Mutation Command 1] Sending: [207]
+[!] Current state: 'Authenticated'! 
+[!] Command: [207]
+[!] Response: 2
+
+BLE Logs:
+[Error] Code: 0x018374
+
+[Mutation] Byte 0: 255 -> 239
+
+[Mutation Command 2] Sending: [239]
+[!] Current state: 'Authenticated'! 
+[!] Command: [239]
+[!] Response: 2
+
+BLE Logs:
+
+[Mutation] Byte 1: 239 -> 77
+
+[Mutation Command 3] Sending: [0, 77]
+[!] Interesting input found at Authenticated! 
+[!] [0, 77] added to json file
+[!] Current state: 'Authenticated'! 
+[!] Command: [0, 77]
+[!] Response: 1
+[!] [0, 77] added to json file
+
+BLE Logs:
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+
+[Mutation Command 4] Sending: [2]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2]
+[!] Response: 4
+
+BLE Logs:
+[Bluetooth] Received command: 0x02 (Close)
+
+==================================================
+[+] Total number of Fuzzing cycles completed: 1 
+Total Interesting passcodes found: 6
+Total Interesting commands found: 7
+Total Known errors found: 4
+Total tests done: 10
+==================================================
+
+
+[Logs from Smart Lock (Serial Port)]:
+--------------------------------------------------
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Error] Code: 0x018374
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x02 (Close)
+
+[Disconnecting...]
