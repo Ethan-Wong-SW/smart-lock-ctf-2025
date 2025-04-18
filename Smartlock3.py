@@ -80,59 +80,6 @@ def setup_error_tracking():
     except Exception as e:
         print(f"{BLUE}Error loading known errors: {e}{RESET}")
 
-# def setup_error_tracking():
-#     """Load known error patterns from file with comprehensive error handling"""
-#     global known_errors, similar_inputs
-
-#     # Initialize empty sets
-#     known_errors = set()
-#     similar_inputs = set()
-
-#     try:
-#         if not os.path.exists(KNOWN_ERRORS_FILE):
-#             print(f"{BLUE}No error file found at {KNOWN_ERRORS_FILE}{RESET}")
-#             return
-
-#         # Check if file is empty
-#         if os.path.getsize(KNOWN_ERRORS_FILE) == 0:
-#             print(f"{BLUE}Error file is empty{RESET}")
-#             return
-
-#         with open(KNOWN_ERRORS_FILE, 'r') as f:
-#             error_list = json.load(f)
-            
-#             if not isinstance(error_list, list):
-#                 print(f"{BLUE}Invalid data format - expected list{RESET}")
-#                 return
-
-#             for error_obj in error_list:
-#                 try:
-#                     # Handle error field
-#                     if "error" in error_obj and error_obj["error"] is not None:
-#                         known_errors.add(str(error_obj["error"]))
-                    
-#                     # Handle input field
-#                     if "input" in error_obj and error_obj["input"] is not None:
-#                         if isinstance(error_obj["input"], list):
-#                             similar_inputs.add(tuple(error_obj["input"]))
-#                         else:
-#                             print(f"{BLUE}Skipping non-list input: {error_obj['input']}{RESET}")
-                
-#                 except Exception as e:
-#                     print(f"{BLUE}Skipping malformed entry: {e}{RESET}")
-#                     continue
-
-#         print(f"Loaded {len(known_errors)} errors and {len(similar_inputs)} inputs")
-#         if len(known_errors) > 0:
-#             print("Sample errors:", list(known_errors))
-#         if len(similar_inputs) > 0:
-#             print("Sample inputs:", list(similar_inputs))
-
-#     except json.JSONDecodeError:
-#         print(f"{BLUE}Invalid JSON format in error file{RESET}")
-#     except Exception as e:
-#         print(f"{BLUE}Error loading known errors: {type(e).__name__} - {str(e)}{RESET}")
-
 def save_known_errors():
     """Save known error patterns to file in a more readable format"""
     global known_errors, similar_inputs
@@ -206,80 +153,29 @@ def is_known_error(message):
     global known_errors, similar_inputs
     return any(error_pattern in message for error_pattern in known_errors)
 
-# def has_similar_input(input):
-#     """Check if any part of the input_array matches any part of any array in the set."""
-#     global similar_inputs
-    
-#     if not input or not similar_inputs:
-#         return False
-    
-#     input_tuple = tuple(input)
-
-#     # Special case: if input starts with 0
-#     # if input_tuple[0] == 0:
-#     #     for arr in similar_inputs:
-#     #         if arr and arr[0] == 0:
-#     #             return True
-    
-#     # Compare first 6 elements (or full length if shorter)
-#     compare_length = min(6, len(input_tuple))
-    
-#     for arr in similar_inputs:
-#         if not arr:  # Skip empty arrays
-#             continue
-            
-#         # Get the comparable portion (first 6 elements or full length)
-#         arr_portion = arr[:compare_length]
-#         input_portion = input_tuple[:compare_length]
-        
-#         # Must match exactly for the comparison length
-#         if len(arr_portion) >= compare_length and arr_portion == input_portion:
-#             return True
-
-#         if arr == input:
-#             return True
-            
-#     return False
-
 def has_similar_input(input):
-    """
-    Check if:
-    1. The input array starts with 0 AND any array in the set starts with 0, OR
-    2. Any part of the input array matches any part of any array in the set.
-    """
+    """Check if any part of the input_array matches any part of any array in the set."""
     global similar_inputs
-    # Convert input to tuple for consistency
-    input_tuple = tuple(input)
-
+    
     if not input or not similar_inputs:
         return False
     
-    # if len(input) == 2 and input[0] == 0:
-    #     return True
-    
-    # if len(input_tuple) >= 2 and input_tuple[0] == 0 and input_tuple[1] == 0:
-    #     for arr in similar_inputs:
-    #         if len(arr) >= 2 and arr[0] == 0 and arr[1] == 0:
-    #             return True  # Early exit if any array starts with two zeros
+    input_tuple = tuple(input)
 
     # Special case: if input starts with 0
-    if input_tuple[0] == 0:
-        for arr in similar_inputs:
-            if arr and arr[0] == 0:
-                return True
+    # if input_tuple[0] == 0:
+    #     for arr in similar_inputs:
+    #         if arr and arr[0] == 0:
+    #             return True
 
-    # Original behavior (check for overlapping parts)
-    for arr in similar_inputs:
-        arr_tuple = tuple(arr)
-        # Check if the shorter array is a subset of the longer one
-        if len(input_tuple) <= len(arr_tuple):
-            if input_tuple == arr_tuple[:len(input_tuple)]:
-                return True
-        else:
-            if arr_tuple == input_tuple[:len(arr_tuple)]:
-                return True
+    if len(input_tuple) >= 2 and input_tuple[0] == 0 and input_tuple[1] == 0:
+        for arr in similar_inputs:
+            if len(arr) >= 2 and arr[0] == 0 and arr[1] == 0:
+                return True  # Early exit if any array starts with two zeros
     
+    # Compare first 6 elements (or full length if shorter)
     compare_length = min(6, len(input_tuple))
+    
     for arr in similar_inputs:
         if not arr:  # Skip empty arrays
             continue
@@ -292,10 +188,66 @@ def has_similar_input(input):
         if len(arr_portion) >= compare_length and arr_portion == input_portion:
             return True
 
-        if arr == input_tuple:
-            return True
-
+        # if arr == input:
+        #     return True
+            
     return False
+
+# def has_similar_input(input):
+#     """
+#     Check if:
+#     1. The input array starts with 0 AND any array in the set starts with 0, OR
+#     2. Any part of the input array matches any part of any array in the set.
+#     """
+#     global similar_inputs
+#     # Convert input to tuple for consistency
+#     input_tuple = tuple(input)
+
+#     if not input or not similar_inputs:
+#         return False
+    
+#     # if len(input) > 1 and input[0] == 0:
+#     #     return True
+    
+#     if len(input_tuple) >= 2 and input_tuple[0] == 0 and input_tuple[1] == 0:
+#         for arr in similar_inputs:
+#             if len(arr) >= 2 and arr[0] == 0 and arr[1] == 0:
+#                 return True  # Early exit if any array starts with two zeros
+
+#     # Special case: if input starts with 0
+#     # if input_tuple[0] == 0:
+#     #     for arr in similar_inputs:
+#     #         if arr and arr[0] == 0:
+#     #             return True
+
+#     # Original behavior (check for overlapping parts)
+#     for arr in similar_inputs:
+#         arr_tuple = tuple(arr)
+#         # Check if the shorter array is a subset of the longer one
+#         if len(input_tuple) <= len(arr_tuple):
+#             if input_tuple == arr_tuple[:len(input_tuple)]:
+#                 return True
+#         else:
+#             if arr_tuple == input_tuple[:len(arr_tuple)]:
+#                 return True
+    
+#     compare_length = min(6, len(input_tuple))
+#     for arr in similar_inputs:
+#         if not arr:  # Skip empty arrays
+#             continue
+            
+#         # Get the comparable portion (first 6 elements or full length)
+#         arr_portion = arr[:compare_length]
+#         input_portion = input_tuple[:compare_length]
+        
+#         # Must match exactly for the comparison length
+#         if len(arr_portion) >= compare_length and arr_portion == input_portion:
+#             return True
+
+#         if arr == input_tuple:
+#             return True
+
+#     return False
 
         
 def record_new_error(error, input_type, input, history):
@@ -366,15 +318,16 @@ class Fuzzer:
         await asyncio.sleep(0.3)  # Allow time for response
         logs = ble.read_logs()
         
-        log_print(f"\nBLE Logs - idx:{self.idx}, total: {len(logs)}")
+        # log_print(f"\nBLE Logs - idx:{self.idx}, total: {len(logs)}")
         # Print only new logs since last time
         for line in logs[self.idx:]:
-            log_print(line)
+            # log_print(line)
             if "[Error] Code: 0x" in line and input_type is not None and input is not None:
                 # Extract the error code
                 error_code = line.split("0x")[1].strip()
                 if has_similar_input(input) == False:
                     record_new_error(error_code, input_type, input, self.state_checker.command_history)
+                    similar_inputs.add(input)
 
         # Return new last index
         self.idx = len(logs)
@@ -410,7 +363,7 @@ class Fuzzer:
             if input_type == type_passcode:
                 if input not in interesting_passcodes:
                     interesting_passcodes.append(input)
-                    similar_inputs.add(input)
+                    similar_inputs.add(tuple(input))
                     log_print(f"[!] {input} added to json file")
                     record_new_error(e, input_type, input, self.state_checker.command_history)
                     return True
@@ -418,7 +371,7 @@ class Fuzzer:
                 if input not in interesting_commands:
                     interesting_commands.append(input)
                     log_print(f"[!] {input} added to json file")
-                    similar_inputs.add(input)
+                    similar_inputs.add(tuple(input))
                     record_new_error(e, input_type, input, self.state_checker.command_history)
                     return True
         return False
@@ -433,8 +386,8 @@ class Fuzzer:
             self.state_checker.current_state = self.state_checker.STATES['BEF_AUTH_LOCKED']
             log_print(f"[!] Current state: {self.state_checker.current_state}")
 
-            self.idx = 0
-            self.ble.init_logs()
+            # self.idx = 0
+            # self.ble.init_logs()
             return True
         except Exception as conn_e:
             log_print(f"[!] Reconnection failed: {conn_e}")
@@ -623,6 +576,9 @@ class Fuzzer:
                             f'Total Tests done: {self.total_testcases}\n'
                             f'{"="*50}\n')
                 
+                log_print(f"current pool of interesting passcodes: {interesting_passcodes}")
+                log_print(f"current pool of interesting commands: {interesting_commands}")
+                
                 log_print(f"\n[Logs from Smart Lock (Serial Port)]:\n{'-'*50}")
                 for line in self.ble.read_logs():
                     log_print(line)
@@ -636,22 +592,15 @@ class Fuzzer:
 
                 self.state_checker.command_history.clear()
                 self.testcases = 0
-                
+
                 # Brief pause between cycles
                 await asyncio.sleep(2)
                 
         except KeyboardInterrupt:
             log_print("\n[!] Received interrupt signal, shutting down...")
         finally:
-
-            # Show all stats
-            log_print(f'\n{"="*50}\n[+] Total number of Fuzzing cycles completed: {loop_number} \n'
-                        f'Total Interesting passcodes found: {len(interesting_passcodes)}\n'
-                        f'Total Interesting commands found: {len(interesting_commands)}\n'
-                        f'Total Known errors found: {len(known_errors)}\n'
-                        f'Total tests done: {self.total_testcases}\n'
-                        f'{"="*50}\n')
-
+            log_print("\n[!] Ending fuzzing...")
+            
             # Output logs from the Smart Lock
             log_print(f"\n[Logs from Smart Lock (Serial Port)]:\n{'-'*50}")
             for line in self.ble.read_logs():
@@ -663,6 +612,14 @@ class Fuzzer:
             
             # Save final state
             save_known_errors()
+
+            # Show all stats
+            log_print(f'\n{"="*50}\n[+] Total number of Fuzzing cycles completed: {loop_number} \n'
+                        f'Total Interesting passcodes found: {len(interesting_passcodes)}\n'
+                        f'Total Interesting commands found: {len(interesting_commands)}\n'
+                        f'Total Known errors found: {len(known_errors)}\n'
+                        f'Total tests done: {self.total_testcases}\n'
+                        f'{"="*50}\n')
 
             sys.exit(0)
 
@@ -932,14 +889,14 @@ class StateChecker:
                 log_print(f"[!] Interesting input found at {self.current_state}! ")
                 log_print(f"[!] {command} added to json file")
                 interesting_commands.append(command)
-                # similar_inputs.add(command)
+                similar_inputs.add(tuple(command))
                 record_new_error("Unexpected transition for commands", type_command, command, command_history)
-        elif 'AUTHENTICATED' == self.STATES['BEF_AUTH_LOCKED']:
+        elif self.current_state == self.STATES['BEF_AUTH_LOCKED']:
             state_info = self.expected_states[self.current_state]
             # print(f"state_info: {state_info}")
             if (response not in state_info['expected_responses'] and has_similar_input(command[1:]) == False):
                 interesting_passcodes.append(command)
-                # similar_inputs.add(command)
+                similar_inputs.add(tuple(command))
                 log_print(f"[!] Interesting input found at {self.current_state}! ")
                 log_print(f"[!] {command} added to json file")
                 record_new_error("Unexpected transition for passcode", type_passcode, command[1:], command_history)
