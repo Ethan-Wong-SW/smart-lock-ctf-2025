@@ -1,0 +1,42 @@
+=== Efficiency Metrics ===
+Time to First Crash: Cycle 1
+Avg Time to Generate Test: 0.0000640736s
+Avg Time to Run Test (per cycle):
+  Cycle 1: 0.06555s
+  Cycle 2: 0.06326s
+  Cycle 3: 0.04920s
+  Cycle 4: 0.03974s
+  Cycle 5: 0.03529s
+  Cycle 6: 0.03209s
+  Cycle 7: 0.03057s
+  Cycle 8: 0.02939s
+  Cycle 9: 0.02858s
+  Cycle 10: 0.02781s
+  Cycle 11: 0.02758s
+  Cycle 12: 0.02798s
+  Cycle 13: 0.02736s
+  Cycle 14: 0.02838s
+  Cycle 15: 0.02772s
+  Cycle 16: 0.03079s
+  Cycle 17: 0.03243s
+  Cycle 18: 0.03492s
+  Cycle 19: 0.03734s
+  Cycle 20: 0.03911s
+  Cycle 21: 0.04095s
+  Cycle 22: 0.04258s
+  Cycle 23: 0.04410s
+  Cycle 24: 0.04557s
+  Cycle 25: 0.04629s
+  Cycle 26: 0.04580s
+  Cycle 27: 0.04535s
+  Cycle 28: 0.04540s
+  Cycle 29: 0.04531s
+  Cycle 30: 0.04505s
+  Cycle 31: 0.04468s
+  Cycle 32: 0.04453s
+  Cycle 33: 0.04431s
+  Cycle 34: 0.04390s
+  Cycle 35: 0.04378s
+  Cycle 36: 0.04356s
+
+Overall Avg Time to Run Test: 0.03962s

@@ -1,0 +1,11 @@
+=== Baseline Summary ===
+Fuzzing 1: 131 interesting test cases
+Fuzzing 2: 127 interesting test cases
+Fuzzing 3: 48 interesting test cases
+Fuzzing 4: 10 interesting test cases
+Fuzzing 5: 25 interesting test cases
+Fuzzing 6: 23 interesting test cases
+Fuzzing 7: 118 interesting test cases
+
+Total: 482
+Average per run: 68.86
