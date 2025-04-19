@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 # Set this to your folder if not current directory
 directory = "."
-file_prefix = "known_errors_and_interesting_inputs_fuzzing"
+file_prefix = "json/known_errors_and_interesting_inputs_fuzzing"
 file_suffix = ".json"
 
 baseline_data = {}

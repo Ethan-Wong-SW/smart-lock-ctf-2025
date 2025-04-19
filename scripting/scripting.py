@@ -57,7 +57,7 @@ df = pd.DataFrame(data)
 df.to_csv("cycle_stats7.csv", index=False)
 
 # Save to TXT (human-readable format)
-with open("cycle_stats7.txt", "w") as txt_file:
+with open("stats/cycle_stats7.txt", "w") as txt_file:
     for index, row in df.iterrows():
         txt_file.write(f"Cycle {row['Cycle']}:\n")
         txt_file.write(f"  Interesting Passcodes: {row['Interesting_Passcodes']}\n")

@@ -1,7 +1,7 @@
 import re
 
 logfile = "logs/fuzz_test_20250419_030123_fuzzing4.txt"
-output_file = "efficiency_metrics4.txt"
+output_file = "stats/efficiency_metrics4.txt"
 
 with open(logfile, 'r') as f:
     lines = f.readlines()

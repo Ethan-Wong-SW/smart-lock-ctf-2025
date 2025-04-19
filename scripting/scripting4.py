@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 
 # === CONFIGURATION ===
 directory = "."  # set to directory where JSON files are stored
-prefix = "known_errors_and_interesting_inputs_fuzzing"
-output_txt = "stability_rq4_report.txt"
-output_img = "stability_rq4_plot.png"
+prefix = "json/known_errors_and_interesting_inputs_fuzzing"
+output_txt = "stats/stability_rq4_report.txt"
+output_img = "stats/stability_rq4_plot.png"
 num_sessions = 8  # update this based on how many runs you have
 
 # === STORAGE ===
