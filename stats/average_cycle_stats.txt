@@ -1,0 +1,544 @@
+Cycle 1:
+  Avg Interesting Passcodes: 2.50
+  Avg Interesting Commands:  2.00
+  Avg Errors:                1.50
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           10.00
+  Avg Execution Time:        0.06722 s
+
+Cycle 2:
+  Avg Interesting Passcodes: 2.50
+  Avg Interesting Commands:  2.50
+  Avg Errors:                2.25
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           20.00
+  Avg Execution Time:        0.06323 s
+
+Cycle 3:
+  Avg Interesting Passcodes: 2.50
+  Avg Interesting Commands:  2.50
+  Avg Errors:                2.25
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           30.00
+  Avg Execution Time:        0.05550 s
+
+Cycle 4:
+  Avg Interesting Passcodes: 2.75
+  Avg Interesting Commands:  3.00
+  Avg Errors:                3.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           40.00
+  Avg Execution Time:        0.05164 s
+
+Cycle 5:
+  Avg Interesting Passcodes: 3.25
+  Avg Interesting Commands:  3.25
+  Avg Errors:                3.75
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           50.00
+  Avg Execution Time:        0.04972 s
+
+Cycle 6:
+  Avg Interesting Passcodes: 3.25
+  Avg Interesting Commands:  3.50
+  Avg Errors:                4.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           60.00
+  Avg Execution Time:        0.04649 s
+
+Cycle 7:
+  Avg Interesting Passcodes: 3.50
+  Avg Interesting Commands:  3.75
+  Avg Errors:                4.50
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           70.00
+  Avg Execution Time:        0.04863 s
+
+Cycle 8:
+  Avg Interesting Passcodes: 3.50
+  Avg Interesting Commands:  4.00
+  Avg Errors:                4.75
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           80.00
+  Avg Execution Time:        0.04631 s
+
+Cycle 9:
+  Avg Interesting Passcodes: 3.50
+  Avg Interesting Commands:  4.00
+  Avg Errors:                4.75
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           90.00
+  Avg Execution Time:        0.04536 s
+
+Cycle 10:
+  Avg Interesting Passcodes: 4.00
+  Avg Interesting Commands:  4.25
+  Avg Errors:                5.75
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           100.00
+  Avg Execution Time:        0.04449 s
+
+Cycle 11:
+  Avg Interesting Passcodes: 4.25
+  Avg Interesting Commands:  4.50
+  Avg Errors:                6.25
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           110.00
+  Avg Execution Time:        0.04426 s
+
+Cycle 12:
+  Avg Interesting Passcodes: 4.75
+  Avg Interesting Commands:  4.50
+  Avg Errors:                6.75
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           120.00
+  Avg Execution Time:        0.04466 s
+
+Cycle 13:
+  Avg Interesting Passcodes: 5.00
+  Avg Interesting Commands:  4.75
+  Avg Errors:                7.25
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           130.00
+  Avg Execution Time:        0.04460 s
+
+Cycle 14:
+  Avg Interesting Passcodes: 5.75
+  Avg Interesting Commands:  5.25
+  Avg Errors:                8.75
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           140.00
+  Avg Execution Time:        0.04513 s
+
+Cycle 15:
+  Avg Interesting Passcodes: 6.00
+  Avg Interesting Commands:  6.00
+  Avg Errors:                9.75
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           150.00
+  Avg Execution Time:        0.04415 s
+
+Cycle 16:
+  Avg Interesting Passcodes: 6.75
+  Avg Interesting Commands:  6.50
+  Avg Errors:                11.25
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           160.00
+  Avg Execution Time:        0.04522 s
+
+Cycle 17:
+  Avg Interesting Passcodes: 7.00
+  Avg Interesting Commands:  7.50
+  Avg Errors:                12.50
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           170.00
+  Avg Execution Time:        0.04630 s
+
+Cycle 18:
+  Avg Interesting Passcodes: 7.50
+  Avg Interesting Commands:  8.50
+  Avg Errors:                14.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           180.00
+  Avg Execution Time:        0.04691 s
+
+Cycle 19:
+  Avg Interesting Passcodes: 7.75
+  Avg Interesting Commands:  9.25
+  Avg Errors:                15.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           190.00
+  Avg Execution Time:        0.04770 s
+
+Cycle 20:
+  Avg Interesting Passcodes: 7.75
+  Avg Interesting Commands:  10.25
+  Avg Errors:                16.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           200.00
+  Avg Execution Time:        0.04793 s
+
+Cycle 21:
+  Avg Interesting Passcodes: 8.00
+  Avg Interesting Commands:  10.50
+  Avg Errors:                16.50
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           210.00
+  Avg Execution Time:        0.04855 s
+
+Cycle 22:
+  Avg Interesting Passcodes: 8.25
+  Avg Interesting Commands:  11.75
+  Avg Errors:                18.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           220.00
+  Avg Execution Time:        0.04887 s
+
+Cycle 23:
+  Avg Interesting Passcodes: 8.25
+  Avg Interesting Commands:  12.00
+  Avg Errors:                18.25
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           230.00
+  Avg Execution Time:        0.04936 s
+
+Cycle 24:
+  Avg Interesting Passcodes: 8.25
+  Avg Interesting Commands:  12.75
+  Avg Errors:                19.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           240.00
+  Avg Execution Time:        0.04956 s
+
+Cycle 25:
+  Avg Interesting Passcodes: 8.75
+  Avg Interesting Commands:  14.00
+  Avg Errors:                20.75
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           250.00
+  Avg Execution Time:        0.04980 s
+
+Cycle 26:
+  Avg Interesting Passcodes: 9.00
+  Avg Interesting Commands:  14.25
+  Avg Errors:                21.25
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           260.00
+  Avg Execution Time:        0.04970 s
+
+Cycle 27:
+  Avg Interesting Passcodes: 8.67
+  Avg Interesting Commands:  19.00
+  Avg Errors:                25.67
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           270.00
+  Avg Execution Time:        0.05768 s
+
+Cycle 28:
+  Avg Interesting Passcodes: 8.67
+  Avg Interesting Commands:  19.67
+  Avg Errors:                26.33
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           280.00
+  Avg Execution Time:        0.05739 s
+
+Cycle 29:
+  Avg Interesting Passcodes: 8.67
+  Avg Interesting Commands:  20.00
+  Avg Errors:                26.67
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           290.00
+  Avg Execution Time:        0.05746 s
+
+Cycle 30:
+  Avg Interesting Passcodes: 9.33
+  Avg Interesting Commands:  21.00
+  Avg Errors:                28.33
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           300.00
+  Avg Execution Time:        0.05753 s
+
+Cycle 31:
+  Avg Interesting Passcodes: 9.67
+  Avg Interesting Commands:  21.67
+  Avg Errors:                29.33
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           310.00
+  Avg Execution Time:        0.05702 s
+
+Cycle 32:
+  Avg Interesting Passcodes: 9.67
+  Avg Interesting Commands:  22.00
+  Avg Errors:                29.67
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           320.00
+  Avg Execution Time:        0.05699 s
+
+Cycle 33:
+  Avg Interesting Passcodes: 9.67
+  Avg Interesting Commands:  22.33
+  Avg Errors:                30.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           330.00
+  Avg Execution Time:        0.05689 s
+
+Cycle 34:
+  Avg Interesting Passcodes: 10.00
+  Avg Interesting Commands:  22.67
+  Avg Errors:                30.67
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           340.00
+  Avg Execution Time:        0.05627 s
+
+Cycle 35:
+  Avg Interesting Passcodes: 10.00
+  Avg Interesting Commands:  23.00
+  Avg Errors:                31.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           350.00
+  Avg Execution Time:        0.05600 s
+
+Cycle 36:
+  Avg Interesting Passcodes: 10.00
+  Avg Interesting Commands:  24.33
+  Avg Errors:                32.33
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           360.00
+  Avg Execution Time:        0.05548 s
+
+Cycle 37:
+  Avg Interesting Passcodes: 12.00
+  Avg Interesting Commands:  27.00
+  Avg Errors:                37.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           370.00
+  Avg Execution Time:        0.06095 s
+
+Cycle 38:
+  Avg Interesting Passcodes: 12.50
+  Avg Interesting Commands:  28.00
+  Avg Errors:                38.50
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           380.00
+  Avg Execution Time:        0.06063 s
+
+Cycle 39:
+  Avg Interesting Passcodes: 12.50
+  Avg Interesting Commands:  29.00
+  Avg Errors:                39.50
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           390.00
+  Avg Execution Time:        0.06080 s
+
+Cycle 40:
+  Avg Interesting Passcodes: 12.50
+  Avg Interesting Commands:  30.50
+  Avg Errors:                41.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           400.00
+  Avg Execution Time:        0.06066 s
+
+Cycle 41:
+  Avg Interesting Passcodes: 12.50
+  Avg Interesting Commands:  31.50
+  Avg Errors:                42.50
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           410.00
+  Avg Execution Time:        0.06044 s
+
+Cycle 42:
+  Avg Interesting Passcodes: 12.50
+  Avg Interesting Commands:  33.50
+  Avg Errors:                44.50
+  Avg Tests This Cycle:      9.00
+  Avg Total Tests:           419.00
+  Avg Execution Time:        0.06044 s
+
+Cycle 43:
+  Avg Interesting Passcodes: 12.50
+  Avg Interesting Commands:  34.00
+  Avg Errors:                45.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           429.00
+  Avg Execution Time:        0.05985 s
+
+Cycle 44:
+  Avg Interesting Passcodes: 12.50
+  Avg Interesting Commands:  35.00
+  Avg Errors:                46.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           439.00
+  Avg Execution Time:        0.05968 s
+
+Cycle 45:
+  Avg Interesting Passcodes: 12.50
+  Avg Interesting Commands:  36.50
+  Avg Errors:                47.50
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           449.00
+  Avg Execution Time:        0.05936 s
+
+Cycle 46:
+  Avg Interesting Passcodes: 12.50
+  Avg Interesting Commands:  38.00
+  Avg Errors:                49.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           459.00
+  Avg Execution Time:        0.05907 s
+
+Cycle 47:
+  Avg Interesting Passcodes: 12.50
+  Avg Interesting Commands:  39.00
+  Avg Errors:                50.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           469.00
+  Avg Execution Time:        0.05912 s
+
+Cycle 48:
+  Avg Interesting Passcodes: 12.50
+  Avg Interesting Commands:  39.50
+  Avg Errors:                50.50
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           479.00
+  Avg Execution Time:        0.05887 s
+
+Cycle 49:
+  Avg Interesting Passcodes: 12.50
+  Avg Interesting Commands:  40.50
+  Avg Errors:                51.50
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           489.00
+  Avg Execution Time:        0.05882 s
+
+Cycle 50:
+  Avg Interesting Passcodes: 12.50
+  Avg Interesting Commands:  41.00
+  Avg Errors:                52.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           499.00
+  Avg Execution Time:        0.05865 s
+
+Cycle 51:
+  Avg Interesting Passcodes: 13.00
+  Avg Interesting Commands:  42.50
+  Avg Errors:                54.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           509.00
+  Avg Execution Time:        0.05896 s
+
+Cycle 52:
+  Avg Interesting Passcodes: 4.00
+  Avg Interesting Commands:  84.00
+  Avg Errors:                86.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           518.00
+  Avg Execution Time:        0.07861 s
+
+Cycle 53:
+  Avg Interesting Passcodes: 4.00
+  Avg Interesting Commands:  86.00
+  Avg Errors:                88.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           528.00
+  Avg Execution Time:        0.07921 s
+
+Cycle 54:
+  Avg Interesting Passcodes: 4.00
+  Avg Interesting Commands:  88.00
+  Avg Errors:                90.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           538.00
+  Avg Execution Time:        0.07908 s
+
+Cycle 55:
+  Avg Interesting Passcodes: 4.00
+  Avg Interesting Commands:  92.00
+  Avg Errors:                94.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           548.00
+  Avg Execution Time:        0.07904 s
+
+Cycle 56:
+  Avg Interesting Passcodes: 4.00
+  Avg Interesting Commands:  94.00
+  Avg Errors:                96.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           558.00
+  Avg Execution Time:        0.07899 s
+
+Cycle 57:
+  Avg Interesting Passcodes: 4.00
+  Avg Interesting Commands:  97.00
+  Avg Errors:                99.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           568.00
+  Avg Execution Time:        0.07908 s
+
+Cycle 58:
+  Avg Interesting Passcodes: 4.00
+  Avg Interesting Commands:  98.00
+  Avg Errors:                100.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           578.00
+  Avg Execution Time:        0.07984 s
+
+Cycle 59:
+  Avg Interesting Passcodes: 4.00
+  Avg Interesting Commands:  99.00
+  Avg Errors:                101.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           588.00
+  Avg Execution Time:        0.07968 s
+
+Cycle 60:
+  Avg Interesting Passcodes: 4.00
+  Avg Interesting Commands:  100.00
+  Avg Errors:                102.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           598.00
+  Avg Execution Time:        0.07953 s
+
+Cycle 61:
+  Avg Interesting Passcodes: 4.00
+  Avg Interesting Commands:  103.00
+  Avg Errors:                105.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           608.00
+  Avg Execution Time:        0.07958 s
+
+Cycle 62:
+  Avg Interesting Passcodes: 4.00
+  Avg Interesting Commands:  106.00
+  Avg Errors:                108.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           618.00
+  Avg Execution Time:        0.07951 s
+
+Cycle 63:
+  Avg Interesting Passcodes: 4.00
+  Avg Interesting Commands:  108.00
+  Avg Errors:                110.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           628.00
+  Avg Execution Time:        0.07959 s
+
+Cycle 64:
+  Avg Interesting Passcodes: 4.00
+  Avg Interesting Commands:  111.00
+  Avg Errors:                113.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           638.00
+  Avg Execution Time:        0.07956 s
+
+Cycle 65:
+  Avg Interesting Passcodes: 4.00
+  Avg Interesting Commands:  112.00
+  Avg Errors:                114.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           648.00
+  Avg Execution Time:        0.07968 s
+
+Cycle 66:
+  Avg Interesting Passcodes: 4.00
+  Avg Interesting Commands:  114.00
+  Avg Errors:                116.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           658.00
+  Avg Execution Time:        0.07993 s
+
+Cycle 67:
+  Avg Interesting Passcodes: 4.00
+  Avg Interesting Commands:  116.00
+  Avg Errors:                118.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           668.00
+  Avg Execution Time:        0.08010 s
+
+Cycle 68:
+  Avg Interesting Passcodes: 4.00
+  Avg Interesting Commands:  116.00
+  Avg Errors:                118.00
+  Avg Tests This Cycle:      10.00
+  Avg Total Tests:           678.00
+  Avg Execution Time:        0.07996 s
+
