@@ -3,7 +3,7 @@ import json
 import matplotlib.pyplot as plt
 
 # Set this to your folder if not current directory
-directory = "."
+directory = "../"
 file_prefix = "json/known_errors_and_interesting_inputs_fuzzing"
 file_suffix = ".json"
 
