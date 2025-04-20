@@ -1,0 +1,2575 @@
+
+==================================================
+[+] Starting new fuzzing cycle: Attempt 1
+==================================================
+[1] Connecting to "Smart Lock [Group 3]"...
+
+[Random Auth 0] Trying: [72, 172, 200, 112, 130, 189]
+[!] Previous state 'None' is now state 'Locked before authentication'! 
+[!] Command: [0, 72, 172, 200, 112, 130, 189]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 1] Trying: [225, 177, 126, 53, 147, 60]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 225, 177, 126, 53, 147, 60]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 2] Trying: [41, 155, 77, 89, 78, 248]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 41, 155, 77, 89, 78, 248]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 3] Trying: [133, 229, 138, 19, 252, 213]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 133, 229, 138, 19, 252, 213]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 4] Trying: [189, 46, 84, 73, 231, 11]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 189, 46, 84, 73, 231, 11]
+[!] Response: 1
+[!] Authentication failed
+
+[!] Authentication fuzzing failed, trying with correct passcode...
+[!] Previous state 'Locked before authentication' is now state 'Authenticated'! 
+[+] Authenticated with correct passcode
+
+[Mutation] Changed length from 1 to 2 bytes
+
+[Random Command 0] Sending: [2, 19]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 19]
+[!] Response: 4
+[!] [2, 19] added to json file
+
+[Mutation] Byte 0: 2 -> 209
+
+
+[Random Command 1] Sending: [209, 19]
+[!] Current state: 'Authenticated'! 
+[!] Command: [209, 19]
+[!] Response: 2
+
+[Random Command 2] Sending: [2, 163, 11, 91]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 163, 11, 91]
+[!] Response: 4
+[!] [2, 163, 11, 91] added to json file
+
+[Mutation] Byte 2: 11 -> 0
+
+
+[Random Command 3] Sending: [2, 163, 0, 91]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 163, 0, 91]
+[!] Response: 4
+[!] [2, 163, 0, 91] added to json file
+
+[Random Command 4] Sending: [236, 53, 143, 26, 160]
+[!] Current state: 'Authenticated'! 
+[!] Command: [236, 53, 143, 26, 160]
+[!] Response: 2
+
+==================================================
+[+] Fuzzing cycle 1 complete
+Total Interesting passcodes: 1
+Total Interesting commands: 5
+Total Known errors: 3
+Tests done for this cycle: 10
+Total Tests done: 10
+Avg generation time: 0.0000000000s
+Total inputs generated: 10
+Avg execution time: 0.07180s
+==================================================
+
+current pool of interesting passcodes: [[1, 2, 3, 4, 5, 6]]
+current pool of interesting commands: [[1], [2], [2, 19], [2, 163, 11, 91], [2, 163, 0, 91]]
+current pool of similar inputs: {(2, 163, 0, 91), (2, 163, 11, 91), (2, 19)}
+
+[Logs from Smart Lock (Serial Port)]:
+--------------------------------------------------
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+
+==================================================
+[+] Starting new fuzzing cycle: Attempt 2
+==================================================
+[1] Connecting to "Smart Lock [Group 3]"...
+
+[Random Auth 0] Trying: [30, 221, 243, 212, 117, 131]
+[!] Previous state 'None' is now state 'Locked before authentication'! 
+[!] Command: [0, 30, 221, 243, 212, 117, 131]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 1] Trying: [47, 171, 41, 145, 65, 138]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 47, 171, 41, 145, 65, 138]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 2] Trying: [126, 112, 149, 42, 177, 43]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 126, 112, 149, 42, 177, 43]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 3] Trying: [60, 189, 156, 151, 209, 47]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 60, 189, 156, 151, 209, 47]
+[!] Response: 1
+[!] Authentication failed
+
+[Mutation] Byte 0: 1 -> 16
+, Byte 1: 2 -> 131
+, Byte 2: 3 -> 70
+, Byte 3: 4 -> 68
+, Byte 4: 5 -> 8
+, Byte 5: 6 -> 134
+
+
+[Random Auth 4] Trying: [16, 131, 70, 68, 8, 134]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 16, 131, 70, 68, 8, 134]
+[!] Response: 1
+[!] Authentication failed
+
+[!] Authentication fuzzing failed, trying with correct passcode...
+[!] Previous state 'Locked before authentication' is now state 'Authenticated'! 
+[+] Authenticated with correct passcode
+
+[Random Command 0] Sending: [2, 239]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 239]
+[!] Response: 4
+[!] [2, 239] added to json file
+
+[Random Command 1] Sending: [2]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2]
+[!] Response: 4
+[2] is similar to inputs in json file
+
+[Random Command 2] Sending: [42, 39, 235, 239]
+[!] Current state: 'Authenticated'! 
+[!] Command: [42, 39, 235, 239]
+[!] Response: 2
+
+[Mutation] Changed length from 2 to 3 bytes
+
+[Random Command 3] Sending: [2, 239, 31]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 239, 31]
+[!] Response: 4
+[!] [2, 239, 31] added to json file
+
+[Random Command 4] Sending: [1, 175]
+[!] Current state: 'Authenticated'! 
+[!] Command: [1, 175]
+[!] Response: 0
+[!] [1, 175] added to json file
+
+==================================================
+[+] Fuzzing cycle 2 complete
+Total Interesting passcodes: 1
+Total Interesting commands: 8
+Total Known errors: 6
+Tests done for this cycle: 10
+Total Tests done: 20
+Avg generation time: 0.0000000000s
+Total inputs generated: 20
+Avg execution time: 0.07030s
+==================================================
+
+current pool of interesting passcodes: [[1, 2, 3, 4, 5, 6]]
+current pool of interesting commands: [[1], [2], [2, 19], [2, 163, 11, 91], [2, 163, 0, 91], [2, 239], [2, 239, 31], [1, 175]]
+current pool of similar inputs: {(2, 239), (1, 175), (2, 239, 31), (2, 19), (2, 163, 11, 91), (2, 163, 0, 91)}
+
+[Logs from Smart Lock (Serial Port)]:
+--------------------------------------------------
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<BLEClient._serialport_task() done, defined at C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py:72> exception=SerialException("could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)")>
+Traceback (most recent call last):
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 74, in _serialport_task
+    port = self.open_serialport()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 55, in open_serialport
+    self.serialport = serial.Serial(
+                      ^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)
+
+==================================================
+[+] Starting new fuzzing cycle: Attempt 3
+==================================================
+[1] Connecting to "Smart Lock [Group 3]"...
+
+[Random Auth 0] Trying: [59, 195, 232, 87, 178, 224]
+[!] Previous state 'None' is now state 'Locked before authentication'! 
+[!] Command: [0, 59, 195, 232, 87, 178, 224]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 1] Trying: [147, 87, 186, 176, 16, 170]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 147, 87, 186, 176, 16, 170]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 2] Trying: [226, 22, 54, 253, 31, 199]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 226, 22, 54, 253, 31, 199]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 3] Trying: [5, 65, 214, 194, 87, 30]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 5, 65, 214, 194, 87, 30]
+[!] Response: 1
+[!] Authentication failed
+
+[Mutation] Byte 0: 1 -> 213
+
+
+[Random Auth 4] Trying: [213, 2, 3, 4, 5, 6]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 213, 2, 3, 4, 5, 6]
+[!] Response: 1
+[!] Authentication failed
+
+[!] Authentication fuzzing failed, trying with correct passcode...
+[!] Previous state 'Locked before authentication' is now state 'Authenticated'! 
+[+] Authenticated with correct passcode
+
+[Random Command 0] Sending: [135]
+[!] Current state: 'Authenticated'! 
+[!] Command: [135]
+[!] Response: 2
+
+[Random Command 1] Sending: [144, 70, 128, 102]
+[!] Current state: 'Authenticated'! 
+[!] Command: [144, 70, 128, 102]
+[!] Response: 2
+
+[Random Command 2] Sending: [2, 116, 189]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 116, 189]
+[!] Response: 0
+[!] [2, 116, 189] added to json file
+
+[Random Command 3] Sending: [1, 217]
+[!] Current state: 'Authenticated'! 
+[!] Command: [1, 217]
+[!] Response: 0
+[!] [1, 217] added to json file
+
+[Random Command 4] Sending: [128, 234]
+[!] Current state: 'Authenticated'! 
+[!] Command: [128, 234]
+[!] Response: 2
+
+==================================================
+[+] Fuzzing cycle 3 complete
+Total Interesting passcodes: 1
+Total Interesting commands: 10
+Total Known errors: 8
+Tests done for this cycle: 10
+Total Tests done: 30
+Avg generation time: 0.0000000000s
+Total inputs generated: 31
+Avg execution time: 0.07006s
+==================================================
+
+current pool of interesting passcodes: [[1, 2, 3, 4, 5, 6]]
+current pool of interesting commands: [[1], [2], [2, 19], [2, 163, 11, 91], [2, 163, 0, 91], [2, 239], [2, 239, 31], [1, 175], [2, 116, 189], [1, 217]]
+current pool of similar inputs: {(2, 239), (2, 116, 189), (1, 217), (1, 175), (2, 239, 31), (2, 19), (2, 163, 11, 91), (2, 163, 0, 91)}
+
+[Logs from Smart Lock (Serial Port)]:
+--------------------------------------------------
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<BLEClient._serialport_task() done, defined at C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py:72> exception=SerialException("could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)")>
+Traceback (most recent call last):
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 74, in _serialport_task
+    port = self.open_serialport()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 55, in open_serialport
+    self.serialport = serial.Serial(
+                      ^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)
+
+==================================================
+[+] Starting new fuzzing cycle: Attempt 4
+==================================================
+[1] Connecting to "Smart Lock [Group 3]"...
+
+[Random Auth 0] Trying: [192, 93, 165, 73, 253, 121]
+[!] Previous state 'None' is now state 'Locked before authentication'! 
+[!] Command: [0, 192, 93, 165, 73, 253, 121]
+[!] Response: 1
+[!] Authentication failed
+
+[Mutation] Changed length from 6 to 5 bytes
+
+[Random Auth 1] Trying: [1, 2, 3, 4, 6]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 1, 2, 3, 4, 6]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 2] Trying: [162, 121, 238, 193, 24, 247]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 162, 121, 238, 193, 24, 247]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 3] Trying: [232, 119, 14, 16, 195, 100]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 232, 119, 14, 16, 195, 100]
+[!] Response: 1
+[!] Authentication failed
+
+[Mutation] Changed length from 6 to 7 bytes
+
+[Random Auth 4] Trying: [1, 2, 2, 3, 4, 5, 6]
+[!] Current state: 'Locked before authentication'! 
+[!] Command: [0, 1, 2, 2, 3, 4, 5, 6]
+[!] Response: 1
+[!] Authentication failed
+
+[!] Authentication fuzzing failed, trying with correct passcode...
+[!] Previous state 'Locked before authentication' is now state 'Authenticated'! 
+[+] Authenticated with correct passcode
+
+[Random Command 0] Sending: [1]
+[!] Current state: 'Authenticated'! 
+[!] Command: [1]
+[!] Response: 4
+[1] is similar to inputs in json file
+
+[Random Command 1] Sending: [163, 235, 109]
+[!] Current state: 'Authenticated'! 
+[!] Command: [163, 235, 109]
+[!] Response: 2
+
+[Mutation] Byte 0: 2 -> 19
+, Byte 1: 19 -> 2
+
+
+[Random Command 2] Sending: [19, 2]
+[!] Current state: 'Authenticated'! 
+[!] Command: [19, 2]
+[!] Response: 2
+
+[Random Command 3] Sending: [2, 32, 156, 58, 32]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 32, 156, 58, 32]
+[!] Response: 0
+[!] [2, 32, 156, 58, 32] added to json file
+
+[Mutation] Byte 1: 19 -> 0
+
+
+[Random Command 4] Sending: [2, 0]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 0]
+[!] Response: 4
+[!] [2, 0] added to json file
+
+==================================================
+[+] Fuzzing cycle 4 complete
+Total Interesting passcodes: 1
+Total Interesting commands: 12
+Total Known errors: 10
+Tests done for this cycle: 10
+Total Tests done: 40
+Avg generation time: 0.0000000000s
+Total inputs generated: 42
+Avg execution time: 0.06843s
+==================================================
+
+current pool of interesting passcodes: [[1, 2, 3, 4, 5, 6]]
+current pool of interesting commands: [[1], [2], [2, 19], [2, 163, 11, 91], [2, 163, 0, 91], [2, 239], [2, 239, 31], [1, 175], [2, 116, 189], [1, 217], [2, 32, 156, 58, 32], [2, 0]]
+current pool of similar inputs: {(2, 239), (2, 116, 189), (1, 217), (2, 32, 156, 58, 32), (1, 175), (2, 239, 31), (2, 0), (2, 19), (2, 163, 11, 91), (2, 163, 0, 91)}
+
+[Logs from Smart Lock (Serial Port)]:
+--------------------------------------------------
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x02 (Close)
+Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<BLEClient._serialport_task() done, defined at C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py:72> exception=SerialException("could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)")>
+Traceback (most recent call last):
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 74, in _serialport_task
+    port = self.open_serialport()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 55, in open_serialport
+    self.serialport = serial.Serial(
+                      ^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)
+
+==================================================
+[+] Starting new fuzzing cycle: Attempt 5
+==================================================
+[1] Connecting to "Smart Lock [Group 3]"...
+
+[Random Auth 0] Trying: [90, 41, 232, 74, 160, 0]
+[!] Previous state 'None' is now state 'Locked before authentication'! 
+[!] Command: [0, 90, 41, 232, 74, 160, 0]
+[!] Response: 1
+[!] Authentication failed
+
+[Mutation] Byte 2: 3 -> 200
+
+
+[Random Auth 1] Trying: [1, 2, 200, 4, 5, 6]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 1, 2, 200, 4, 5, 6]
+[!] Response: 1
+[!] Authentication failed
+
+[Mutation] Byte 1: 2 -> 255
+
+
+[Random Auth 2] Trying: [1, 255, 3, 4, 5, 6]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 1, 255, 3, 4, 5, 6]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 3] Trying: [130, 61, 137, 16, 173, 28]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 130, 61, 137, 16, 173, 28]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 4] Trying: [38, 83, 211, 152, 240, 64]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 38, 83, 211, 152, 240, 64]
+[!] Response: 1
+[!] Authentication failed
+
+[!] Authentication fuzzing failed, trying with correct passcode...
+[!] Previous state 'Locked before authentication' is now state 'Authenticated'! 
+[+] Authenticated with correct passcode
+
+[Random Command 0] Sending: [2, 252]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 252]
+[!] Response: 4
+[!] [2, 252] added to json file
+
+[Mutation] Changed length from 2 to 5 bytes
+
+[Random Command 1] Sending: [1, 1, 1, 1, 175]
+[!] Current state: 'Authenticated'! 
+[!] Command: [1, 1, 1, 1, 175]
+[!] Response: 0
+[!] [1, 1, 1, 1, 175] added to json file
+
+[Random Command 2] Sending: [1, 169, 106, 163, 84]
+[!] Current state: 'Authenticated'! 
+[!] Command: [1, 169, 106, 163, 84]
+[!] Response: 4
+[!] [1, 169, 106, 163, 84] added to json file
+
+[Random Command 3] Sending: [1, 244, 206, 158]
+[!] Current state: 'Authenticated'! 
+[!] Command: [1, 244, 206, 158]
+[!] Response: 4
+[!] [1, 244, 206, 158] added to json file
+
+[Random Command 4] Sending: [1, 239]
+[!] Current state: 'Authenticated'! 
+[!] Command: [1, 239]
+[!] Response: 4
+[!] [1, 239] added to json file
+
+==================================================
+[+] Fuzzing cycle 5 complete
+Total Interesting passcodes: 1
+Total Interesting commands: 17
+Total Known errors: 15
+Tests done for this cycle: 10
+Total Tests done: 50
+Avg generation time: 0.0003076923s
+Total inputs generated: 52
+Avg execution time: 0.07117s
+==================================================
+
+current pool of interesting passcodes: [[1, 2, 3, 4, 5, 6]]
+current pool of interesting commands: [[1], [2], [2, 19], [2, 163, 11, 91], [2, 163, 0, 91], [2, 239], [2, 239, 31], [1, 175], [2, 116, 189], [1, 217], [2, 32, 156, 58, 32], [2, 0], [2, 252], [1, 1, 1, 1, 175], [1, 169, 106, 163, 84], [1, 244, 206, 158], [1, 239]]
+current pool of similar inputs: {(2, 239), (2, 116, 189), (2, 252), (1, 217), (1, 169, 106, 163, 84), (2, 32, 156, 58, 32), (1, 175), (2, 239, 31), (2, 0), (1, 239), (2, 19), (1, 244, 206, 158), (2, 163, 11, 91), (1, 1, 1, 1, 175), (2, 163, 0, 91)}
+
+[Logs from Smart Lock (Serial Port)]:
+--------------------------------------------------
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<BLEClient._serialport_task() done, defined at C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py:72> exception=SerialException("could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)")>
+Traceback (most recent call last):
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 74, in _serialport_task
+    port = self.open_serialport()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 55, in open_serialport
+    self.serialport = serial.Serial(
+                      ^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)
+
+==================================================
+[+] Starting new fuzzing cycle: Attempt 6
+==================================================
+[1] Connecting to "Smart Lock [Group 3]"...
+
+[Mutation] Changed length from 6 to 10 bytes
+
+[Random Auth 0] Trying: [1, 2, 3, 4, 3, 4, 3, 4, 5, 6]
+[!] Current state: 'Locked before authentication'! 
+[!] Command: [0, 1, 2, 3, 4, 3, 4, 3, 4, 5, 6]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 1] Trying: [183, 143, 145, 152, 135, 248]
+[!] Previous state 'None' is now state 'Locked before authentication'! 
+[!] Command: [0, 183, 143, 145, 152, 135, 248]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 2] Trying: [224, 188, 185, 227, 155, 217]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 224, 188, 185, 227, 155, 217]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 3] Trying: [20, 22, 58, 186, 52, 44]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 20, 22, 58, 186, 52, 44]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 4] Trying: [20, 198, 148, 231, 193, 115]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 20, 198, 148, 231, 193, 115]
+[!] Response: 1
+[!] Authentication failed
+
+[!] Authentication fuzzing failed, trying with correct passcode...
+[!] Previous state 'Locked before authentication' is now state 'Authenticated'! 
+[+] Authenticated with correct passcode
+
+[Random Command 0] Sending: [1, 33]
+[!] Current state: 'Authenticated'! 
+[!] Command: [1, 33]
+[!] Response: 4
+[!] [1, 33] added to json file
+
+[Random Command 1] Sending: [1, 14, 211, 20, 220, 30]
+[!] Current state: 'Authenticated'! 
+[!] Command: [1, 14, 211, 20, 220, 30]
+[!] Response: 4
+[!] [1, 14, 211, 20, 220, 30] added to json file
+
+[Random Command 2] Sending: [1, 58, 119, 122, 211]
+[!] Current state: 'Authenticated'! 
+[!] Command: [1, 58, 119, 122, 211]
+[!] Response: 4
+[!] [1, 58, 119, 122, 211] added to json file
+
+[Mutation] Byte 2: 156 -> 0
+
+
+[Random Command 3] Sending: [2, 32, 0, 58, 32]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 32, 0, 58, 32]
+[!] Response: 0
+[!] [2, 32, 0, 58, 32] added to json file
+
+[Random Command 4] Sending: [2, 194, 227, 171]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 194, 227, 171]
+[!] Response: 4
+[!] [2, 194, 227, 171] added to json file
+
+==================================================
+[+] Fuzzing cycle 6 complete
+Total Interesting passcodes: 1
+Total Interesting commands: 22
+Total Known errors: 20
+Tests done for this cycle: 10
+Total Tests done: 60
+Avg generation time: 0.0002580645s
+Total inputs generated: 62
+Avg execution time: 0.07453s
+==================================================
+
+current pool of interesting passcodes: [[1, 2, 3, 4, 5, 6]]
+current pool of interesting commands: [[1], [2], [2, 19], [2, 163, 11, 91], [2, 163, 0, 91], [2, 239], [2, 239, 31], [1, 175], [2, 116, 189], [1, 217], [2, 32, 156, 58, 32], [2, 0], [2, 252], [1, 1, 1, 1, 175], [1, 169, 106, 163, 84], [1, 244, 206, 158], [1, 239], [1, 33], [1, 14, 211, 20, 220, 30], [1, 58, 119, 122, 211], [2, 32, 0, 58, 32], [2, 194, 227, 171]]
+current pool of similar inputs: {(2, 116, 189), (1, 217), (2, 32, 0, 58, 32), (2, 163, 11, 91), (1, 1, 1, 1, 175), (2, 252), (2, 32, 156, 58, 32), (1, 33), (1, 14, 211, 20, 220, 30), (2, 194, 227, 171), (1, 169, 106, 163, 84), (2, 239), (2, 19), (1, 58, 119, 122, 211), (1, 175), (2, 239, 31), (2, 0), (1, 239), (1, 244, 206, 158), (2, 163, 0, 91)}
+
+[Logs from Smart Lock (Serial Port)]:
+--------------------------------------------------
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x02 (Close)
+Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<BLEClient._serialport_task() done, defined at C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py:72> exception=SerialException("could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)")>
+Traceback (most recent call last):
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 74, in _serialport_task
+    port = self.open_serialport()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 55, in open_serialport
+    self.serialport = serial.Serial(
+                      ^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)
+
+==================================================
+[+] Starting new fuzzing cycle: Attempt 7
+==================================================
+[1] Connecting to "Smart Lock [Group 3]"...
+
+[Random Auth 0] Trying: [78, 50, 164, 187, 199, 252]
+[!] Previous state 'None' is now state 'Locked before authentication'! 
+[!] Command: [0, 78, 50, 164, 187, 199, 252]
+[!] Response: 1
+[!] Authentication failed
+
+[Mutation] Byte 2: 3 -> 159
+
+
+[Random Auth 1] Trying: [1, 2, 159, 4, 5, 6]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 1, 2, 159, 4, 5, 6]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 2] Trying: [217, 97, 89, 136, 47, 100]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 217, 97, 89, 136, 47, 100]
+[!] Response: 1
+[!] Authentication failed
+
+[Mutation] Byte 0: 1 -> 223
+
+
+[Random Auth 3] Trying: [223, 2, 3, 4, 5, 6]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 223, 2, 3, 4, 5, 6]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 4] Trying: [30, 248, 207, 159, 245, 179]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 30, 248, 207, 159, 245, 179]
+[!] Response: 1
+[!] Authentication failed
+
+[!] Authentication fuzzing failed, trying with correct passcode...
+[!] Previous state 'Locked before authentication' is now state 'Authenticated'! 
+[+] Authenticated with correct passcode
+
+[Mutation] Changed length from 5 to 6 bytes
+
+[Random Command 0] Sending: [2, 32, 156, 58, 58, 32]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 32, 156, 58, 58, 32]
+[!] Response: 4
+[!] [2, 32, 156, 58, 58, 32] added to json file
+
+[Mutation] Byte 4: 32 -> 156
+
+
+[Random Command 1] Sending: [2, 32, 156, 58, 156]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 32, 156, 58, 156]
+[!] Response: 4
+[!] [2, 32, 156, 58, 156] added to json file
+
+[Random Command 2] Sending: [1, 23, 3, 91, 37]
+[!] Current state: 'Authenticated'! 
+[!] Command: [1, 23, 3, 91, 37]
+[!] Response: 0
+[!] [1, 23, 3, 91, 37] added to json file
+
+[Random Command 3] Sending: [1, 159, 80]
+[!] Current state: 'Authenticated'! 
+[!] Command: [1, 159, 80]
+[!] Response: 4
+[!] [1, 159, 80] added to json file
+
+[Random Command 4] Sending: [1, 184, 183]
+[!] Current state: 'Authenticated'! 
+[!] Command: [1, 184, 183]
+[!] Response: 4
+[!] [1, 184, 183] added to json file
+
+==================================================
+[+] Fuzzing cycle 7 complete
+Total Interesting passcodes: 1
+Total Interesting commands: 27
+Total Known errors: 25
+Tests done for this cycle: 10
+Total Tests done: 70
+Avg generation time: 0.0002222222s
+Total inputs generated: 72
+Avg execution time: 0.07653s
+==================================================
+
+current pool of interesting passcodes: [[1, 2, 3, 4, 5, 6]]
+current pool of interesting commands: [[1], [2], [2, 19], [2, 163, 11, 91], [2, 163, 0, 91], [2, 239], [2, 239, 31], [1, 175], [2, 116, 189], [1, 217], [2, 32, 156, 58, 32], [2, 0], [2, 252], [1, 1, 1, 1, 175], [1, 169, 106, 163, 84], [1, 244, 206, 158], [1, 239], [1, 33], [1, 14, 211, 20, 220, 30], [1, 58, 119, 122, 211], [2, 32, 0, 58, 32], [2, 194, 227, 171], [2, 32, 156, 58, 58, 32], [2, 32, 156, 58, 156], [1, 23, 3, 91, 37], [1, 159, 80], [1, 184, 183]]
+current pool of similar inputs: {(2, 116, 189), (1, 217), (2, 32, 0, 58, 32), (1, 23, 3, 91, 37), (1, 184, 183), (2, 163, 11, 91), (1, 159, 80), (1, 1, 1, 1, 175), (2, 252), (2, 32, 156, 58, 32), (1, 33), (2, 32, 156, 58, 58, 32), (1, 14, 211, 20, 220, 30), (2, 194, 227, 171), (1, 169, 106, 163, 84), (2, 239), (2, 19), (1, 58, 119, 122, 211), (2, 32, 156, 58, 156), (1, 175), (2, 239, 31), (2, 0), (1, 239), (1, 244, 206, 158), (2, 163, 0, 91)}
+
+[Logs from Smart Lock (Serial Port)]:
+--------------------------------------------------
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+Task exception was never retrieved
+future: <Task finished name='Task-14' coro=<BLEClient._serialport_task() done, defined at C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py:72> exception=SerialException("could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)")>
+Traceback (most recent call last):
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 74, in _serialport_task
+    port = self.open_serialport()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 55, in open_serialport
+    self.serialport = serial.Serial(
+                      ^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)
+
+==================================================
+[+] Starting new fuzzing cycle: Attempt 8
+==================================================
+[1] Connecting to "Smart Lock [Group 3]"...
+
+[Mutation] Byte 0: 1 -> 64
+, Byte 1: 2 -> 3
+, Byte 2: 3 -> 10
+, Byte 3: 4 -> 86
+, Byte 4: 5 -> 44
+, Byte 5: 6 -> 164
+
+
+[Random Auth 0] Trying: [64, 3, 10, 86, 44, 164]
+[!] Previous state 'None' is now state 'Locked before authentication'! 
+[!] Command: [0, 64, 3, 10, 86, 44, 164]
+[!] Response: 1
+[!] Authentication failed
+
+[Mutation] Byte 2: 3 -> 6
+, Byte 5: 6 -> 3
+
+
+[Random Auth 1] Trying: [1, 2, 6, 4, 5, 3]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 1, 2, 6, 4, 5, 3]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 2] Trying: [225, 254, 62, 148, 123, 237]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 225, 254, 62, 148, 123, 237]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 3] Trying: [135, 173, 234, 156, 206, 229]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 135, 173, 234, 156, 206, 229]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 4] Trying: [31, 253, 16, 208, 174, 27]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 31, 253, 16, 208, 174, 27]
+[!] Response: 1
+[!] Authentication failed
+
+[!] Authentication fuzzing failed, trying with correct passcode...
+[!] Previous state 'Locked before authentication' is now state 'Authenticated'! 
+[+] Authenticated with correct passcode
+
+[Random Command 0] Sending: [75, 202, 170, 126, 241]
+[!] Current state: 'Authenticated'! 
+[!] Command: [75, 202, 170, 126, 241]
+[!] Response: 2
+
+[Random Command 1] Sending: [43, 254, 118]
+[!] Current state: 'Authenticated'! 
+[!] Command: [43, 254, 118]
+[!] Response: 2
+
+[Random Command 2] Sending: [2, 126]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 126]
+[!] Response: 0
+[!] [2, 126] added to json file
+
+[Random Command 3] Sending: [1, 83, 152, 172]
+[!] Current state: 'Authenticated'! 
+[!] Command: [1, 83, 152, 172]
+[!] Response: 0
+[!] [1, 83, 152, 172] added to json file
+
+[Random Command 4] Sending: [123, 134]
+[!] Current state: 'Authenticated'! 
+[!] Command: [123, 134]
+[!] Response: 2
+
+==================================================
+[+] Fuzzing cycle 8 complete
+Total Interesting passcodes: 1
+Total Interesting commands: 29
+Total Known errors: 27
+Tests done for this cycle: 10
+Total Tests done: 80
+Avg generation time: 0.0001951220s
+Total inputs generated: 82
+Avg execution time: 0.07632s
+==================================================
+
+current pool of interesting passcodes: [[1, 2, 3, 4, 5, 6]]
+current pool of interesting commands: [[1], [2], [2, 19], [2, 163, 11, 91], [2, 163, 0, 91], [2, 239], [2, 239, 31], [1, 175], [2, 116, 189], [1, 217], [2, 32, 156, 58, 32], [2, 0], [2, 252], [1, 1, 1, 1, 175], [1, 169, 106, 163, 84], [1, 244, 206, 158], [1, 239], [1, 33], [1, 14, 211, 20, 220, 30], [1, 58, 119, 122, 211], [2, 32, 0, 58, 32], [2, 194, 227, 171], [2, 32, 156, 58, 58, 32], [2, 32, 156, 58, 156], [1, 23, 3, 91, 37], [1, 159, 80], [1, 184, 183], [2, 126], [1, 83, 152, 172]]
+current pool of similar inputs: {(2, 116, 189), (1, 217), (2, 32, 0, 58, 32), (1, 23, 3, 91, 37), (1, 184, 183), (2, 163, 11, 91), (1, 159, 80), (1, 1, 1, 1, 175), (1, 83, 152, 172), (2, 252), (2, 32, 156, 58, 32), (1, 33), (2, 32, 156, 58, 58, 32), (1, 14, 211, 20, 220, 30), (2, 194, 227, 171), (1, 169, 106, 163, 84), (2, 239), (2, 126), (2, 19), (1, 58, 119, 122, 211), (2, 32, 156, 58, 156), (1, 175), (2, 239, 31), (2, 0), (1, 239), (1, 244, 206, 158), (2, 163, 0, 91)}
+
+[Logs from Smart Lock (Serial Port)]:
+--------------------------------------------------
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+Task exception was never retrieved
+future: <Task finished name='Task-16' coro=<BLEClient._serialport_task() done, defined at C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py:72> exception=SerialException("could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)")>
+Traceback (most recent call last):
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 74, in _serialport_task
+    port = self.open_serialport()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 55, in open_serialport
+    self.serialport = serial.Serial(
+                      ^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)
+
+==================================================
+[+] Starting new fuzzing cycle: Attempt 9
+==================================================
+[1] Connecting to "Smart Lock [Group 3]"...
+
+[Mutation] Byte 1: 2 -> 4
+, Byte 3: 4 -> 2
+
+
+[Random Auth 0] Trying: [1, 4, 3, 2, 5, 6]
+[!] Previous state 'None' is now state 'Locked before authentication'! 
+[!] Command: [0, 1, 4, 3, 2, 5, 6]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 1] Trying: [161, 80, 86, 67, 109, 162]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 161, 80, 86, 67, 109, 162]
+[!] Response: 1
+[!] Authentication failed
+
+[Mutation] Byte 5: 6 -> 193
+
+
+[Random Auth 2] Trying: [1, 2, 3, 4, 5, 193]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 1, 2, 3, 4, 5, 193]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 3] Trying: [33, 88, 217, 27, 205, 215]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 33, 88, 217, 27, 205, 215]
+[!] Response: 1
+[!] Authentication failed
+
+[Mutation] Byte 1: 2 -> 217
+
+
+[Random Auth 4] Trying: [1, 217, 3, 4, 5, 6]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 1, 217, 3, 4, 5, 6]
+[!] Response: 1
+[!] Authentication failed
+
+[!] Authentication fuzzing failed, trying with correct passcode...
+[!] Previous state 'Locked before authentication' is now state 'Authenticated'! 
+[+] Authenticated with correct passcode
+
+[Mutation] Changed length from 5 to 6 bytes
+
+[Random Command 0] Sending: [2, 32, 0, 58, 32, 226]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 32, 0, 58, 32, 226]
+[!] Response: 0
+[!] [2, 32, 0, 58, 32, 226] added to json file
+
+[Random Command 1] Sending: [55, 157, 161, 100, 215]
+[!] Current state: 'Authenticated'! 
+[!] Command: [55, 157, 161, 100, 215]
+[!] Response: 2
+
+[Random Command 2] Sending: [2, 163, 178]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 163, 178]
+[!] Response: 4
+[!] [2, 163, 178] added to json file
+
+[Random Command 3] Sending: [1, 88, 24]
+[!] Current state: 'Authenticated'! 
+[!] Command: [1, 88, 24]
+[!] Response: 0
+[!] [1, 88, 24] added to json file
+
+[Random Command 4] Sending: [2, 235]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 235]
+[!] Response: 0
+[!] [2, 235] added to json file
+
+==================================================
+[+] Fuzzing cycle 9 complete
+Total Interesting passcodes: 1
+Total Interesting commands: 33
+Total Known errors: 31
+Tests done for this cycle: 10
+Total Tests done: 90
+Avg generation time: 0.0001720430s
+Total inputs generated: 93
+Avg execution time: 0.07804s
+==================================================
+
+current pool of interesting passcodes: [[1, 2, 3, 4, 5, 6]]
+current pool of interesting commands: [[1], [2], [2, 19], [2, 163, 11, 91], [2, 163, 0, 91], [2, 239], [2, 239, 31], [1, 175], [2, 116, 189], [1, 217], [2, 32, 156, 58, 32], [2, 0], [2, 252], [1, 1, 1, 1, 175], [1, 169, 106, 163, 84], [1, 244, 206, 158], [1, 239], [1, 33], [1, 14, 211, 20, 220, 30], [1, 58, 119, 122, 211], [2, 32, 0, 58, 32], [2, 194, 227, 171], [2, 32, 156, 58, 58, 32], [2, 32, 156, 58, 156], [1, 23, 3, 91, 37], [1, 159, 80], [1, 184, 183], [2, 126], [1, 83, 152, 172], [2, 32, 0, 58, 32, 226], [2, 163, 178], [1, 88, 24], [2, 235]]
+current pool of similar inputs: {(2, 116, 189), (1, 217), (2, 32, 0, 58, 32), (1, 23, 3, 91, 37), (1, 184, 183), (2, 163, 11, 91), (1, 159, 80), (1, 1, 1, 1, 175), (1, 83, 152, 172), (2, 252), (2, 32, 156, 58, 32), (2, 163, 178), (1, 33), (2, 32, 156, 58, 58, 32), (1, 14, 211, 20, 220, 30), (2, 32, 0, 58, 32, 226), (2, 194, 227, 171), (1, 169, 106, 163, 84), (2, 239), (2, 126), (2, 19), (1, 58, 119, 122, 211), (2, 32, 156, 58, 156), (1, 88, 24), (1, 175), (2, 239, 31), (2, 235), (2, 0), (1, 239), (1, 244, 206, 158), (2, 163, 0, 91)}
+
+[Logs from Smart Lock (Serial Port)]:
+--------------------------------------------------
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+Task exception was never retrieved
+future: <Task finished name='Task-18' coro=<BLEClient._serialport_task() done, defined at C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py:72> exception=SerialException("could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)")>
+Traceback (most recent call last):
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 74, in _serialport_task
+    port = self.open_serialport()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 55, in open_serialport
+    self.serialport = serial.Serial(
+                      ^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)
+
+==================================================
+[+] Starting new fuzzing cycle: Attempt 10
+==================================================
+[1] Connecting to "Smart Lock [Group 3]"...
+
+[Random Auth 0] Trying: [250, 102, 206, 167, 200, 225]
+[!] Previous state 'None' is now state 'Locked before authentication'! 
+[!] Command: [0, 250, 102, 206, 167, 200, 225]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 1] Trying: [95, 69, 167, 167, 178, 235]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 95, 69, 167, 167, 178, 235]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 2] Trying: [155, 38, 93, 160, 65, 89]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 155, 38, 93, 160, 65, 89]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 3] Trying: [230, 168, 210, 113, 61, 228]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 230, 168, 210, 113, 61, 228]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 4] Trying: [69, 201, 23, 252, 79, 78]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 69, 201, 23, 252, 79, 78]
+[!] Response: 1
+[!] Authentication failed
+
+[!] Authentication fuzzing failed, trying with correct passcode...
+[!] Previous state 'Locked before authentication' is now state 'Authenticated'! 
+[+] Authenticated with correct passcode
+
+[Mutation] Byte 3: 58 -> 128
+
+
+[Random Command 0] Sending: [2, 32, 0, 128, 32]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 32, 0, 128, 32]
+[!] Response: 4
+[!] [2, 32, 0, 128, 32] added to json file
+
+[Random Command 1] Sending: [2, 164, 144]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 164, 144]
+[!] Response: 4
+[!] [2, 164, 144] added to json file
+
+[Random Command 2] Sending: [2, 247, 175]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 247, 175]
+[!] Response: 4
+[!] [2, 247, 175] added to json file
+
+[Random Command 3] Sending: [2, 228, 249, 59, 228, 68]
+[!] Current state: 'Authenticated'! 
+[!] Command: [2, 228, 249, 59, 228, 68]
+[!] Response: 4
+[!] [2, 228, 249, 59, 228, 68] added to json file
+
+[Random Command 4] Sending: [1, 193, 0]
+[!] Current state: 'Authenticated'! 
+[!] Command: [1, 193, 0]
+[!] Response: 0
+[!] [1, 193, 0] added to json file
+
+==================================================
+[+] Fuzzing cycle 10 complete
+Total Interesting passcodes: 1
+Total Interesting commands: 38
+Total Known errors: 36
+Tests done for this cycle: 10
+Total Tests done: 100
+Avg generation time: 0.0001553398s
+Total inputs generated: 103
+Avg execution time: 0.07957s
+==================================================
+
+current pool of interesting passcodes: [[1, 2, 3, 4, 5, 6]]
+current pool of interesting commands: [[1], [2], [2, 19], [2, 163, 11, 91], [2, 163, 0, 91], [2, 239], [2, 239, 31], [1, 175], [2, 116, 189], [1, 217], [2, 32, 156, 58, 32], [2, 0], [2, 252], [1, 1, 1, 1, 175], [1, 169, 106, 163, 84], [1, 244, 206, 158], [1, 239], [1, 33], [1, 14, 211, 20, 220, 30], [1, 58, 119, 122, 211], [2, 32, 0, 58, 32], [2, 194, 227, 171], [2, 32, 156, 58, 58, 32], [2, 32, 156, 58, 156], [1, 23, 3, 91, 37], [1, 159, 80], [1, 184, 183], [2, 126], [1, 83, 152, 172], [2, 32, 0, 58, 32, 226], [2, 163, 178], [1, 88, 24], [2, 235], [2, 32, 0, 128, 32], [2, 164, 144], [2, 247, 175], [2, 228, 249, 59, 228, 68], [1, 193, 0]]
+current pool of similar inputs: {(2, 116, 189), (1, 193, 0), (1, 217), (2, 32, 0, 58, 32), (1, 23, 3, 91, 37), (2, 247, 175), (1, 184, 183), (2, 163, 11, 91), (1, 159, 80), (1, 1, 1, 1, 175), (2, 32, 0, 128, 32), (1, 83, 152, 172), (2, 252), (2, 32, 156, 58, 32), (2, 163, 178), (1, 33), (2, 32, 156, 58, 58, 32), (1, 14, 211, 20, 220, 30), (2, 32, 0, 58, 32, 226), (2, 194, 227, 171), (1, 169, 106, 163, 84), (2, 228, 249, 59, 228, 68), (2, 239), (2, 126), (2, 19), (1, 58, 119, 122, 211), (2, 32, 156, 58, 156), (1, 88, 24), (1, 175), (2, 239, 31), (2, 235), (2, 0), (1, 239), (2, 164, 144), (1, 244, 206, 158), (2, 163, 0, 91)}
+
+[Logs from Smart Lock (Serial Port)]:
+--------------------------------------------------
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+Task exception was never retrieved
+future: <Task finished name='Task-20' coro=<BLEClient._serialport_task() done, defined at C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py:72> exception=SerialException("could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)")>
+Traceback (most recent call last):
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 74, in _serialport_task
+    port = self.open_serialport()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 55, in open_serialport
+    self.serialport = serial.Serial(
+                      ^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)
+
+==================================================
+[+] Starting new fuzzing cycle: Attempt 11
+==================================================
+[1] Connecting to "Smart Lock [Group 3]"...
+
+[Mutation] Byte 4: 5 -> 255
+
+
+[Random Auth 0] Trying: [1, 2, 3, 4, 255, 6]
+[!] Previous state 'None' is now state 'Locked before authentication'! 
+[!] Command: [0, 1, 2, 3, 4, 255, 6]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 1] Trying: [24, 144, 96, 127, 246, 134]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 24, 144, 96, 127, 246, 134]
+[!] Response: 1
+[!] Authentication failed
+
+[Random Auth 2] Trying: [139, 55, 127, 52, 109, 119]
+[!] Previous state 'Locked before authentication' is now state 'Locked before authentication'! 
+[!] Command: [0, 139, 55, 127, 52, 109, 119]
+[!] Response: 1
+[!] Authentication failed
+
+[!] Ending fuzzing...
+
+[Logs from Smart Lock (Serial Port)]:
+--------------------------------------------------
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] Received command: 0x01 (Open)
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] Received command: 0x02 (Close)
+[State] Closing the lock mechanism
+[State] Lock mechanism closed
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[Auth] Authentication Sucessfull
+[State] Device state: Authenticated
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x02 (Close)
+[Bluetooth] Received command: 0x01 (Open)
+[State] Opening the lock mechanism
+[State] Lock mechanism open
+[Bluetooth] User Disconnected
+
+[Bluetooth] User Connected
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+[Bluetooth] Received command: 0x00 (Authenticate)
+[AUTH] Authentication Failed
+
+[Disconnecting...]
+
+==================================================
+[+] Total number of Fuzzing cycles completed: 11 
+Total Interesting passcodes found: 1
+Total Interesting commands found: 38
+Total Known errors found: 36
+Total tests done: 103
+Average generation time per input: 0.0001509434s
+Total inputs generated: 106
+Average execution time per input: 0.07806s
+==================================================
+
+Task exception was never retrieved
+future: <Task finished name='Task-22' coro=<BLEClient._serialport_task() done, defined at C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py:72> exception=SerialException("could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)")>
+Traceback (most recent call last):
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 74, in _serialport_task
+    port = self.open_serialport()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\BLEClient.py", line 55, in open_serialport
+    self.serialport = serial.Serial(
+                      ^^^^^^^^^^^^^^
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 33, in __init__
+    super(Serial, self).__init__(*args, **kwargs)
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialutil.py", line 244, in __init__
+    self.open()
+  File "C:\SUTD\TERM_6\STV\smart-lock-ctf-2025\venv\Lib\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM6': PermissionError(13, 'Access is denied.', None, 5)

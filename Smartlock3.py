@@ -162,12 +162,6 @@ def has_similar_input(input):
     
     input_tuple = tuple(input)
 
-    # Special case: if input starts with 0
-    # if input_tuple[0] == 0:
-    #     for arr in similar_inputs:
-    #         if arr and arr[0] == 0:
-    #             return True
-
     if len(input_tuple) >= 2 and input_tuple[0] == 0 and input_tuple[1] == 0:
         for arr in similar_inputs:
             if len(arr) >= 2 and arr[0] == 0 and arr[1] == 0:
@@ -187,67 +181,8 @@ def has_similar_input(input):
         # Must match exactly for the comparison length
         if len(arr_portion) >= compare_length and arr_portion == input_portion:
             return True
-
-        # if arr == input:
-        #     return True
             
     return False
-
-# def has_similar_input(input):
-#     """
-#     Check if:
-#     1. The input array starts with 0 AND any array in the set starts with 0, OR
-#     2. Any part of the input array matches any part of any array in the set.
-#     """
-#     global similar_inputs
-#     # Convert input to tuple for consistency
-#     input_tuple = tuple(input)
-
-#     if not input or not similar_inputs:
-#         return False
-    
-#     # if len(input) > 1 and input[0] == 0:
-#     #     return True
-    
-#     if len(input_tuple) >= 2 and input_tuple[0] == 0 and input_tuple[1] == 0:
-#         for arr in similar_inputs:
-#             if len(arr) >= 2 and arr[0] == 0 and arr[1] == 0:
-#                 return True  # Early exit if any array starts with two zeros
-
-#     # Special case: if input starts with 0
-#     # if input_tuple[0] == 0:
-#     #     for arr in similar_inputs:
-#     #         if arr and arr[0] == 0:
-#     #             return True
-
-#     # Original behavior (check for overlapping parts)
-#     for arr in similar_inputs:
-#         arr_tuple = tuple(arr)
-#         # Check if the shorter array is a subset of the longer one
-#         if len(input_tuple) <= len(arr_tuple):
-#             if input_tuple == arr_tuple[:len(input_tuple)]:
-#                 return True
-#         else:
-#             if arr_tuple == input_tuple[:len(arr_tuple)]:
-#                 return True
-    
-#     compare_length = min(6, len(input_tuple))
-#     for arr in similar_inputs:
-#         if not arr:  # Skip empty arrays
-#             continue
-            
-#         # Get the comparable portion (first 6 elements or full length)
-#         arr_portion = arr[:compare_length]
-#         input_portion = input_tuple[:compare_length]
-        
-#         # Must match exactly for the comparison length
-#         if len(arr_portion) >= compare_length and arr_portion == input_portion:
-#             return True
-
-#         if arr == input_tuple:
-#             return True
-
-#     return False
 
         
 def record_new_error(error, input_type, input, history):
@@ -322,7 +257,6 @@ class Fuzzer:
         await asyncio.sleep(0.3)  # Allow time for response
         logs = ble.read_logs()
         
-        # log_print(f"\nBLE Logs - idx:{self.idx}, total: {len(logs)}")
         # Print only new logs since last time
         for line in logs[self.idx:]:
             # log_print(line)
@@ -345,17 +279,8 @@ class Fuzzer:
         if not input:
             return False
 
-        # is_new = True
         is_new = False
 
-        # Track unique error codes if response is provided
-        # if response is not None and isinstance(response, list) and len(response) > 0:
-        #     code = response[0]
-        #     if code not in self.unique_error_codes:
-        #         log_print(f"New input is interesting!")
-        #         self.unique_error_codes.add(code)
-        #         is_new = True
-        
         if has_similar_input(input):
             log_print(f"{input} is similar to inputs in json file")
             is_new = False
@@ -390,8 +315,6 @@ class Fuzzer:
             self.state_checker.current_state = self.state_checker.STATES['BEF_AUTH_LOCKED']
             log_print(f"[!] Current state: {self.state_checker.current_state}")
 
-            # self.idx = 0
-            # self.ble.init_logs()
             return True
         except Exception as conn_e:
             log_print(f"[!] Reconnection failed: {conn_e}")
@@ -644,12 +567,7 @@ class Fuzzer:
         while attempts_made < attempts and not authenticated:
             start_gen = asyncio.get_event_loop().time()
             if fuzzer_type == 'random':
-                # 50% chance to use interesting passcode as base
-                if interesting_passcodes and random.random() < 0.5:
-                    base = random.choice(interesting_passcodes)
-                    fuzz_passcode = self.mutate_command(base)
-                else:
-                    fuzz_passcode = [random.randint(0, 255) for _ in range(6)]
+                fuzz_passcode = [random.randint(0, 255) for _ in range(6)]
             else:  # mutation
                 base = random.choice(interesting_passcodes)
                 fuzz_passcode = self.mutate_command(base)
@@ -663,7 +581,7 @@ class Fuzzer:
             if self._command_has_known_error(full_command):
                 continue
                 
-            log_print(f'[{fuzzer_type.capitalize()} Auth {attempts_made}] Trying: {fuzz_passcode}')
+            log_print(f'\n[{fuzzer_type.capitalize()} Auth {attempts_made}] Trying: {fuzz_passcode}')
             try:
                 start_exec = asyncio.get_event_loop().time()
 
@@ -678,7 +596,6 @@ class Fuzzer:
                 if res and res[0] == 0:
                     authenticated = True
                     log_print(f'[+] Authenticated with: {fuzz_passcode}')
-                    self.is_interesting("Response: Success", type_passcode, fuzz_passcode, response=res)
                 else:
                     log_print('[!] Authentication failed')
                 
@@ -700,13 +617,8 @@ class Fuzzer:
                     except Exception as e:
                         self.is_interesting(e, type_passcode, fuzz_passcode, response=res)
                         await self.print_new_logs(self.ble, type_passcode, fuzz_passcode)
-                        # Record the error in our tracking system
-                        # record_new_error(e, type_passcode, fuzz_passcode)
                     continue
-                
                 self.is_interesting(e, type_passcode, fuzz_passcode)
-                # Record the error in our tracking system
-                # record_new_error(e, type_passcode, fuzz_passcode)
             
             attempts_made += 1
             self.testcases += 1
@@ -722,14 +634,9 @@ class Fuzzer:
         while attempts_made < attempts:
             start_gen = asyncio.get_event_loop().time()
             if fuzzer_type == 'random':
-                # 50% chance to use interesting command as base
-                if interesting_commands and random.random() < 0.5:
-                    base = random.choice(interesting_commands)
-                    fuzzed_command = self.mutate_command(base)
-                else:
-                    base = random.choice([COMMANDS['OPEN'], COMMANDS['CLOSE'], []])
-                    fuzz_extra = [random.randint(0, 255) for _ in range(random.randint(0, 5))]
-                    fuzzed_command = base + fuzz_extra
+                base = random.choice([COMMANDS['OPEN'], COMMANDS['CLOSE'], []])
+                fuzz_extra = [random.randint(0, 255) for _ in range(random.randint(0, 5))]
+                fuzzed_command = base + fuzz_extra
             else:  # mutation
                 base = random.choice(interesting_commands)
                 fuzzed_command = self.mutate_command(base)
@@ -754,8 +661,8 @@ class Fuzzer:
                 self.state_checker.update_state(fuzzed_command, res)
                 log_print(f'[!] Command: {fuzzed_command}')
                 log_print(f'[!] Response: {res[0]}')
-                if res and res[0] == 0:  # Check for non-success response codes
-                    self.is_interesting("Response: Success", type_command, fuzzed_command, response=res)
+                if res and (res[0] == 0) and (fuzzed_command[0] == COMMANDS['OPEN'][0] or fuzzed_command[0] == COMMANDS['CLOSE'][0]):  # Check for non-success response codes
+                    self.is_interesting("Invalid Command but Response is 'Success'", type_command, fuzzed_command, response=res)
 
                 await self.print_new_logs(self.ble, type_command, fuzzed_command)
             except Exception as e:
@@ -763,6 +670,7 @@ class Fuzzer:
                 if "Not connected" in str(e):
                     await self.ensure_connection()
                     self.state_checker.command_history.clear()  # clear the command history after a crash
+                    # if the error is Not connected, try the same input again
                     try:
                         res = await self.ble.write_command(COMMANDS['AUTH'] + PASSCODE)
                         await self.print_new_logs(self.ble, type_passcode, COMMANDS['AUTH'] + PASSCODE)
@@ -772,22 +680,16 @@ class Fuzzer:
                     except Exception as e:
                         log_print(f"[X] Error authenticating with correct passcode: {e}")
                     log_print(f'\n[!] Send request with the same input again')
-
-                    # if the error is Not connected, try the same input again
                     try:
                         res = await self.ble.write_command(fuzzed_command)
                         await self.print_new_logs(self.ble, type_command, fuzzed_command)
                         self.state_checker.update_state(fuzzed_command, res)
                     except Exception as e:
                         self.is_interesting(e, type_command, fuzzed_command, response=res)
-                        # Record the error in our tracking system
-                        # record_new_error(e, type_command, fuzzed_command)
                     continue
 
                 self.is_interesting(e, type_command, fuzzed_command)
                 await self.print_new_logs(self.ble, type_command, fuzzed_command)
-                # Record the error in our tracking system
-                # record_new_error(e, type_command, fuzzed_command)
             
             attempts_made += 1
             self.testcases += 1
@@ -819,31 +721,31 @@ class StateChecker:
             'BEF_AUTH_LOCKED' : 'Locked before authentication',     # Initial state
             'AUTHENTICATED': 'Authenticated',     # Auth successful
             'UNLOCKED': 'Unlocked',         # Unlocked state
-            'LOCKED': 'Locked'
+            'LOCKED': 'Locked'              # Locked state
         }
 
         self.transition_rules = {
-            self.STATES['BEF_AUTH_LOCKED']: {    # PASSCODE CHECK NEEDS TO BE DONE ELSEWHERE
-                (COMMANDS['AUTH'][0], RESPONSES['SUCCESS']): self.STATES['AUTHENTICATED'],
-                (COMMANDS['AUTH'][0], RESPONSES['AUTHFAIL']): self.STATES['BEF_AUTH_LOCKED'],
-                (COMMANDS['OPEN'][0], RESPONSES['COMMAND_NOT_ALLOWED_BEF_AUTH']): self.STATES['BEF_AUTH_LOCKED'],
-                (COMMANDS['CLOSE'][0], RESPONSES['COMMAND_NOT_ALLOWED_BEF_AUTH']): self.STATES['BEF_AUTH_LOCKED'],
-                (None, RESPONSES['INVALID_COMMAND']): self.STATES['BEF_AUTH_LOCKED'],   # need to do a check where the command is none of the valid commands
+            self.STATES['BEF_AUTH_LOCKED']: {   
+                (COMMANDS['AUTH'][0], RESPONSES['SUCCESS']): self.STATES['AUTHENTICATED'],                          # auth command received, response = success, hence move to authenticated
+                (COMMANDS['AUTH'][0], RESPONSES['AUTHFAIL']): self.STATES['BEF_AUTH_LOCKED'],                       # auth command received, response = auth fail, hence remain here
+                (COMMANDS['OPEN'][0], RESPONSES['COMMAND_NOT_ALLOWED_BEF_AUTH']): self.STATES['BEF_AUTH_LOCKED'],   # close command received, response = cmd not allowed, hence remain here
+                (COMMANDS['CLOSE'][0], RESPONSES['COMMAND_NOT_ALLOWED_BEF_AUTH']): self.STATES['BEF_AUTH_LOCKED'],  # open command received, response = cmd not allowed, hence remain here
+                (None, RESPONSES['INVALID_COMMAND']): self.STATES['BEF_AUTH_LOCKED'],                               # invalid commands received, response = invalid cmd, hence remain here
             },
             self.STATES['AUTHENTICATED']: {
-                (COMMANDS['OPEN'][0], RESPONSES['SUCCESS']): self.STATES['UNLOCKED'],   # Open command received
-                (COMMANDS['CLOSE'][0], RESPONSES['SUCCESS']): self.STATES['LOCKED'],   # Close command received
-                (None, RESPONSES['INVALID_COMMAND']): self.STATES['AUTHENTICATED']
+                (COMMANDS['OPEN'][0], RESPONSES['SUCCESS']): self.STATES['UNLOCKED'],   # Open command received, response = success, hence unlock
+                (COMMANDS['CLOSE'][0], RESPONSES['SUCCESS']): self.STATES['LOCKED'],   # Close command received, response = success, hence lock
+                (None, RESPONSES['INVALID_COMMAND']): self.STATES['AUTHENTICATED']      # invalid commands received, response = invalid cmd, hence remain here
             },
             self.STATES['UNLOCKED']: {
-                (COMMANDS['CLOSE'][0], RESPONSES['SUCCESS']): self.STATES['LOCKED'],     # closing
+                (COMMANDS['CLOSE'][0], RESPONSES['SUCCESS']): self.STATES['LOCKED'],        # close command received, response = success, hence lock
                 (COMMANDS['OPEN'][0], RESPONSES['LOCK_ERROR']): self.STATES['UNLOCKED'],     # opening again, so lock error
-                (None, RESPONSES['INVALID_COMMAND']): self.STATES['UNLOCKED']
+                (None, RESPONSES['INVALID_COMMAND']): self.STATES['UNLOCKED']                # invalid commands received, response = invalid cmd, hence remain here
             },
             self.STATES['LOCKED']: {
-                (COMMANDS['OPEN'][0], RESPONSES['SUCCESS']): self.STATES['UNLOCKED'],
-                (COMMANDS['CLOSE'][0], RESPONSES['LOCK_ERROR']): self.STATES['LOCKED'],
-                (None, RESPONSES['INVALID_COMMAND']): self.STATES['LOCKED']
+                (COMMANDS['OPEN'][0], RESPONSES['SUCCESS']): self.STATES['UNLOCKED'],    # open command received, response = success, hence unlock
+                (COMMANDS['CLOSE'][0], RESPONSES['LOCK_ERROR']): self.STATES['LOCKED'], # opening again, so lock error
+                (None, RESPONSES['INVALID_COMMAND']): self.STATES['LOCKED']              # invalid commands received, response = invalid cmd, hence remain here
             }
         }
 
@@ -918,7 +820,6 @@ class StateChecker:
         # input is interesting since response or transition is unexpected
         if self.current_state == self.STATES['LOCKED'] or self.current_state == self.STATES['UNLOCKED'] or self.current_state == self.STATES['AUTHENTICATED']:
             state_info = self.expected_states[self.current_state]
-            # print(f"state_info: {state_info}")
             if (response not in state_info['expected_responses'] and has_similar_input(command) == False):
                 log_print(f"[!] Interesting input found at {self.current_state}! ")
                 log_print(f"[!] {command} added to json file")
@@ -927,7 +828,6 @@ class StateChecker:
                 record_new_error("Unexpected transition for commands", type_command, command, command_history)
         elif self.current_state == self.STATES['BEF_AUTH_LOCKED']:
             state_info = self.expected_states[self.current_state]
-            # print(f"state_info: {state_info}")
             if (response not in state_info['expected_responses'] and has_similar_input(command[1:]) == False):
                 interesting_passcodes.append(command)
                 similar_inputs.add(tuple(command))
@@ -939,6 +839,7 @@ class StateChecker:
 # Main execution
 if __name__ == "__main__":
     try:
+        random.seed(None)
         # Choose which fuzzer to run
         asyncio.run(run_random_fuzzer(5, 5, True))
         # asyncio.run(run_mutation_fuzzer(5, 5, True))
