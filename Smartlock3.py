@@ -19,17 +19,17 @@ type_command = 'command_code'
 DEVICE_NAME = "Smart Lock [Group 3]"
 
 RESPONSES = {
-    'SUCCESS': 0x00,
-    'AUTHFAIL': 0x01,
-    'INVALID_COMMAND': 0x02,
-    'COMMAND_NOT_ALLOWED_BEF_AUTH': 0x03,
-    'LOCK_ERROR': 0x04,
+    'SUCCESS': 0x00,                     # Command succeeded
+    'AUTHFAIL': 0x01,                    # Authentication failed
+    'INVALID_COMMAND': 0x02,             # Unrecognized command
+    'COMMAND_NOT_ALLOWED_BEF_AUTH': 0x03, # Command requires authentication
+    'LOCK_ERROR': 0x04,                   # Lock mechanism error
 }
 
 COMMANDS = {
-    'AUTH': [0x00],  # 7 Bytes (command + 6 byte passcode)
-    'OPEN': [0x01],  # 1 Byte
-    'CLOSE': [0x02]  # 1 Byte
+    'AUTH': [0x00],  # Authentication command (7 bytes total: command + 6 byte passcode)
+    'OPEN': [0x01],  # Open lock command (1 byte)
+    'CLOSE': [0x02]  # Close lock command (1 byte)
 }
 PASSCODE = [0x01, 0x02, 0x03, 0x04, 0x05, 0x06]  # Correct PASSCODE
 
@@ -47,8 +47,8 @@ def setup_logging():
         level=logging.INFO,
         format="%(message)s",
         handlers=[
-            logging.FileHandler(log_filename),
-            logging.StreamHandler(sys.stdout)
+            logging.FileHandler(log_filename),      # Log to file
+            logging.StreamHandler(sys.stdout)       # print to console
         ]
     )
 
@@ -63,7 +63,7 @@ known_errors = set()
 similar_inputs = set()
 
 def setup_error_tracking():
-    """Load known error patterns from file, storing only the error messages"""
+    """Load error patterns and interesting inputs from previous sessions if any"""
     global known_errors, similar_inputs
 
     try:
@@ -81,7 +81,7 @@ def setup_error_tracking():
         print(f"{BLUE}Error loading known errors: {e}{RESET}")
 
 def save_known_errors():
-    """Save known error patterns to file in a more readable format"""
+    """Save discovered error patterns to file in JSON format"""
     global known_errors, similar_inputs
 
     try:
@@ -106,7 +106,7 @@ def save_known_errors():
                 print(f"{BLUE}Error reading existing errors: {e}{RESET}")
                 existing_errors = []
 
-        # Prepare current errors (same as your original code)
+        # Prepare current errors
         formatted_errors = []
         for error_entry in known_errors:
             if isinstance(error_entry, str):
@@ -154,7 +154,7 @@ def is_known_error(message):
     return any(error_pattern in message for error_pattern in known_errors)
 
 def has_similar_input(input):
-    """Check if any part of the input_array matches any part of any array in the set."""
+    """Check if input matches any previously seen interesting input pattern"""
     global similar_inputs
     
     if not input or not similar_inputs:
@@ -162,6 +162,7 @@ def has_similar_input(input):
     
     input_tuple = tuple(input)
 
+    # Special case: inputs starting with two zeros
     if len(input_tuple) >= 2 and input_tuple[0] == 0 and input_tuple[1] == 0:
         for arr in similar_inputs:
             if len(arr) >= 2 and arr[0] == 0 and arr[1] == 0:
@@ -186,7 +187,7 @@ def has_similar_input(input):
 
         
 def record_new_error(error, input_type, input, history):
-    """Record a newly discovered error in a structured JSON format"""
+    """Record a newly discovered error with information"""
     global known_errors, similar_inputs
     error_entry = {
         'error': str(error),
@@ -201,7 +202,7 @@ def record_new_error(error, input_type, input, history):
         save_known_errors()
 
 def load_interesting_inputs():
-    """Load interesting inputs from error history"""
+    """Load interesting inputs from error history file"""
     try:
         if os.path.exists(KNOWN_ERRORS_FILE):
             with open(KNOWN_ERRORS_FILE, 'r') as f:
@@ -215,7 +216,7 @@ def load_interesting_inputs():
                     if cmd is None or err_type is None:
                         continue
                     
-                    # Handle case where input might be a string representation
+                    # Handle string representation of inputs
                     if isinstance(cmd, str):
                         try:
                             cmd = json.loads(cmd.replace("'", '"'))
@@ -239,27 +240,28 @@ setup_logging()
 
 class Fuzzer:
     def __init__(self):
-        self.ble = BLEClient()
+        self.ble = BLEClient()          # BLE communication client
         setup_error_tracking()
-        load_interesting_inputs()  # Load from previous sessions
+        load_interesting_inputs()       # Load from previous sessions
         self.unique_error_codes = set()
         self.state_checker = StateChecker()
         self.testcases = 0
         self.total_testcases = 0
-        self.idx = 0
+        self.idx = 0                    # Log index
         self.total_generation_time = 0.0
         self.total_execution_time = 0.0
         self.total_cycles = 0
         self.total_inputs_generated = 0
 
-    async def print_new_logs(self, ble, input_type=None, input=None):
-        """Print only new logs since last index and return new last index"""
+    async def retrieve_new_logs(self, ble, input_type=None, input=None):
+        """Retrieve new logs since last check and process any errors"""
         await asyncio.sleep(0.3)  # Allow time for response
         logs = ble.read_logs()
         
-        # Print only new logs since last time
+        # Process new logs
         for line in logs[self.idx:]:
             # log_print(line)
+            # Extract and record error code
             if "[Error] Code: 0x" in line and input_type is not None and input is not None:
                 # Extract the error code
                 error_code = line.split("0x")[1].strip()
@@ -267,14 +269,12 @@ class Fuzzer:
                     record_new_error(error_code, input_type, input, self.state_checker.command_history)
                     similar_inputs.add(tuple(input))
 
-        # Return new last index
-        self.idx = len(logs)
+        self.idx = len(logs)        # Update log index
 
     def is_interesting(self, e, input_type, input, response=None):
         """
-        Determine if an input is interesting enough to save
-        and add to our mutation pools if it is. (This is not yet implemented)
-        Returns True if the input was added to an interesting pool.
+        Determine if an input is interesting enough to save for future mutations
+        Returns True if the input was added to an interesting pool
         """
         if not input:
             return False
@@ -287,7 +287,7 @@ class Fuzzer:
         else:
             is_new = True
 
-        # Add to respective interesting inputs list based on input type if the error is new
+       # Add to respective interesting inputs list if new
         if is_new:
             if input_type == type_passcode:
                 if input not in interesting_passcodes:
@@ -306,11 +306,11 @@ class Fuzzer:
         return False
 
     async def ensure_connection(self):
-        """Helper to verify connection and attempt reconnection if needed"""
+        """Verify BLE connection and attempt reconnection if needed"""
         try:
             log_print("[!] Attempting to reconnect...")
             await self.ble.connect(DEVICE_NAME)
-            await self.print_new_logs(self.ble)
+            await self.retrieve_new_logs(self.ble)
             log_print("[!] Reconnected successfully.")
             self.state_checker.current_state = self.state_checker.STATES['BEF_AUTH_LOCKED']
             log_print(f"[!] Current state: {self.state_checker.current_state}")
@@ -322,13 +322,13 @@ class Fuzzer:
 
     def mutate_command(self, command):
         """
-        Main mutation entry point that randomly selects a mutation strategy
-        and applies it to the command.
+        Mutate a command using randomly selected mutation strategy
+        Returns the mutated command
         """
         if not command:
             return command.copy()
 
-        # Select a mutation strategy
+        # Select a mutation strategy randomly
         mutation_strategy = random.choice([
             self._randomize_single_byte,
             self._flip_bits,
@@ -344,7 +344,7 @@ class Fuzzer:
         return mutated
 
     def _randomize_single_byte(self, data):
-        """Alter one random byte"""
+        """Randomly alter one byte in the data"""
         idx = random.randint(0, len(data) - 1)
         data[idx] = random.randint(0, 255)
         return data
@@ -401,7 +401,7 @@ class Fuzzer:
         return data
 
     def _bitwise_operations(self, data):
-        """Apply bitwise operations to random bytes"""
+        """Apply random bitwise operation to a random byte"""
         idx = random.randint(0, len(data)-1)
         operation = random.choice(['and', 'or', 'xor', 'not'])
         operand = random.randint(0, 255)
@@ -418,7 +418,7 @@ class Fuzzer:
         return data
 
     def _log_mutation(self, original, mutated):
-        """Helper to log mutation details"""
+        """Log details of the mutation"""
         if len(original) != len(mutated):
             log_print(f'\n[Mutation] Changed length from {len(original)} to {len(mutated)} bytes')
         else:
@@ -432,13 +432,12 @@ class Fuzzer:
 
     async def run_fuzzer(self, fuzzer_type, auth_attempts=100, command_attempts=100, run_forever=False):
         """
-        Main fuzzer function with indefinite running capability
-        
+        Main fuzzing loop
         Args:
-            fuzzer_type (str): 'random' or 'mutation'
-            auth_attempts (int): Number of authentication attempts per cycle
-            command_attempts (int): Number of command attempts per cycle
-            run_forever (bool): Whether to run indefinitely until interrupted
+            fuzzer_type: 'random' or 'mutation'
+            auth_attempts: Number of authentication attempts per cycle
+            command_attempts: Number of command attempts per cycle
+            run_forever: Whether to run indefinitely
         """
         global known_errors, similar_inputs
         try:
@@ -450,7 +449,7 @@ class Fuzzer:
                 
                 try:
                     await self.ble.connect(DEVICE_NAME)
-                    await self.print_new_logs(self.ble)
+                    await self.retrieve_new_logs(self.ble)
                 except Exception as e:
                     log_print(f'[X] Initial connection failed: {e}')
                     if not run_forever:
@@ -467,12 +466,12 @@ class Fuzzer:
                         try:
                             res = await self.ble.write_command(COMMANDS['AUTH'] + PASSCODE)
                             self.state_checker.update_state(COMMANDS['AUTH'] + PASSCODE, res)
-                            await self.print_new_logs(self.ble, type_passcode, COMMANDS['AUTH'] + PASSCODE)
+                            await self.retrieve_new_logs(self.ble, type_passcode, COMMANDS['AUTH'] + PASSCODE)
                             authenticated = True
                             log_print("[+] Authenticated with correct passcode")
                         except Exception as e:
                             log_print(f"[X] Error authenticating with correct passcode: {e}")
-                            await self.print_new_logs(self.ble, type_passcode, COMMANDS['AUTH'] + PASSCODE)
+                            await self.retrieve_new_logs(self.ble, type_passcode, COMMANDS['AUTH'] + PASSCODE)
                 except Exception as e:
                     log_print(f'[X] Authentication phase crashed: {e}')
                     if not run_forever:
@@ -518,7 +517,7 @@ class Fuzzer:
                 # Save progress before next cycle
                 save_known_errors()
                 
-                loop_number = loop_number + 1
+                loop_number += 1
 
                 self.state_checker.command_history.clear()
                 self.state_checker.current_state = self.state_checker.STATES['BEF_AUTH_LOCKED']
@@ -560,50 +559,66 @@ class Fuzzer:
             sys.exit(0)
 
     async def fuzz_authentication(self, fuzzer_type, attempts):
-        """Authentication fuzzing using interesting passcodes"""
+        """Fuzz authentication with passcodes"""
         attempts_made = 0
         authenticated = False
         
         while attempts_made < attempts and not authenticated:
+            # Start timing input generation
             start_gen = asyncio.get_event_loop().time()
+
+            # Generate fuzzed passcode based on strategy
             if fuzzer_type == 'random':
                 fuzz_passcode = [random.randint(0, 255) for _ in range(6)]
-            else:  # mutation
+            else:  # mutation-based
                 base = random.choice(interesting_passcodes)
                 fuzz_passcode = self.mutate_command(base)
             
+            # Construct full authentication command (command byte + passcode)
             full_command = COMMANDS['AUTH'] + fuzz_passcode
             
+            # Construct full authentication command (command byte + passcode)
             generation_time = asyncio.get_event_loop().time() - start_gen
             self.total_generation_time += generation_time
             self.total_inputs_generated += 1
 
+            # Skip if this command is known to cause errors
             if self._command_has_known_error(full_command):
                 continue
                 
             log_print(f'\n[{fuzzer_type.capitalize()} Auth {attempts_made}] Trying: {fuzz_passcode}')
             try:
+                # Time the command execution
                 start_exec = asyncio.get_event_loop().time()
 
                 res = await self.ble.write_command(full_command)
 
+                # Track execution time
                 execution_time = asyncio.get_event_loop().time() - start_exec
                 self.total_execution_time += execution_time
 
+                # Update state machine with command/response
                 self.state_checker.update_state(full_command, res)
                 log_print(f'[!] Command: {full_command}')
                 log_print(f'[!] Response: {res[0]}')
+
+                # Check if authentication succeeded (response code 0)
                 if res and res[0] == 0:
                     authenticated = True
                     log_print(f'[+] Authenticated with: {fuzz_passcode}')
                 else:
                     log_print('[!] Authentication failed')
                 
-                await self.print_new_logs(self.ble, type_passcode, full_command)
+                # Process any new device logs
+                await self.retrieve_new_logs(self.ble, type_passcode, full_command)
 
             except Exception as e:
                 log_print(f'[!] Error: {e}')
+
+                # Handle connection errors specially
                 if "Not connected" in str(e):
+
+                    # Attempt to reconnect
                     await self.ensure_connection()
                     self.state_checker.command_history.clear()  # clear the command history after a crash
 
@@ -613,13 +628,18 @@ class Fuzzer:
                     try:
                         res = await self.ble.write_command(fuzz_passcode)
                         self.state_checker.update_state(fuzz_passcode, res)
-                        await self.print_new_logs(self.ble, type_passcode, fuzz_passcode)
+                        await self.retrieve_new_logs(self.ble, type_passcode, fuzz_passcode)
                     except Exception as e:
+                        # Record if this input is interesting
                         self.is_interesting(e, type_passcode, fuzz_passcode, response=res)
-                        await self.print_new_logs(self.ble, type_passcode, fuzz_passcode)
+                        await self.retrieve_new_logs(self.ble, type_passcode, fuzz_passcode)
                     continue
+
+                # Record any new error patterns
                 self.is_interesting(e, type_passcode, fuzz_passcode)
-            
+                await self.retrieve_new_logs(self.ble, type_passcode, fuzz_passcode)
+
+            # Update attempt counters
             attempts_made += 1
             self.testcases += 1
             self.total_testcases += 1
@@ -628,52 +648,66 @@ class Fuzzer:
         return authenticated
 
     async def fuzz_commands(self, fuzzer_type, attempts):
-        """Command fuzzing using interesting commands"""
+        """Fuzz operational commands"""
         attempts_made = 0
         
         while attempts_made < attempts:
+            # Time the input generation
             start_gen = asyncio.get_event_loop().time()
+
+            # Generate command based on strategy
             if fuzzer_type == 'random':
                 base = random.choice([COMMANDS['OPEN'], COMMANDS['CLOSE'], []])
                 fuzz_extra = [random.randint(0, 255) for _ in range(random.randint(0, 5))]
                 fuzzed_command = base + fuzz_extra
-            else:  # mutation
+            else:  # mutation-based
                 base = random.choice(interesting_commands)
                 fuzzed_command = self.mutate_command(base)
 
+            # Track generation statistics
             generation_time = asyncio.get_event_loop().time() - start_gen
             self.total_generation_time += generation_time
             self.total_inputs_generated += 1
             
+            # Skip known bad commands
             if self._command_has_known_error(fuzzed_command):
                 continue
                 
             log_print(f'\n[{fuzzer_type.capitalize()} Command {attempts_made}] Sending: {fuzzed_command}')
             
             try:
+                # Time the command execution
                 start_exec = asyncio.get_event_loop().time()
 
                 res = await self.ble.write_command(fuzzed_command)
 
+                # Track execution time
                 execution_time = asyncio.get_event_loop().time() - start_exec
                 self.total_execution_time += execution_time
 
+                # Update state machine
                 self.state_checker.update_state(fuzzed_command, res)
                 log_print(f'[!] Command: {fuzzed_command}')
                 log_print(f'[!] Response: {res[0]}')
-                if res and (res[0] == 0) and (fuzzed_command[0] == COMMANDS['OPEN'][0] or fuzzed_command[0] == COMMANDS['CLOSE'][0]):  # Check for non-success response codes
+
+                # Check for anomalous success responses
+                if res and (res[0] == 0) and (fuzzed_command[0] == COMMANDS['OPEN'][0] or fuzzed_command[0] == COMMANDS['CLOSE'][0]):
                     self.is_interesting("Invalid Command but Response is 'Success'", type_command, fuzzed_command, response=res)
 
-                await self.print_new_logs(self.ble, type_command, fuzzed_command)
+                # Process device logs
+                await self.retrieve_new_logs(self.ble, type_command, fuzzed_command)
             except Exception as e:
                 log_print(f'[!] Error: {e}')
+
+                # Handle connection drops
                 if "Not connected" in str(e):
                     await self.ensure_connection()
                     self.state_checker.command_history.clear()  # clear the command history after a crash
+                    
                     # if the error is Not connected, try the same input again
                     try:
                         res = await self.ble.write_command(COMMANDS['AUTH'] + PASSCODE)
-                        await self.print_new_logs(self.ble, type_passcode, COMMANDS['AUTH'] + PASSCODE)
+                        await self.retrieve_new_logs(self.ble, type_passcode, COMMANDS['AUTH'] + PASSCODE)
                         self.state_checker.update_state(COMMANDS['AUTH'] + PASSCODE, res)
                         if res and res[0] == 0:
                             log_print("[+] Authenticated with correct passcode")
@@ -682,22 +716,24 @@ class Fuzzer:
                     log_print(f'\n[!] Send request with the same input again')
                     try:
                         res = await self.ble.write_command(fuzzed_command)
-                        await self.print_new_logs(self.ble, type_command, fuzzed_command)
+                        await self.retrieve_new_logs(self.ble, type_command, fuzzed_command)
                         self.state_checker.update_state(fuzzed_command, res)
                     except Exception as e:
                         self.is_interesting(e, type_command, fuzzed_command, response=res)
                     continue
 
+                # Record any new error patterns
                 self.is_interesting(e, type_command, fuzzed_command)
-                await self.print_new_logs(self.ble, type_command, fuzzed_command)
+                await self.retrieve_new_logs(self.ble, type_command, fuzzed_command)
             
+            # Update attempt counters
             attempts_made += 1
             self.testcases += 1
             self.total_testcases += 1
             await asyncio.sleep(random.uniform(0.5, 3))
 
     def _command_has_known_error(self, command):
-        """Check if this exact command has previously caused an error"""
+        """Check if command matches any known error pattern"""
         global known_errors, similar_inputs
         command_str = str(command)
         for error_entry in known_errors:
@@ -706,12 +742,12 @@ class Fuzzer:
         return False
 
 async def run_random_fuzzer(auth_attempts=50, command_attempts=50, run_forever=False):
-    """Run the random fuzzer"""
+    """Run random fuzzing strategy"""
     fuzzer = Fuzzer()
     await fuzzer.run_fuzzer('random', auth_attempts, command_attempts, run_forever=run_forever)
 
 async def run_mutation_fuzzer(auth_attempts=50, command_attempts=50, run_forever=False):
-    """Run the mutation-based fuzzer"""
+    """Run mutation-based fuzzing strategy"""
     fuzzer = Fuzzer()
     await fuzzer.run_fuzzer('mutation', auth_attempts, command_attempts, run_forever=run_forever)
 
@@ -719,9 +755,9 @@ class StateChecker:
     def __init__(self):
         self.STATES = {
             'BEF_AUTH_LOCKED' : 'Locked before authentication',     # Initial state
-            'AUTHENTICATED': 'Authenticated',     # Auth successful
-            'UNLOCKED': 'Unlocked',         # Unlocked state
-            'LOCKED': 'Locked'              # Locked state
+            'AUTHENTICATED': 'Authenticated',                       # Auth successful
+            'UNLOCKED': 'Unlocked',                                 # Unlocked state
+            'LOCKED': 'Locked'                                      # Locked state
         }
 
         self.transition_rules = {
@@ -772,11 +808,11 @@ class StateChecker:
         
         self.current_state = self.STATES['BEF_AUTH_LOCKED']
         self.prev_state = None
-        self.command_history = []
+        self.command_history = []                            # Track command/response history
         
         
     def update_state(self, command, response):
-        """Update internal state based on command/response"""
+        """Update state based on command/response and validate transition"""
 
         comm_byte = command[0] if command else None
         res_byte = response[0] if response else None
@@ -790,17 +826,9 @@ class StateChecker:
         if (comm_byte == COMMANDS['AUTH'][0]):
             if len(command) > 7:
                 comm_byte = None
-                # print(f"\n{BLUE}len(command): {len(command)}{RESET}")
-
 
         transition_key = (comm_byte, res_byte)
-
-        # print(f"\n{BLUE}comm_byte: {comm_byte}{RESET}")
-        # print(f"\n{BLUE}res: {res_byte}{RESET}")
-        # print(f"\n{BLUE}transition_key: {transition_key}{RESET}")
-
         current_rules = self.transition_rules.get(self.current_state, {})
-        # print(f"\n{BLUE}current_rules: {current_rules}{RESET}")
 
         self.command_history.append({
             'state' : self.current_state,
@@ -817,7 +845,8 @@ class StateChecker:
             log_print(f"[!] Current state: '{self.current_state}'! ")
     
     def is_interesting_state_check(self, command, response, command_history):
-        # input is interesting since response or transition is unexpected
+        """Check if state transition is interesting/abnormal"""
+        # input is interesting if response or transition is unexpected
         if self.current_state == self.STATES['LOCKED'] or self.current_state == self.STATES['UNLOCKED'] or self.current_state == self.STATES['AUTHENTICATED']:
             state_info = self.expected_states[self.current_state]
             if (response not in state_info['expected_responses'] and has_similar_input(command) == False):
@@ -839,9 +868,9 @@ class StateChecker:
 # Main execution
 if __name__ == "__main__":
     try:
-        random.seed(None)
+        random.seed(None)                                   # Initialize random seed
         # Choose which fuzzer to run
-        asyncio.run(run_random_fuzzer(5, 5, True))
-        # asyncio.run(run_mutation_fuzzer(5, 5, True))
+        asyncio.run(run_random_fuzzer(5, 5, True))          # Random fuzzing
+        # asyncio.run(run_mutation_fuzzer(5, 5, True))       # Mutation-based fuzzing
     except KeyboardInterrupt:
         print("\nProgram Exited by User!")
