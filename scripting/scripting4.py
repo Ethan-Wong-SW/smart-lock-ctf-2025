@@ -29,6 +29,8 @@ for i in range(1, num_sessions + 1):
     # Count interesting test cases
     interesting_count = len(data)
 
+    print(i, ": ", interesting_count)
+
     # Count unique crash types based on error message content
     crash_set = set()
     for item in data:

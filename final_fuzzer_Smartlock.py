@@ -870,7 +870,7 @@ if __name__ == "__main__":
     try:
         random.seed(None)                                   # Initialize random seed
         # Choose which fuzzer to run
-        asyncio.run(run_random_fuzzer(5, 5, True))          # Random fuzzing
-        # asyncio.run(run_mutation_fuzzer(5, 5, True))       # Mutation-based fuzzing
+        # asyncio.run(run_random_fuzzer(5, 5, True))          # Random fuzzing
+        asyncio.run(run_mutation_fuzzer(5, 5, True))       # Mutation-based fuzzing
     except KeyboardInterrupt:
         print("\nProgram Exited by User!")

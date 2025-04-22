@@ -28,8 +28,8 @@ Session 7:
   Unique Crashes: 5
 
 Session 8:
-  Interesting Test Cases: 1
-  Unique Crashes: 0
+  Interesting Test Cases: 28
+  Unique Crashes: 6
 
-Avg Interesting Test Cases: 60.38
-Avg Unique Crashes: 4.00
+Avg Interesting Test Cases: 63.75
+Avg Unique Crashes: 4.75
