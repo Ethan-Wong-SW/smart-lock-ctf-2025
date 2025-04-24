@@ -430,7 +430,7 @@ class Fuzzer:
             if differences:
                 log_print('\n[Mutation] ' + ', '.join(differences))
 
-    async def run_fuzzer(self, fuzzer_type, auth_attempts=100, command_attempts=100, run_forever=False):
+    async def run_fuzzer(self, fuzzer_type, auth_attempts=100, command_attempts=100, run_forever=False, max_cycles=None):
         """
         Main fuzzing loop
         Args:
@@ -438,6 +438,7 @@ class Fuzzer:
             auth_attempts: Number of authentication attempts per cycle
             command_attempts: Number of command attempts per cycle
             run_forever: Whether to run indefinitely
+            max_cycles: Maximum number of fuzzing cycles to run (overrides run_forever if set)
         """
         global known_errors, similar_inputs
         try:
@@ -447,12 +448,17 @@ class Fuzzer:
                 log_print(f'\n{"="*50}\n[+] Starting new fuzzing cycle: Attempt {loop_number}\n{"="*50}')
                 log_print(f'[1] Connecting to "{DEVICE_NAME}"...')
                 
+                # Check if we've reached max cycles (if specified)
+                if max_cycles is not None and loop_number > max_cycles:
+                    log_print(f"\n[!] Reached maximum cycles ({max_cycles}), stopping...")
+                    break
+
                 try:
                     await self.ble.connect(DEVICE_NAME)
                     await self.retrieve_new_logs(self.ble)
                 except Exception as e:
                     log_print(f'[X] Initial connection failed: {e}')
-                    if not run_forever:
+                    if not run_forever and max_cycles is None:  # Only exit if not running forever and no max cycles set
                         raise
                     await asyncio.sleep(5)  # Wait before retrying
                     continue
@@ -474,7 +480,7 @@ class Fuzzer:
                             await self.retrieve_new_logs(self.ble, type_passcode, COMMANDS['AUTH'] + PASSCODE)
                 except Exception as e:
                     log_print(f'[X] Authentication phase crashed: {e}')
-                    if not run_forever:
+                    if not run_forever and max_cycles is None:  # Only exit if not running forever and no max cycles set
                         raise
 
                 # --- Operational Commands Phase ---
@@ -483,13 +489,13 @@ class Fuzzer:
                         await self.fuzz_commands(fuzzer_type, command_attempts)
                     except Exception as e:
                         log_print(f'[X] Command phase crashed: {e}')
-                        if not run_forever:
+                        if not run_forever and max_cycles is None:  # Only exit if not running forever and no max cycles set
                             raise
                 else:
                     log_print("[X] Skipping command fuzzing due to authentication failure")
 
                 # --- Cycle Complete ---
-                if not run_forever:
+                if not run_forever and max_cycles is None:
                     break
                 
                 # Show stats before next cycle
@@ -534,9 +540,9 @@ class Fuzzer:
             log_print("\n[!] Ending fuzzing...")
             
             # Output logs from the Smart Lock
-            log_print(f"\n[Logs from Smart Lock (Serial Port)]:\n{'-'*50}")
-            for line in self.ble.read_logs():
-                log_print(line)
+            # log_print(f"\n[Logs from Smart Lock (Serial Port)]:\n{'-'*50}")
+            # for line in self.ble.read_logs():
+            #     log_print(line)
 
             # Final cleanup
             log_print("\n[Disconnecting...]")
@@ -570,9 +576,16 @@ class Fuzzer:
             # Generate fuzzed passcode based on strategy
             if fuzzer_type == 'random':
                 fuzz_passcode = [random.randint(0, 255) for _ in range(6)]
-            else:  # mutation-based
+            elif fuzzer_type == 'mutation':  # mutation-based
                 base = random.choice(interesting_passcodes)
                 fuzz_passcode = self.mutate_command(base)
+            else:
+                # 50% chance to use interesting passcode as base
+                if interesting_passcodes and random.random() < 0.5:
+                    base = random.choice(interesting_passcodes)
+                    fuzz_passcode = self.mutate_command(base)
+                else:
+                    fuzz_passcode = [random.randint(0, 255) for _ in range(6)]
             
             # Construct full authentication command (command byte + passcode)
             full_command = COMMANDS['AUTH'] + fuzz_passcode
@@ -660,9 +673,18 @@ class Fuzzer:
                 base = random.choice([COMMANDS['OPEN'], COMMANDS['CLOSE'], []])
                 fuzz_extra = [random.randint(0, 255) for _ in range(random.randint(0, 5))]
                 fuzzed_command = base + fuzz_extra
-            else:  # mutation-based
+            elif fuzzer_type == 'mutation':  # mutation-based
                 base = random.choice(interesting_commands)
                 fuzzed_command = self.mutate_command(base)
+            else:
+                if interesting_commands and random.random() < 0.5:
+                    base = random.choice(interesting_commands)
+                    fuzzed_command = self.mutate_command(base)
+                else:
+                    base = random.choice([COMMANDS['OPEN'], COMMANDS['CLOSE'], ""])
+                    fuzz_extra = [random.randint(0, 255) for _ in range(random.randint(0, 5))]
+                    fuzzed_command = base + fuzz_extra
+
 
             # Track generation statistics
             generation_time = asyncio.get_event_loop().time() - start_gen
@@ -691,7 +713,7 @@ class Fuzzer:
                 log_print(f'[!] Response: {res[0]}')
 
                 # Check for anomalous success responses
-                if res and (res[0] == 0) and (fuzzed_command[0] == COMMANDS['OPEN'][0] or fuzzed_command[0] == COMMANDS['CLOSE'][0]):
+                if res and (res[0] == 0 or res[0] == 2) and (fuzzed_command[0] == COMMANDS['OPEN'][0] or fuzzed_command[0] == COMMANDS['CLOSE'][0]):
                     self.is_interesting("Invalid Command but Response is 'Success'", type_command, fuzzed_command, response=res)
 
                 # Process device logs
@@ -741,15 +763,20 @@ class Fuzzer:
                 return True
         return False
 
-async def run_random_fuzzer(auth_attempts=50, command_attempts=50, run_forever=False):
+async def run_random_fuzzer(auth_attempts=50, command_attempts=50, run_forever=False, max_cycles=None):
     """Run random fuzzing strategy"""
     fuzzer = Fuzzer()
-    await fuzzer.run_fuzzer('random', auth_attempts, command_attempts, run_forever=run_forever)
+    await fuzzer.run_fuzzer('random', auth_attempts, command_attempts, run_forever=run_forever, max_cycles=max_cycles)
 
-async def run_mutation_fuzzer(auth_attempts=50, command_attempts=50, run_forever=False):
+async def run_random_mutation_fuzzer(auth_attempts=50, command_attempts=50, run_forever=False, max_cycles=None):
+    """Run random & mutation fuzzing strategy"""
+    fuzzer = Fuzzer()
+    await fuzzer.run_fuzzer('random_mutation', auth_attempts, command_attempts, run_forever=run_forever, max_cycles=max_cycles)
+
+async def run_mutation_fuzzer(auth_attempts=50, command_attempts=50, run_forever=False, max_cycles=None):
     """Run mutation-based fuzzing strategy"""
     fuzzer = Fuzzer()
-    await fuzzer.run_fuzzer('mutation', auth_attempts, command_attempts, run_forever=run_forever)
+    await fuzzer.run_fuzzer('mutation', auth_attempts, command_attempts, run_forever=run_forever, max_cycles=max_cycles)
 
 class StateChecker:
     def __init__(self):
@@ -870,7 +897,8 @@ if __name__ == "__main__":
     try:
         random.seed(None)                                   # Initialize random seed
         # Choose which fuzzer to run
-        # asyncio.run(run_random_fuzzer(5, 5, True))          # Random fuzzing
-        asyncio.run(run_mutation_fuzzer(5, 5, True))       # Mutation-based fuzzing
+        asyncio.run(run_random_mutation_fuzzer(5, 5, max_cycles=40))          # Random & Mutation fuzzing
+        # asyncio.run(run_random_fuzzer(5, 5, max_cycles=60))          # Random fuzzing
+        # asyncio.run(run_mutation_fuzzer(5, 5, max_cycles=60))          # Mutation-based fuzzing
     except KeyboardInterrupt:
         print("\nProgram Exited by User!")

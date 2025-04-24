@@ -1,35 +1,35 @@
 === Stability Metrics (RQ4) ===
 Session 1:
-  Interesting Test Cases: 131
-  Unique Crashes: 6
+  Interesting Test Cases: 73
+  Unique Crashes: 4
 
 Session 2:
-  Interesting Test Cases: 127
+  Interesting Test Cases: 50
   Unique Crashes: 4
 
 Session 3:
-  Interesting Test Cases: 48
+  Interesting Test Cases: 67
   Unique Crashes: 5
 
 Session 4:
-  Interesting Test Cases: 10
-  Unique Crashes: 3
-
-Session 5:
-  Interesting Test Cases: 25
-  Unique Crashes: 5
-
-Session 6:
-  Interesting Test Cases: 23
-  Unique Crashes: 4
-
-Session 7:
-  Interesting Test Cases: 118
-  Unique Crashes: 5
-
-Session 8:
-  Interesting Test Cases: 28
+  Interesting Test Cases: 66
   Unique Crashes: 6
 
-Avg Interesting Test Cases: 63.75
-Avg Unique Crashes: 4.75
+Session 5:
+  Interesting Test Cases: 69
+  Unique Crashes: 6
+
+Session 6:
+  Interesting Test Cases: 74
+  Unique Crashes: 5
+
+Session 7:
+  Interesting Test Cases: 25
+  Unique Crashes: 6
+
+Session 8:
+  Interesting Test Cases: 74
+  Unique Crashes: 7
+
+Avg Interesting Test Cases: 62.25
+Avg Unique Crashes: 5.38

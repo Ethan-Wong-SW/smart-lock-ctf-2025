@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 # === CONFIG ===
 directory = "../stats"
-file_prefix = "cycle_stats"
+file_prefix = "cs_rm_"
 file_suffix = ".csv"
 
 all_dataframes = []
@@ -48,8 +48,8 @@ print(f"✅ Saved average summary to {txt_path}")
 
 # === PLOT ===
 plt.figure(figsize=(10, 6))
-plt.plot(average_df["Cycle"], average_df["Interesting_Commands"], label="Avg Interesting Commands", marker='o')
-plt.plot(average_df["Cycle"], average_df["Interesting_Passcodes"], label="Avg Interesting Passcodes", marker='s')
+plt.plot(average_df["Cycle"], average_df["Interesting_Commands"], label="Avg Interesting Commands", marker='o', markersize=1)
+plt.plot(average_df["Cycle"], average_df["Interesting_Passcodes"], label="Avg Interesting Passcodes", marker='s', markersize=1)
 plt.xlabel("Fuzzing Cycle")
 plt.ylabel("Average Interesting Inputs")
 plt.title("Average Fuzzing Effectiveness Across Runs")

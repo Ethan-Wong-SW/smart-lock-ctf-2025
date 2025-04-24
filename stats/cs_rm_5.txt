@@ -1,0 +1,480 @@
+Cycle 1.0:
+  Interesting Passcodes: 1.0
+  Interesting Commands:  2.0
+  Errors:                0.0
+  Tests This Cycle:      8.0
+  Total Tests:           8.0
+  Avg Execution Time:    0.07025 s
+
+Cycle 2.0:
+  Interesting Passcodes: 1.0
+  Interesting Commands:  3.0
+  Errors:                1.0
+  Tests This Cycle:      7.0
+  Total Tests:           15.0
+  Avg Execution Time:    0.06447 s
+
+Cycle 3.0:
+  Interesting Passcodes: 2.0
+  Interesting Commands:  3.0
+  Errors:                2.0
+  Tests This Cycle:      6.0
+  Total Tests:           21.0
+  Avg Execution Time:    0.05876 s
+
+Cycle 4.0:
+  Interesting Passcodes: 2.0
+  Interesting Commands:  3.0
+  Errors:                2.0
+  Tests This Cycle:      5.0
+  Total Tests:           26.0
+  Avg Execution Time:    0.05089 s
+
+Cycle 5.0:
+  Interesting Passcodes: 2.0
+  Interesting Commands:  6.0
+  Errors:                5.0
+  Tests This Cycle:      10.0
+  Total Tests:           36.0
+  Avg Execution Time:    0.05632 s
+
+Cycle 6.0:
+  Interesting Passcodes: 2.0
+  Interesting Commands:  6.0
+  Errors:                5.0
+  Tests This Cycle:      5.0
+  Total Tests:           41.0
+  Avg Execution Time:    0.053 s
+
+Cycle 7.0:
+  Interesting Passcodes: 2.0
+  Interesting Commands:  6.0
+  Errors:                5.0
+  Tests This Cycle:      10.0
+  Total Tests:           51.0
+  Avg Execution Time:    0.05923 s
+
+Cycle 8.0:
+  Interesting Passcodes: 2.0
+  Interesting Commands:  9.0
+  Errors:                8.0
+  Tests This Cycle:      9.0
+  Total Tests:           60.0
+  Avg Execution Time:    0.05714 s
+
+Cycle 9.0:
+  Interesting Passcodes: 2.0
+  Interesting Commands:  12.0
+  Errors:                11.0
+  Tests This Cycle:      10.0
+  Total Tests:           70.0
+  Avg Execution Time:    0.05957 s
+
+Cycle 10.0:
+  Interesting Passcodes: 2.0
+  Interesting Commands:  13.0
+  Errors:                12.0
+  Tests This Cycle:      10.0
+  Total Tests:           80.0
+  Avg Execution Time:    0.06233 s
+
+Cycle 11.0:
+  Interesting Passcodes: 2.0
+  Interesting Commands:  13.0
+  Errors:                12.0
+  Tests This Cycle:      6.0
+  Total Tests:           86.0
+  Avg Execution Time:    0.06062 s
+
+Cycle 12.0:
+  Interesting Passcodes: 2.0
+  Interesting Commands:  14.0
+  Errors:                13.0
+  Tests This Cycle:      6.0
+  Total Tests:           92.0
+  Avg Execution Time:    0.05929 s
+
+Cycle 13.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  17.0
+  Errors:                17.0
+  Tests This Cycle:      10.0
+  Total Tests:           102.0
+  Avg Execution Time:    0.0618 s
+
+Cycle 14.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  18.0
+  Errors:                18.0
+  Tests This Cycle:      7.0
+  Total Tests:           109.0
+  Avg Execution Time:    0.06101 s
+
+Cycle 15.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  18.0
+  Errors:                18.0
+  Tests This Cycle:      2.0
+  Total Tests:           111.0
+  Avg Execution Time:    0.06035 s
+
+Cycle 16.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  19.0
+  Errors:                19.0
+  Tests This Cycle:      9.0
+  Total Tests:           120.0
+  Avg Execution Time:    0.06101 s
+
+Cycle 17.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  19.0
+  Errors:                19.0
+  Tests This Cycle:      7.0
+  Total Tests:           127.0
+  Avg Execution Time:    0.05993 s
+
+Cycle 18.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  20.0
+  Errors:                20.0
+  Tests This Cycle:      6.0
+  Total Tests:           133.0
+  Avg Execution Time:    0.05781 s
+
+Cycle 19.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  21.0
+  Errors:                21.0
+  Tests This Cycle:      10.0
+  Total Tests:           143.0
+  Avg Execution Time:    0.05897 s
+
+Cycle 20.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  21.0
+  Errors:                21.0
+  Tests This Cycle:      5.0
+  Total Tests:           148.0
+  Avg Execution Time:    0.05777 s
+
+Cycle 21.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  22.0
+  Errors:                22.0
+  Tests This Cycle:      7.0
+  Total Tests:           155.0
+  Avg Execution Time:    0.05789 s
+
+Cycle 22.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  23.0
+  Errors:                23.0
+  Tests This Cycle:      7.0
+  Total Tests:           162.0
+  Avg Execution Time:    0.05736 s
+
+Cycle 23.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  26.0
+  Errors:                26.0
+  Tests This Cycle:      10.0
+  Total Tests:           172.0
+  Avg Execution Time:    0.05869 s
+
+Cycle 24.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  27.0
+  Errors:                27.0
+  Tests This Cycle:      10.0
+  Total Tests:           182.0
+  Avg Execution Time:    0.05925 s
+
+Cycle 25.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  27.0
+  Errors:                27.0
+  Tests This Cycle:      5.0
+  Total Tests:           187.0
+  Avg Execution Time:    0.05876 s
+
+Cycle 26.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  27.0
+  Errors:                27.0
+  Tests This Cycle:      5.0
+  Total Tests:           192.0
+  Avg Execution Time:    0.05792 s
+
+Cycle 27.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  28.0
+  Errors:                28.0
+  Tests This Cycle:      10.0
+  Total Tests:           202.0
+  Avg Execution Time:    0.05874 s
+
+Cycle 28.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  29.0
+  Errors:                29.0
+  Tests This Cycle:      10.0
+  Total Tests:           212.0
+  Avg Execution Time:    0.05967 s
+
+Cycle 29.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  31.0
+  Errors:                31.0
+  Tests This Cycle:      9.0
+  Total Tests:           221.0
+  Avg Execution Time:    0.06005 s
+
+Cycle 30.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  31.0
+  Errors:                31.0
+  Tests This Cycle:      5.0
+  Total Tests:           226.0
+  Avg Execution Time:    0.05937 s
+
+Cycle 31.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  33.0
+  Errors:                33.0
+  Tests This Cycle:      10.0
+  Total Tests:           236.0
+  Avg Execution Time:    0.06058 s
+
+Cycle 32.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  33.0
+  Errors:                33.0
+  Tests This Cycle:      5.0
+  Total Tests:           241.0
+  Avg Execution Time:    0.05986 s
+
+Cycle 33.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  36.0
+  Errors:                36.0
+  Tests This Cycle:      10.0
+  Total Tests:           251.0
+  Avg Execution Time:    0.06075 s
+
+Cycle 34.0:
+  Interesting Passcodes: 3.0
+  Interesting Commands:  38.0
+  Errors:                38.0
+  Tests This Cycle:      10.0
+  Total Tests:           261.0
+  Avg Execution Time:    0.06139 s
+
+Cycle 35.0:
+  Interesting Passcodes: 4.0
+  Interesting Commands:  41.0
+  Errors:                42.0
+  Tests This Cycle:      10.0
+  Total Tests:           271.0
+  Avg Execution Time:    0.06154 s
+
+Cycle 36.0:
+  Interesting Passcodes: 4.0
+  Interesting Commands:  41.0
+  Errors:                42.0
+  Tests This Cycle:      6.0
+  Total Tests:           277.0
+  Avg Execution Time:    0.06107 s
+
+Cycle 37.0:
+  Interesting Passcodes: 5.0
+  Interesting Commands:  42.0
+  Errors:                44.0
+  Tests This Cycle:      10.0
+  Total Tests:           287.0
+  Avg Execution Time:    0.06191 s
+
+Cycle 38.0:
+  Interesting Passcodes: 5.0
+  Interesting Commands:  44.0
+  Errors:                46.0
+  Tests This Cycle:      9.0
+  Total Tests:           296.0
+  Avg Execution Time:    0.06108 s
+
+Cycle 39.0:
+  Interesting Passcodes: 5.0
+  Interesting Commands:  47.0
+  Errors:                49.0
+  Tests This Cycle:      10.0
+  Total Tests:           306.0
+  Avg Execution Time:    0.06142 s
+
+Cycle 40.0:
+  Interesting Passcodes: 5.0
+  Interesting Commands:  49.0
+  Errors:                51.0
+  Tests This Cycle:      10.0
+  Total Tests:           316.0
+  Avg Execution Time:    0.06188 s
+
+Cycle 41.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  50.0
+  Errors:                53.0
+  Tests This Cycle:      9.0
+  Total Tests:           325.0
+  Avg Execution Time:    0.06218 s
+
+Cycle 42.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  50.0
+  Errors:                53.0
+  Tests This Cycle:      5.0
+  Total Tests:           330.0
+  Avg Execution Time:    0.06168 s
+
+Cycle 43.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  50.0
+  Errors:                53.0
+  Tests This Cycle:      5.0
+  Total Tests:           335.0
+  Avg Execution Time:    0.06106 s
+
+Cycle 44.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  51.0
+  Errors:                54.0
+  Tests This Cycle:      9.0
+  Total Tests:           344.0
+  Avg Execution Time:    0.06171 s
+
+Cycle 45.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  52.0
+  Errors:                55.0
+  Tests This Cycle:      10.0
+  Total Tests:           354.0
+  Avg Execution Time:    0.0622 s
+
+Cycle 46.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  52.0
+  Errors:                55.0
+  Tests This Cycle:      5.0
+  Total Tests:           359.0
+  Avg Execution Time:    0.06161 s
+
+Cycle 47.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  52.0
+  Errors:                55.0
+  Tests This Cycle:      7.0
+  Total Tests:           366.0
+  Avg Execution Time:    0.06134 s
+
+Cycle 48.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  54.0
+  Errors:                57.0
+  Tests This Cycle:      7.0
+  Total Tests:           373.0
+  Avg Execution Time:    0.06123 s
+
+Cycle 49.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  54.0
+  Errors:                57.0
+  Tests This Cycle:      6.0
+  Total Tests:           379.0
+  Avg Execution Time:    0.06093 s
+
+Cycle 50.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  54.0
+  Errors:                57.0
+  Tests This Cycle:      7.0
+  Total Tests:           386.0
+  Avg Execution Time:    0.06076 s
+
+Cycle 51.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  54.0
+  Errors:                57.0
+  Tests This Cycle:      7.0
+  Total Tests:           393.0
+  Avg Execution Time:    0.06037 s
+
+Cycle 52.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  56.0
+  Errors:                59.0
+  Tests This Cycle:      10.0
+  Total Tests:           403.0
+  Avg Execution Time:    0.0611 s
+
+Cycle 53.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  57.0
+  Errors:                60.0
+  Tests This Cycle:      8.0
+  Total Tests:           411.0
+  Avg Execution Time:    0.06105 s
+
+Cycle 54.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  59.0
+  Errors:                62.0
+  Tests This Cycle:      10.0
+  Total Tests:           421.0
+  Avg Execution Time:    0.06224 s
+
+Cycle 55.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  61.0
+  Errors:                64.0
+  Tests This Cycle:      10.0
+  Total Tests:           431.0
+  Avg Execution Time:    0.06259 s
+
+Cycle 56.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  61.0
+  Errors:                64.0
+  Tests This Cycle:      5.0
+  Total Tests:           436.0
+  Avg Execution Time:    0.06214 s
+
+Cycle 57.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  61.0
+  Errors:                64.0
+  Tests This Cycle:      6.0
+  Total Tests:           442.0
+  Avg Execution Time:    0.06177 s
+
+Cycle 58.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  64.0
+  Errors:                67.0
+  Tests This Cycle:      9.0
+  Total Tests:           451.0
+  Avg Execution Time:    0.06195 s
+
+Cycle 59.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  64.0
+  Errors:                67.0
+  Tests This Cycle:      5.0
+  Total Tests:           456.0
+  Avg Execution Time:    0.06156 s
+
+Cycle 60.0:
+  Interesting Passcodes: 6.0
+  Interesting Commands:  66.0
+  Errors:                69.0
+  Tests This Cycle:      10.0
+  Total Tests:           466.0
+  Avg Execution Time:    0.06181 s
+
