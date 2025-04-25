@@ -2,7 +2,6 @@ import re
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# logfile = "logs/fuzz_test_20250419_035503_fuzzing7.txt"
 logfile = "../logs/fuzz_test_20250423_024710_rm_2.txt"
 
 with open(logfile, 'r') as f:

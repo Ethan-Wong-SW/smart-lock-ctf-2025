@@ -763,17 +763,17 @@ class Fuzzer:
                 return True
         return False
 
-async def run_random_fuzzer(auth_attempts=50, command_attempts=50, run_forever=False, max_cycles=None):
+async def run_random_fuzzer(auth_attempts=5, command_attempts=5, run_forever=False, max_cycles=None):
     """Run random fuzzing strategy"""
     fuzzer = Fuzzer()
     await fuzzer.run_fuzzer('random', auth_attempts, command_attempts, run_forever=run_forever, max_cycles=max_cycles)
 
-async def run_random_mutation_fuzzer(auth_attempts=50, command_attempts=50, run_forever=False, max_cycles=None):
+async def run_random_mutation_fuzzer(auth_attempts=5, command_attempts=5, run_forever=False, max_cycles=None):
     """Run random & mutation fuzzing strategy"""
     fuzzer = Fuzzer()
     await fuzzer.run_fuzzer('random_mutation', auth_attempts, command_attempts, run_forever=run_forever, max_cycles=max_cycles)
 
-async def run_mutation_fuzzer(auth_attempts=50, command_attempts=50, run_forever=False, max_cycles=None):
+async def run_mutation_fuzzer(auth_attempts=5, command_attempts=5, run_forever=False, max_cycles=None):
     """Run mutation-based fuzzing strategy"""
     fuzzer = Fuzzer()
     await fuzzer.run_fuzzer('mutation', auth_attempts, command_attempts, run_forever=run_forever, max_cycles=max_cycles)
@@ -897,7 +897,8 @@ if __name__ == "__main__":
     try:
         random.seed(None)                                   # Initialize random seed
         # Choose which fuzzer to run
-        asyncio.run(run_random_mutation_fuzzer(5, 5, max_cycles=40))          # Random & Mutation fuzzing
+        asyncio.run(run_random_mutation_fuzzer())          # Random & Mutation fuzzing
+        # asyncio.run(run_random_mutation_fuzzer(5, 5, max_cycles=40))          # Random & Mutation fuzzing
         # asyncio.run(run_random_fuzzer(5, 5, max_cycles=60))          # Random fuzzing
         # asyncio.run(run_mutation_fuzzer(5, 5, max_cycles=60))          # Mutation-based fuzzing
     except KeyboardInterrupt:
