@@ -63,7 +63,7 @@ Configuration options:
 - Maximum fuzzing cycles **(None by default)**
 - Run indefinitely **(False by default)**
 
-Examples of how to run the fuzzer in the main function:
+Examples of how to run the fuzzer in the main function in `final_fuzzer_Smartlock.py`:
 ```python
 # Random & Mutation fuzzing with 10 authentication & 10 command attempts in each fuzzing cycle and the fuzzer will run for 40 cycles (each cycle will run the the authentication fuzzing for 10 times and command fuzzing for 10 times)
 asyncio.run(run_random_mutation_fuzzer(10, 10, max_cycles=40))         
@@ -89,7 +89,7 @@ The PoC code can be run on Windows with:
 ./run.bat
 ```
 
-Modify the script to uncomment the specific test case you want to run (located at the end of the file):
+Modify the script to uncomment the specific test case you want to run (located at the end of the file) in `error_reproduction.py`:
 ```python
 try:
     # Run a specific test:
